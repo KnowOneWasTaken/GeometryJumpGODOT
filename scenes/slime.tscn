@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://16mmuo5b3heq"]
+
+[ext_resource type="Texture2D" uid="uid://b1k2wim8g5ctt" path="res://assets/original/slimeGlow.png" id="1_oq4ea"]
+[ext_resource type="Texture2D" uid="uid://bi86rsydcj4pb" path="res://assets/original/slime.png" id="2_5wb4x"]
+[ext_resource type="Script" path="res://scripts/JumpArea.gd" id="3_pdoyr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xpbt"]
+size = Vector2(120, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1csp"]
+size = Vector2(67, 17)
+
+[node name="Slime" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("1_oq4ea")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("2_5wb4x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_7xpbt")
+
+[node name="JumpArea" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("3_pdoyr")
+
+[node name="JumpShape" type="CollisionShape2D" parent="JumpArea"]
+position = Vector2(0.5, -68.5)
+shape = SubResource("RectangleShape2D_f1csp")
+
+[node name="Timer" type="Timer" parent="JumpArea"]
+wait_time = 0.015
+
+[connection signal="body_entered" from="JumpArea" to="JumpArea" method="_on_body_entered"]
+[connection signal="body_exited" from="JumpArea" to="JumpArea" method="_on_body_exited"]
+[connection signal="timeout" from="JumpArea/Timer" to="JumpArea" method="_on_timer_timeout"]
