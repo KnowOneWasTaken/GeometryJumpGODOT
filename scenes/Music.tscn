@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgr7w4ch3nbwt"]
+
+[ext_resource type="AudioStream" uid="uid://du65fc7d7jr40" path="res://assets/sounds/backgroundMusic/8bit_dungeon_boss.mp3" id="1_4btvr"]
+[ext_resource type="Script" path="res://scripts/Music.gd" id="2_ctsxc"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_4btvr")
+autoplay = true
+bus = &"Music"
+script = ExtResource("2_ctsxc")

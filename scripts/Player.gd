@@ -10,7 +10,7 @@ const MAX_WALK_SPEED = 700
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 6
-
+@onready var jump_sfx = $JumpSFX
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -22,6 +22,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jump_sfx.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -37,5 +38,5 @@ func _physics_process(delta):
 				velocity.x = direction * MAX_WALK_SPEED
 	#else:
 		#velocity.x = move_toward(velocity.x, 0, SPEED)
-
 	move_and_slide()
+

@@ -1,14 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://16mmuo5b3heq"]
+[gd_scene load_steps=7 format=3 uid="uid://16mmuo5b3heq"]
 
 [ext_resource type="Texture2D" uid="uid://b1k2wim8g5ctt" path="res://assets/original/slimeGlow.png" id="1_oq4ea"]
 [ext_resource type="Texture2D" uid="uid://bi86rsydcj4pb" path="res://assets/original/slime.png" id="2_5wb4x"]
 [ext_resource type="Script" path="res://scripts/JumpArea.gd" id="3_pdoyr"]
+[ext_resource type="AudioStream" uid="uid://7plye86gm272" path="res://assets/sounds/jumpSlime.mp3" id="4_eqhc4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xpbt"]
 size = Vector2(120, 120)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1csp"]
-size = Vector2(67, 17)
+size = Vector2(112, 9.5)
 
 [node name="Slime" type="Node2D"]
 
@@ -30,11 +31,14 @@ collision_mask = 2
 script = ExtResource("3_pdoyr")
 
 [node name="JumpShape" type="CollisionShape2D" parent="JumpArea"]
-position = Vector2(0.5, -68.5)
+position = Vector2(0, -64.25)
 shape = SubResource("RectangleShape2D_f1csp")
 
 [node name="Timer" type="Timer" parent="JumpArea"]
-wait_time = 0.015
+wait_time = 0.1
+
+[node name="SlimeSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_eqhc4")
 
 [connection signal="body_entered" from="JumpArea" to="JumpArea" method="_on_body_entered"]
 [connection signal="body_exited" from="JumpArea" to="JumpArea" method="_on_body_exited"]

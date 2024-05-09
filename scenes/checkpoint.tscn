@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://dn0k5cvsfacg3"]
+
+[ext_resource type="Script" path="res://scripts/Checkpoint.gd" id="1_emq64"]
+[ext_resource type="Texture2D" uid="uid://c8qj1nssq6os0" path="res://assets/original/checkpointGlow.png" id="2_db84o"]
+[ext_resource type="Texture2D" uid="uid://brva4dh1ombkq" path="res://assets/original/checkpoint.png" id="3_1afdw"]
+[ext_resource type="AudioStream" uid="uid://cs5767j2vdjl6" path="res://assets/sounds/goal.mp3" id="4_c1lgt"]
+
+[sub_resource type="GDScript" id="GDScript_0ufb1"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxyf0"]
+size = Vector2(120, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ka8am"]
+size = Vector2(120, 6)
+
+[sub_resource type="GDScript" id="GDScript_d2tyq"]
+script/source = "extends AudioStreamPlayer2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Checkpoint" type="Node2D"]
+script = ExtResource("1_emq64")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("2_db84o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_1afdw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = SubResource("GDScript_0ufb1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_oxyf0")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -63)
+shape = SubResource("RectangleShape2D_ka8am")
+
+[node name="CheckpointSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_c1lgt")
+bus = &"SFX"
+script = SubResource("GDScript_d2tyq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
