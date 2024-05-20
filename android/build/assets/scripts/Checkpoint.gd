@@ -1,4 +1,5 @@
-extends Area2D
+extends Node2D
+@onready var checkpoint_sfx = $CheckpointSFX
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,5 +12,5 @@ func _process(delta):
 	pass
 
 
-func _on_body_entered(body):
-	body.velocity.y -= 4000
+func _on_area_2d_body_entered(body):
+	checkpoint_sfx.play()
