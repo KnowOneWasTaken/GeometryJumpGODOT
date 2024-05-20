@@ -8,7 +8,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_hexx1"]
 radius = 55.0364
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_am66c"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_rfkp6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -163,7 +163,7 @@ shape = SubResource("CircleShape2D_hexx1")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 z_index = -1
-sprite_frames = SubResource("SpriteFrames_am66c")
+sprite_frames = SubResource("SpriteFrames_rfkp6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
