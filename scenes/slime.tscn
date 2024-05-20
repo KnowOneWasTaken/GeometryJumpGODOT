@@ -9,7 +9,7 @@
 size = Vector2(120, 120)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1csp"]
-size = Vector2(112, 9.5)
+size = Vector2(120, 9.5)
 
 [node name="Slime" type="Node2D"]
 

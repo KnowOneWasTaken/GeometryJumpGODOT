@@ -46,3 +46,4 @@ android/build/res/mipmap/icon_foreground.png
 assets/original/coin.png
 assets/original/coinGlow.png
 assets/original/spikeGlow.png
+*.apk
