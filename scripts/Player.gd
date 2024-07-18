@@ -11,6 +11,7 @@ const CUT_OFF_JUMP_VELOCITY = -1000
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 6
+var respawn_point = Vector2(0,0)
 @onready var jump_sfx = $JumpSFX
 
 func _physics_process(delta):
@@ -43,4 +44,8 @@ func _physics_process(delta):
 				velocity.x = direction * MAX_WALK_SPEED
 	
 	move_and_slide()
+
+func reset():
+	position = respawn_point
+
 

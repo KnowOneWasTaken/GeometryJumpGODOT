@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://byc3a44gr7lkf"]
+
+[ext_resource type="Texture2D" uid="uid://cgmyatonbqks" path="res://assets/original/empty.png" id="1_vyhal"]
+
+[node name="Background-Black" type="Node2D"]
+
+[node name="Empty" type="Sprite2D" parent="."]
+z_index = -13
+position = Vector2(-59036.5, -8106.03)
+scale = Vector2(4574.07, 3164.07)
+texture = ExtResource("1_vyhal")

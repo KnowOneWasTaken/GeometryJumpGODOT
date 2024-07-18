@@ -1,5 +1,4 @@
-extends Node2D
-@onready var checkpoint_sfx = $CheckpointSFX
+extends Node
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,8 +9,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-
-func _on_area_2d_body_entered(body):
-	checkpoint_sfx.play()
-	body.respawn_point = Vector2(position.x, position.y-120)
