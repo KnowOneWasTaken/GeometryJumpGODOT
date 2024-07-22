@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.geometryjump_gdot.geometryjump"
     android:installLocation="auto"
-    android:versionCode="1"
-    android:versionName="1.0-21w20a" >
+    android:versionCode="2"
+    android:versionName="1.1-30w22a" >
 
     <uses-sdk
-        android:minSdkVersion="24"
+        android:minSdkVersion="33"
         android:targetSdkVersion="34" />
 
     <supports-screens

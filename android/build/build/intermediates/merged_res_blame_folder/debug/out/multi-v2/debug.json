@@ -80,7 +80,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-it_values-it.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-it/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-it/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -179,7 +179,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-es-rES_values-es-rES.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-es-rES/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-es-rES/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -218,7 +218,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-ca/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-ca/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -287,7 +287,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-sk/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-sk/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -309,7 +309,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-zh-rTW_values-zh-rTW.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-zh-rTW/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-zh-rTW/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -365,7 +365,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-cs/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-cs/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -387,7 +387,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-hi_values-hi.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-hi/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-hi/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -443,7 +443,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-tr/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-tr/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -482,7 +482,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-es/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-es/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -504,6 +504,23 @@
             "outputFile": "com.godot.game-merged_res-18:/values-el_values-el.arsc.flat",
             "map": [
                 {
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-el/godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "63",
+                        "endOffsets": "174"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                },
+                {
                     "source": "/home/philipp/.gradle/caches/transforms-3/245f1aa0863a677574781ac0a1900f6e/transformed/core-1.8.0/res/values-el/values-el.xml",
                     "from": {
                         "startLines": "2",
@@ -519,23 +536,6 @@
                         "endColumns": "100",
                         "endOffsets": "218"
                     }
-                },
-                {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-el/godot_project_name_string.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "1",
-                        "startOffsets": "112",
-                        "endColumns": "63",
-                        "endOffsets": "174"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
-                    }
                 }
             ]
         },
@@ -543,7 +543,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-zh-rHK_values-zh-rHK.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-zh-rHK/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-zh-rHK/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -597,7 +597,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-da_values-da.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-da/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-da/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -651,6 +651,23 @@
             "outputFile": "com.godot.game-merged_res-18:/values-sr_values-sr.arsc.flat",
             "map": [
                 {
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-sr/godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "63",
+                        "endOffsets": "174"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                },
+                {
                     "source": "/home/philipp/.gradle/caches/transforms-3/245f1aa0863a677574781ac0a1900f6e/transformed/core-1.8.0/res/values-sr/values-sr.xml",
                     "from": {
                         "startLines": "2",
@@ -665,23 +682,6 @@
                         "startOffsets": "122",
                         "endColumns": "100",
                         "endOffsets": "218"
-                    }
-                },
-                {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-sr/godot_project_name_string.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "1",
-                        "startOffsets": "112",
-                        "endColumns": "63",
-                        "endOffsets": "174"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
                     }
                 }
             ]
@@ -705,6 +705,23 @@
             "outputFile": "com.godot.game-merged_res-18:/values-fa_values-fa.arsc.flat",
             "map": [
                 {
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-fa/godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "63",
+                        "endOffsets": "174"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                },
+                {
                     "source": "/home/philipp/.gradle/caches/transforms-3/245f1aa0863a677574781ac0a1900f6e/transformed/core-1.8.0/res/values-fa/values-fa.xml",
                     "from": {
                         "startLines": "2",
@@ -719,23 +736,6 @@
                         "startOffsets": "122",
                         "endColumns": "100",
                         "endOffsets": "218"
-                    }
-                },
-                {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-fa/godot_project_name_string.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "1",
-                        "startOffsets": "112",
-                        "endColumns": "63",
-                        "endOffsets": "174"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
                     }
                 },
                 {
@@ -791,7 +791,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-ro_values-ro.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-ro/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-ro/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -845,7 +845,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-de_values-de.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-de/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-de/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -914,6 +914,23 @@
             "outputFile": "com.godot.game-merged_res-18:/values-iw_values-iw.arsc.flat",
             "map": [
                 {
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-iw/godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "63",
+                        "endOffsets": "174"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                },
+                {
                     "source": "/home/philipp/.gradle/caches/transforms-3/245f1aa0863a677574781ac0a1900f6e/transformed/core-1.8.0/res/values-iw/values-iw.xml",
                     "from": {
                         "startLines": "2",
@@ -928,23 +945,6 @@
                         "startOffsets": "122",
                         "endColumns": "100",
                         "endOffsets": "218"
-                    }
-                },
-                {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-iw/godot_project_name_string.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "1",
-                        "startOffsets": "112",
-                        "endColumns": "63",
-                        "endOffsets": "174"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
                     }
                 }
             ]
@@ -970,7 +970,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-sv/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-sv/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1054,7 +1054,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-nl/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-nl/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1123,7 +1123,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-nb/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-nb/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1145,6 +1145,23 @@
             "outputFile": "com.godot.game-merged_res-18:/values-bg_values-bg.arsc.flat",
             "map": [
                 {
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-bg/godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "63",
+                        "endOffsets": "174"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                },
+                {
                     "source": "/home/philipp/.gradle/caches/transforms-3/245f1aa0863a677574781ac0a1900f6e/transformed/core-1.8.0/res/values-bg/values-bg.xml",
                     "from": {
                         "startLines": "2",
@@ -1160,23 +1177,6 @@
                         "endColumns": "100",
                         "endOffsets": "218"
                     }
-                },
-                {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-bg/godot_project_name_string.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "1",
-                        "startOffsets": "112",
-                        "endColumns": "63",
-                        "endOffsets": "174"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
-                    }
                 }
             ]
         },
@@ -1184,7 +1184,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-pl_values-pl.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-pl/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-pl/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1255,7 +1255,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-hr/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-hr/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1309,7 +1309,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-th/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-th/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1425,7 +1425,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-ko/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-ko/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1462,7 +1462,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-ru_values-ru.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-ru/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-ru/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1516,23 +1516,6 @@
             "outputFile": "com.godot.game-merged_res-18:/values-hu_values-hu.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-hu/godot_project_name_string.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "1",
-                        "startOffsets": "112",
-                        "endColumns": "63",
-                        "endOffsets": "174"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
-                    }
-                },
-                {
                     "source": "/home/philipp/.gradle/caches/transforms-3/245f1aa0863a677574781ac0a1900f6e/transformed/core-1.8.0/res/values-hu/values-hu.xml",
                     "from": {
                         "startLines": "2",
@@ -1547,6 +1530,23 @@
                         "startOffsets": "122",
                         "endColumns": "100",
                         "endOffsets": "218"
+                    }
+                },
+                {
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-hu/godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "63",
+                        "endOffsets": "174"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
                     }
                 }
             ]
@@ -1572,7 +1572,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-lv/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-lv/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1656,7 +1656,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-fr/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-fr/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1678,7 +1678,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-ja_values-ja.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-ja/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-ja/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1734,7 +1734,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-uk/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-uk/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1771,7 +1771,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-vi_values-vi.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-vi/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-vi/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1810,23 +1810,6 @@
             "outputFile": "com.godot.game-merged_res-18:/values-sl_values-sl.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-sl/godot_project_name_string.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "1",
-                        "startOffsets": "112",
-                        "endColumns": "63",
-                        "endOffsets": "174"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
-                    }
-                },
-                {
                     "source": "/home/philipp/.gradle/caches/transforms-3/245f1aa0863a677574781ac0a1900f6e/transformed/core-1.8.0/res/values-sl/values-sl.xml",
                     "from": {
                         "startLines": "2",
@@ -1841,6 +1824,23 @@
                         "startOffsets": "122",
                         "endColumns": "100",
                         "endOffsets": "218"
+                    }
+                },
+                {
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-sl/godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "63",
+                        "endOffsets": "174"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
                     }
                 }
             ]
@@ -1879,7 +1879,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-tl_values-tl.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-tl/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-tl/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1935,7 +1935,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-in/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-in/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1957,7 +1957,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-zh_values-zh.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-zh/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-zh/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -1979,7 +1979,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-pt_values-pt.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-pt/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-pt/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -2018,7 +2018,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-en_values-en.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-en/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-en/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -2104,20 +2104,22 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values/themes.xml",
                     "from": {
-                        "startLines": "3",
-                        "startColumns": "1",
-                        "startOffsets": "112",
-                        "endColumns": "63",
-                        "endOffsets": "174"
+                        "startLines": "3,5",
+                        "startColumns": "1,1",
+                        "startOffsets": "53,136",
+                        "endLines": "3,8",
+                        "endColumns": "81,9",
+                        "endOffsets": "133,384"
                     },
                     "to": {
-                        "startLines": "95",
-                        "startColumns": "4",
-                        "startOffsets": "5802",
-                        "endColumns": "66",
-                        "endOffsets": "5864"
+                        "startLines": "135,136",
+                        "startColumns": "4,4",
+                        "startOffsets": "9016,9101",
+                        "endLines": "135,139",
+                        "endColumns": "84,9",
+                        "endOffsets": "9096,9349"
                     }
                 },
                 {
@@ -2191,25 +2193,6 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values/themes.xml",
-                    "from": {
-                        "startLines": "3,5",
-                        "startColumns": "1,1",
-                        "startOffsets": "53,136",
-                        "endLines": "3,8",
-                        "endColumns": "81,9",
-                        "endOffsets": "133,384"
-                    },
-                    "to": {
-                        "startLines": "135,136",
-                        "startColumns": "4,4",
-                        "startOffsets": "9016,9101",
-                        "endLines": "135,139",
-                        "endColumns": "84,9",
-                        "endOffsets": "9096,9349"
-                    }
-                },
-                {
                     "source": "/home/philipp/.gradle/caches/transforms-3/a1052a08c437a0cfe93531a0770d912d/transformed/fragment-1.6.2/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,10",
@@ -2246,6 +2229,23 @@
                         "endColumns": "59,71,87,68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,64,58,58,59,59,59,59,59,59,59,59,59,59,58,59,59,59,59,59,59,59,59,59,59,58,59,59,58,58,58,58,58,58,34,34,54,62,54,57,57,60,62,56,50,49,60,56,65,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24,24",
                         "endOffsets": "110,182,270,339,402,472,540,612,682,743,817,890,951,1012,1074,1138,1200,1261,1329,1429,1489,1555,1628,1697,1754,1806,1868,1988,2064,2129,2188,2247,2307,2367,2427,2487,2547,2607,2667,2727,2787,2847,2906,2966,3026,3086,3146,3206,3266,3326,3386,3446,3506,3565,3625,3685,3744,3803,3862,3921,3980,4039,4131,4166,4328,4391,4446,4504,4562,4623,4686,4743,4794,4844,4905,4962,5028,5062,5097,5132,5473,7706,10156,10357,10467,10668,10797,10869,10936,11139,11440,13171,13852,14853,15020"
                     }
+                },
+                {
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values/godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "63",
+                        "endOffsets": "174"
+                    },
+                    "to": {
+                        "startLines": "95",
+                        "startColumns": "4",
+                        "startOffsets": "5802",
+                        "endColumns": "66",
+                        "endOffsets": "5864"
+                    }
                 }
             ]
         },
@@ -2268,6 +2268,23 @@
             "outputFile": "com.godot.game-merged_res-18:/values-lt_values-lt.arsc.flat",
             "map": [
                 {
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-lt/godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "63",
+                        "endOffsets": "174"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                },
+                {
                     "source": "/home/philipp/.gradle/caches/transforms-3/245f1aa0863a677574781ac0a1900f6e/transformed/core-1.8.0/res/values-lt/values-lt.xml",
                     "from": {
                         "startLines": "2",
@@ -2282,23 +2299,6 @@
                         "startOffsets": "122",
                         "endColumns": "100",
                         "endOffsets": "218"
-                    }
-                },
-                {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-lt/godot_project_name_string.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "1",
-                        "startOffsets": "112",
-                        "endColumns": "63",
-                        "endOffsets": "174"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "66",
-                        "endOffsets": "117"
                     }
                 }
             ]
@@ -2339,7 +2339,7 @@
                     }
                 },
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-ar/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-ar/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",
@@ -2361,7 +2361,7 @@
             "outputFile": "com.godot.game-merged_res-18:/values-fi_values-fi.arsc.flat",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-fi/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-fi/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",

@@ -8,11 +8,14 @@ const FRICTION = 0.6
 const CHANGE_DIRECTION_SPEED = 2.0
 const MAX_WALK_SPEED = 700
 const CUT_OFF_JUMP_VELOCITY = -1000
+@onready var timer = $JumpFXTimer
+var play_jump_fx := true
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 6
-var respawn_point = Vector2(0,0)
 @onready var jump_sfx = $JumpSFX
+@export var default_respawn_point := Vector2(-300,60)
+var respawn_point := default_respawn_point
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -25,7 +28,10 @@ func _physics_process(delta):
 	if Input.is_action_pressed("jump") and is_on_floor():
 		if velocity.y > CUT_OFF_JUMP_VELOCITY:
 			velocity.y = JUMP_VELOCITY
-			jump_sfx.play()
+			if play_jump_fx:
+				jump_sfx.play()
+				play_jump_fx = false
+				timer.start()
 
 	# Get the input direction and handle the movement/deceleration.
 	var direction = Input.get_axis("move_left", "move_right")
@@ -49,3 +55,6 @@ func reset():
 	position = respawn_point
 
 
+
+func _on_jump_fx_timer_timeout():
+	play_jump_fx = true

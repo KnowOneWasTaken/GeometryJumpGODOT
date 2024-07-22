@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://wrol554te3wy"]
+
+[ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/ui.tscn" id="1_ot5dc"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://scenes/kill_zone.tscn" id="2_egq6e"]
+[ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/wall.tscn" id="3_ygty3"]
+[ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/goal.tscn" id="4_d37p7"]
+[ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/background_black.tscn" id="5_pnvh2"]
+[ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/Player.tscn" id="6_vl46b"]
+[ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/spike.tscn" id="7_t3mt2"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p6282"]
+
+[node name="Level2" type="Node2D"]
+
+[node name="UI" parent="." instance=ExtResource("1_ot5dc")]
+
+[node name="Map" type="Node" parent="."]
+
+[node name="KillZone" parent="Map" instance=ExtResource("2_egq6e")]
+position = Vector2(-60, 1740)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/KillZone"]
+shape = SubResource("WorldBoundaryShape2D_p6282")
+
+[node name="Blocks" type="Node" parent="Map"]
+
+[node name="Wall" parent="Map/Blocks" instance=ExtResource("3_ygty3")]
+position = Vector2(-60, 180)
+
+[node name="Wall2" parent="Map/Blocks" instance=ExtResource("3_ygty3")]
+position = Vector2(180, 180)
+
+[node name="Wall5" parent="Map/Blocks" instance=ExtResource("3_ygty3")]
+position = Vector2(300, 180)
+
+[node name="Wall6" parent="Map/Blocks" instance=ExtResource("3_ygty3")]
+position = Vector2(540, 180)
+
+[node name="Wall3" parent="Map/Blocks" instance=ExtResource("3_ygty3")]
+position = Vector2(-180, 180)
+
+[node name="Wall4" parent="Map/Blocks" instance=ExtResource("3_ygty3")]
+position = Vector2(-300, 180)
+
+[node name="Goal" parent="Map/Blocks" instance=ExtResource("4_d37p7")]
+position = Vector2(420, 180)
+
+[node name="Wall7" parent="Map/Blocks" instance=ExtResource("3_ygty3")]
+position = Vector2(60, 180)
+
+[node name="Spike" parent="Map/Blocks" instance=ExtResource("7_t3mt2")]
+position = Vector2(60, 60)
+
+[node name="Spike2" parent="Map/Blocks" instance=ExtResource("7_t3mt2")]
+position = Vector2(180, 60)
+
+[node name="Background-Black" parent="Map" instance=ExtResource("5_pnvh2")]
+position = Vector2(-732, 3)
+
+[node name="Player" parent="." instance=ExtResource("6_vl46b")]
+position = Vector2(-300, 60)

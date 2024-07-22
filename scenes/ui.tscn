@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bl68dtbhhyyyv"]
+[gd_scene load_steps=9 format=3 uid="uid://bl68dtbhhyyyv"]
 
 [ext_resource type="Texture2D" uid="uid://dhx0xak1ffv2o" path="res://assets/original/ButtonUP.png" id="1_5imky"]
+[ext_resource type="Script" path="res://scripts/MenuButtons.gd" id="1_lhhre"]
+[ext_resource type="Texture2D" uid="uid://bt0owr845nvp7" path="res://assets/original/ButtonEXIT.png" id="2_cw8dq"]
 [ext_resource type="Texture2D" uid="uid://cnpm0spahbgoi" path="res://assets/original/ButtonLEFT.png" id="2_h5s2f"]
 [ext_resource type="Texture2D" uid="uid://da3g8em58sloy" path="res://assets/original/ButtonUP_PRESSED.png" id="2_vj6g4"]
 [ext_resource type="Texture2D" uid="uid://c74opk83fbk5n" path="res://assets/original/ButtonRIGHT.png" id="3_28pfa"]
@@ -9,26 +11,62 @@
 
 [node name="UI" type="CanvasLayer"]
 
-[node name="JumpButton" type="TouchScreenButton" parent="."]
-position = Vector2(396, 2088)
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+
+[node name="MenuButtons" type="Control" parent="MarginContainer"]
+layout_mode = 2
+script = ExtResource("1_lhhre")
+
+[node name="Exit" type="Button" parent="MarginContainer/MenuButtons"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -224.0
+offset_right = 10.0
+offset_bottom = 231.0
+grow_horizontal = 0
+icon = ExtResource("2_cw8dq")
+flat = true
+icon_alignment = 2
+expand_icon = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="JumpButton" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2(-172, -320)
 scale = Vector2(4.11428, 4.11428)
 texture_normal = ExtResource("1_5imky")
 texture_pressed = ExtResource("2_vj6g4")
 action = "jump"
 visibility_mode = 1
 
-[node name="LeftButton" type="TouchScreenButton" parent="."]
-position = Vector2(108, 2088)
+[node name="LeftButton" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2(-476, -320)
 scale = Vector2(4.11428, 4.11428)
 texture_normal = ExtResource("2_h5s2f")
 texture_pressed = ExtResource("4_fpsv7")
 action = "move_left"
 visibility_mode = 1
 
-[node name="RightButton" type="TouchScreenButton" parent="."]
-position = Vector2(684, 2088)
+[node name="RightButton" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2(132, -320)
 scale = Vector2(4.11428, 4.11428)
 texture_normal = ExtResource("3_28pfa")
 texture_pressed = ExtResource("6_j4188")
 action = "move_right"
 visibility_mode = 1
+
+[connection signal="button_up" from="MarginContainer/MenuButtons/Exit" to="." method="_on_exit_button_up"]
+[connection signal="button_up" from="MarginContainer/MenuButtons/Exit" to="MarginContainer/MenuButtons" method="_on_exit_button_up"]

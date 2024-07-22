@@ -4,7 +4,7 @@
             "outputFile": "com.godot.game-mergeDebugResources-16:/values-da/values-da.xml",
             "map": [
                 {
-                    "source": "/home/philipp/Documents/GitHub/GeometryJumpGODOT/android/build/res/values-da/godot_project_name_string.xml",
+                    "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-da/godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",

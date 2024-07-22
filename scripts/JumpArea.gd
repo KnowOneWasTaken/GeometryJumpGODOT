@@ -4,7 +4,7 @@ var player = null
 @onready var timer = $Timer
 @onready var slime_sfx = $"../SlimeSFX"
 @export var SLIME_VELOCITY = -5400
-@export var CUT_OFF_VELOCITY = -1500
+@export var CUT_OFF_VELOCITY = -1600
 
 func _on_body_entered(body):
 	isInArea = true

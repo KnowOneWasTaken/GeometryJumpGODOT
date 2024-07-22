@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://ls4gn2jp3ogx"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_spb6w"]
+[ext_resource type="Texture2D" uid="uid://b0h6awui5dtcw" path="res://assets/original/BLevelX.png" id="2_0xsjj"]
+[ext_resource type="Texture2D" uid="uid://dlt7nutnsbthm" path="res://assets/original/left.png" id="2_gldfu"]
+[ext_resource type="Texture2D" uid="uid://bu21iu46pf57f" path="res://assets/original/BLevel1Glow.png" id="3_7j466"]
+[ext_resource type="Texture2D" uid="uid://c1fhixy3ppr13" path="res://assets/original/right.png" id="3_cscdo"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_spb6w")
+metadata/Level = 1
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.0
+offset_top = -212.0
+offset_right = 448.0
+offset_bottom = 220.0
+
+[node name="Left" type="Button" parent="HSplitContainer"]
+layout_mode = 2
+icon = ExtResource("2_gldfu")
+flat = true
+
+[node name="Right" type="Button" parent="HSplitContainer"]
+layout_direction = 3
+layout_mode = 2
+icon = ExtResource("3_cscdo")
+flat = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = -224.0
+offset_right = 324.0
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+tooltip_text = "Play this level"
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 189
+text = "          1"
+icon = ExtResource("2_0xsjj")
+flat = true
+icon_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/Button"]
+z_index = -1
+position = Vector2(324, 236)
+texture = ExtResource("3_7j466")
+
+[connection signal="button_up" from="HSplitContainer/Left" to="." method="_on_left_button_up"]
+[connection signal="button_up" from="HSplitContainer/Right" to="." method="_on_right_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_button_up"]
