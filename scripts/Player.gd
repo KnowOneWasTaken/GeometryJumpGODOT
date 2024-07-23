@@ -53,6 +53,7 @@ func _physics_process(delta):
 
 func reset():
 	position = respawn_point
+	velocity = Vector2(0,0)
 
 
 
