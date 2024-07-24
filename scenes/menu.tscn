@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://ls4gn2jp3ogx"]
+[gd_scene load_steps=9 format=3 uid="uid://ls4gn2jp3ogx"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_spb6w"]
 [ext_resource type="Texture2D" uid="uid://b0h6awui5dtcw" path="res://assets/original/BLevelX.png" id="2_0xsjj"]
 [ext_resource type="Texture2D" uid="uid://dlt7nutnsbthm" path="res://assets/original/left.png" id="2_gldfu"]
+[ext_resource type="Texture2D" uid="uid://cgmyatonbqks" path="res://assets/original/empty.png" id="2_vxot0"]
 [ext_resource type="Texture2D" uid="uid://bu21iu46pf57f" path="res://assets/original/BLevel1Glow.png" id="3_7j466"]
 [ext_resource type="Texture2D" uid="uid://c1fhixy3ppr13" path="res://assets/original/right.png" id="3_cscdo"]
+[ext_resource type="Texture2D" uid="uid://cltykmxgxdblj" path="res://assets/original/settings.png" id="7_0dlo1"]
+[ext_resource type="Texture2D" uid="uid://bbhggnuww5mxe" path="res://assets/original/Logo.png" id="8_4c1y5"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -15,6 +18,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_spb6w")
 metadata/Level = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(17452, 3340)
+scale = Vector2(1706, 1177.33)
+texture = ExtResource("2_vxot0")
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
 layout_mode = 1
@@ -70,6 +79,34 @@ z_index = -1
 position = Vector2(324, 236)
 texture = ExtResource("3_7j466")
 
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_direction = 3
+layout_mode = 0
+offset_right = 208.0
+offset_bottom = 208.0
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("7_0dlo1")
+flat = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.305
+anchor_right = 0.5
+anchor_bottom = 0.305
+offset_left = -544.0
+offset_top = -732.0
+offset_right = 544.0
+offset_bottom = 208.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer"]
+position = Vector2(540, 700)
+texture = ExtResource("8_4c1y5")
+
 [connection signal="button_up" from="HSplitContainer/Left" to="." method="_on_left_button_up"]
 [connection signal="button_up" from="HSplitContainer/Right" to="." method="_on_right_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_button_up"]
+[connection signal="button_up" from="VBoxContainer/Settings" to="." method="_on_settings_button_up"]

@@ -52,6 +52,15 @@ position = Vector2(540, -180)
 [node name="Wall13" parent="Map/Blocks" instance=ExtResource("3_mvrud")]
 position = Vector2(780, -180)
 
+[node name="Wall19" parent="Map/Blocks" instance=ExtResource("3_mvrud")]
+position = Vector2(900, -180)
+
+[node name="Wall20" parent="Map/Blocks" instance=ExtResource("3_mvrud")]
+position = Vector2(900, -60)
+
+[node name="Wall21" parent="Map/Blocks" instance=ExtResource("3_mvrud")]
+position = Vector2(900, 60)
+
 [node name="Wall14" parent="Map/Blocks" instance=ExtResource("3_mvrud")]
 position = Vector2(900, -300)
 
@@ -78,12 +87,15 @@ position = Vector2(780, -540)
 
 [node name="Spike" parent="Map/Blocks" instance=ExtResource("6_oeqi2")]
 position = Vector2(420, 60)
+rotation = 1.5708
 
 [node name="Spike2" parent="Map/Blocks" instance=ExtResource("6_oeqi2")]
 position = Vector2(780, -60)
+rotation = -1.5708
 
 [node name="Spike3" parent="Map/Blocks" instance=ExtResource("6_oeqi2")]
 position = Vector2(780, 60)
+rotation = -1.5708
 
 [node name="Background-Black" parent="Map" instance=ExtResource("4_jfpni")]
 position = Vector2(-2340, -300)

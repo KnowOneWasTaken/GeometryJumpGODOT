@@ -47,6 +47,15 @@ position = Vector2(-540, 180)
 [node name="Wall7" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
 position = Vector2(-660, 180)
 
+[node name="Wall38" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(-660, 300)
+
+[node name="Wall39" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(-540, 300)
+
+[node name="Wall40" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(-420, 300)
+
 [node name="Wall8" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
 position = Vector2(-300, 660)
 
@@ -128,35 +137,41 @@ position = Vector2(-660, 660)
 [node name="Wall12" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
 position = Vector2(-780, 660)
 
-[node name="Spike" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
-position = Vector2(-780, 180)
-
 [node name="Spike2" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
-position = Vector2(-780, 300)
-
-[node name="Spike3" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
-position = Vector2(-780, 420)
+position = Vector2(-780, 180)
+rotation = -1.5708
 
 [node name="Spike4" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
-position = Vector2(-660, 420)
+position = Vector2(-780, 60)
 
 [node name="Spike5" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
-position = Vector2(-540, 420)
+position = Vector2(-780, -60)
+
+[node name="Spike7" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
+position = Vector2(-780, -180)
+
+[node name="Spike8" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
+position = Vector2(-780, -300)
+
+[node name="Spike3" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
+position = Vector2(-780, 300)
+rotation = -1.5708
 
 [node name="Spike6" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
 position = Vector2(-420, 420)
+rotation = 3.14159
 
-[node name="Spike7" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
-position = Vector2(-780, 60)
+[node name="Spike22" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
+position = Vector2(-300, 300)
+rotation = 1.5708
 
-[node name="Spike8" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
-position = Vector2(-780, -60)
+[node name="Spike20" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
+position = Vector2(-540, 420)
+rotation = 3.14159
 
-[node name="Spike9" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
-position = Vector2(-780, -180)
-
-[node name="Spike10" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
-position = Vector2(-780, -300)
+[node name="Spike21" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
+position = Vector2(-660, 420)
+rotation = 3.14159
 
 [node name="Spike11" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
 position = Vector2(180, 180)
@@ -189,7 +204,7 @@ position = Vector2(180, 660)
 position = Vector2(540, 60)
 
 [node name="coin2" parent="Map/Blocks" instance=ExtResource("5_0msyl")]
-position = Vector2(900, 1020)
+position = Vector2(900, 1140)
 
 [node name="coin3" parent="Map/Blocks" instance=ExtResource("5_0msyl")]
 position = Vector2(-660, -300)
@@ -207,7 +222,7 @@ position = Vector2(660, 540)
 position = Vector2(780, 900)
 
 [node name="Background-Black" parent="Map" instance=ExtResource("4_k3ms5")]
-position = Vector2(-2340, -300)
+position = Vector2(-2340, -180)
 
 [node name="Player" parent="." instance=ExtResource("5_16vtp")]
 position = Vector2(-300, 60)

@@ -8,7 +8,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
@@ -27,3 +27,6 @@ func _on_right_button_up():
 	
 func updateLevelButton():
 	button.text = "          "+str(level)
+
+func _on_settings_button_up():
+	get_tree().change_scene_to_file("res://scenes/options.tscn")

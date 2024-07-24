@@ -7,9 +7,9 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(delta):
 	pass
 
 
-func _on_exit_button_up():
+func _on_settings_button_up():
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
