@@ -39,6 +39,7 @@ wait_time = 0.1
 
 [node name="SlimeSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_eqhc4")
+bus = &"SFX"
 
 [connection signal="body_entered" from="JumpArea" to="JumpArea" method="_on_body_entered"]
 [connection signal="body_exited" from="JumpArea" to="JumpArea" method="_on_body_exited"]

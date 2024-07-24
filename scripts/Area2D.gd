@@ -2,7 +2,7 @@ extends Area2D
 @onready var label = $Label
 @onready var goal_sfx = $GoalSFX
 @onready var timer = $Timer
-
+var goal_reached = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,10 +15,12 @@ func _process(_delta):
 
 
 func _on_body_entered(_body):
-	print("Goal reached!")
-	label.text = "Goal reached!"
-	goal_sfx.play()
-	timer.start()
+	if not goal_reached:
+		print("Goal reached!")
+		label.text = "Goal reached!"
+		goal_sfx.play()
+		timer.start()
+	goal_reached = true
 
 
 func _on_timer_timeout():

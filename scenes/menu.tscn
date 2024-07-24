@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ls4gn2jp3ogx"]
+[gd_scene load_steps=11 format=3 uid="uid://ls4gn2jp3ogx"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_spb6w"]
 [ext_resource type="Texture2D" uid="uid://b0h6awui5dtcw" path="res://assets/original/BLevelX.png" id="2_0xsjj"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://c1fhixy3ppr13" path="res://assets/original/right.png" id="3_cscdo"]
 [ext_resource type="Texture2D" uid="uid://cltykmxgxdblj" path="res://assets/original/settings.png" id="7_0dlo1"]
 [ext_resource type="Texture2D" uid="uid://bbhggnuww5mxe" path="res://assets/original/Logo.png" id="8_4c1y5"]
+[ext_resource type="AudioStream" uid="uid://13g1x2kqvbqf" path="res://assets/sounds/click interface.mp3" id="9_2jfxu"]
+[ext_resource type="AudioStream" uid="uid://bv0ammc22was5" path="res://assets/sounds/tabChange.mp3" id="10_of3ch"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -105,6 +107,14 @@ offset_bottom = 208.0
 [node name="Sprite2D" type="Sprite2D" parent="CenterContainer"]
 position = Vector2(540, 700)
 texture = ExtResource("8_4c1y5")
+
+[node name="ClickButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_2jfxu")
+bus = &"SFX"
+
+[node name="tabChangeSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_of3ch")
+bus = &"SFX"
 
 [connection signal="button_up" from="HSplitContainer/Left" to="." method="_on_left_button_up"]
 [connection signal="button_up" from="HSplitContainer/Right" to="." method="_on_right_button_up"]

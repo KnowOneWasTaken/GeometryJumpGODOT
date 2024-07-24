@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="GeometryJump"
-config/description="A small neon-style Jump'n Run Game"
+config/description="A small neon-style Jump 'n' Run Game"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/image="res://assets/original/icon-512.png"
 config/icon="res://icon-512.png"
 
 [autoload]

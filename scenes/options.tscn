@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://4it5mpv3insv"]
+[gd_scene load_steps=4 format=3 uid="uid://4it5mpv3insv"]
 
-[ext_resource type="Script" path="res://scenes/options.gd" id="1_pe5yr"]
+[ext_resource type="Script" path="res://scripts/options.gd" id="1_pe5yr"]
 [ext_resource type="Texture2D" uid="uid://cgmyatonbqks" path="res://assets/original/empty.png" id="2_7vncf"]
 [ext_resource type="Texture2D" uid="uid://cltykmxgxdblj" path="res://assets/original/settings.png" id="3_ov71l"]
-[ext_resource type="Texture2D" uid="uid://bw7dr58tgxhal" path="res://assets/original/switch_on.png" id="4_eh1bx"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -31,43 +30,42 @@ layout_mode = 2
 icon = ExtResource("3_ov71l")
 flat = true
 
-[node name="Control" type="Control" parent="."]
-layout_direction = 1
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="CenterContainer" type="CenterContainer" parent="Control"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 2
-offset_right = 1080.0
-offset_bottom = 1564.0
+anchor_left = 0.503
+anchor_top = 0.447
+anchor_right = 0.503
+anchor_bottom = 0.447
+offset_left = -503.029
+offset_top = -520.375
+offset_right = -168.029
+offset_bottom = -173.375
+scale = Vector2(3, 3)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer"]
+[node name="Label" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
-
-[node name="Label" type="Label" parent="Control/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 51
+theme_override_font_sizes/font_size = 38
 text = "Music"
 horizontal_alignment = 1
 
-[node name="music-switch" type="Button" parent="Control/CenterContainer/VBoxContainer"]
+[node name="Music-Slider" type="HSlider" parent="VBoxContainer2"]
 layout_mode = 2
-icon = ExtResource("4_eh1bx")
-flat = true
+size_flags_stretch_ratio = 11.81
+value = 70.0
+tick_count = 5
 
-[node name="Label2" type="Label" parent="Control/CenterContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 51
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 38
 text = "Sound-Effects"
 horizontal_alignment = 1
 
-[node name="sfx-switch" type="Button" parent="Control/CenterContainer/VBoxContainer"]
+[node name="SFX-Slider" type="HSlider" parent="VBoxContainer2"]
 layout_mode = 2
-icon = ExtResource("4_eh1bx")
-flat = true
+value = 100.0
+tick_count = 5
 
 [connection signal="button_up" from="VBoxContainer/Settings" to="." method="_on_settings_button_up"]
-[connection signal="button_up" from="Control/CenterContainer/VBoxContainer/music-switch" to="." method="_on_musicswitch_button_up"]
-[connection signal="button_up" from="Control/CenterContainer/VBoxContainer/music-switch" to="." method="_on_button_2_button_up"]
-[connection signal="button_up" from="Control/CenterContainer/VBoxContainer/sfx-switch" to="." method="_on_sfxswitch_button_up"]
+[connection signal="value_changed" from="VBoxContainer2/Music-Slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer2/SFX-Slider" to="." method="_on_sfx_slider_value_changed"]
