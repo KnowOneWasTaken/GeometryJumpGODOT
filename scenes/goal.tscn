@@ -1,15 +1,33 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmfp6di4l4ue4"]
+[gd_scene load_steps=9 format=3 uid="uid://dmfp6di4l4ue4"]
 
 [ext_resource type="Texture2D" uid="uid://bx23ss1ukw3u4" path="res://assets/original/goalGlow.png" id="1_8jop7"]
 [ext_resource type="Texture2D" uid="uid://brva4dh1ombkq" path="res://assets/original/checkpoint.png" id="2_6ncvw"]
 [ext_resource type="AudioStream" uid="uid://ccyxemm3o6wpl" path="res://assets/sounds/goal_sound.mp3" id="3_2j07x"]
 [ext_resource type="Script" path="res://scripts/Area2D.gd" id="3_fb7xk"]
+[ext_resource type="Texture2D" uid="uid://bs3j00502f8ro" path="res://assets/original/particleCheckpoint.png" id="5_etnlq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l710o"]
 size = Vector2(120, 120)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_livif"]
 size = Vector2(120, 6)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_n5kxm"]
+lifetime_randomness = 0.78
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -120, 0)
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 120.0
+emission_ring_radius = 60.0
+emission_ring_inner_radius = 50.0
+inherit_velocity_ratio = 1.837
+direction = Vector3(0, -1, 0)
+spread = 89.651
+flatness = 0.171
+initial_velocity_min = 0.75
+initial_velocity_max = 195.15
+gravity = Vector3(0, 981, 0)
 
 [node name="Goal" type="Node2D"]
 
@@ -37,15 +55,18 @@ bus = &"SFX"
 position = Vector2(0, -63)
 shape = SubResource("RectangleShape2D_livif")
 
-[node name="Label" type="Label" parent="Area2D"]
-offset_left = -61.0
-offset_top = -84.0
-offset_right = 60.0
-offset_bottom = -61.0
-text = "Here is the goal"
-
 [node name="Timer" type="Timer" parent="Area2D"]
 wait_time = 1.5
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(0, -60)
+scale = Vector2(0.5, 0.5)
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_n5kxm")
+texture = ExtResource("5_etnlq")
+randomness = 0.66
+visibility_rect = Rect2(-100, -100, 50, 50)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="timeout" from="Area2D/Timer" to="Area2D" method="_on_timer_timeout"]

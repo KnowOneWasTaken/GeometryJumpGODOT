@@ -1,4 +1,6 @@
 extends Control
+@onready var tab_change_sound = $tabChangeSound
+@onready var timer = $Timer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,4 +14,9 @@ func _process(_delta):
 
 
 func _on_exit_button_up():
+	tab_change_sound.play()
+	timer.start()
+
+
+func _on_timer_timeout():
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")

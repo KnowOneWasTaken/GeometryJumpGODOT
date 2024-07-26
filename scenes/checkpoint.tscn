@@ -1,33 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://dn0k5cvsfacg3"]
+[gd_scene load_steps=7 format=3 uid="uid://dn0k5cvsfacg3"]
 
 [ext_resource type="Script" path="res://scripts/Checkpoint.gd" id="1_emq64"]
 [ext_resource type="Texture2D" uid="uid://c8qj1nssq6os0" path="res://assets/original/checkpointGlow.png" id="2_db84o"]
 [ext_resource type="Texture2D" uid="uid://brva4dh1ombkq" path="res://assets/original/checkpoint.png" id="3_1afdw"]
 [ext_resource type="AudioStream" uid="uid://cs5767j2vdjl6" path="res://assets/sounds/goal.mp3" id="4_c1lgt"]
-[ext_resource type="Texture2D" uid="uid://bs3j00502f8ro" path="res://assets/original/particleCheckpoint.png" id="5_h0jgo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxyf0"]
 size = Vector2(120, 120)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ka8am"]
 size = Vector2(120, 6)
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_np5ey"]
-lifetime_randomness = 0.78
-particle_flag_disable_z = true
-emission_shape_offset = Vector3(0, -120, 0)
-emission_shape = 6
-emission_ring_axis = Vector3(0, 0, 1)
-emission_ring_height = 120.0
-emission_ring_radius = 60.0
-emission_ring_inner_radius = 50.0
-inherit_velocity_ratio = 1.837
-direction = Vector3(0, -1, 0)
-spread = 89.651
-flatness = 0.171
-initial_velocity_min = 0.75
-initial_velocity_max = 195.15
-gravity = Vector3(0, 981, 0)
 
 [node name="Checkpoint" type="Node2D"]
 script = ExtResource("1_emq64")
@@ -55,18 +37,4 @@ shape = SubResource("RectangleShape2D_ka8am")
 stream = ExtResource("4_c1lgt")
 bus = &"SFX"
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(0, -60)
-scale = Vector2(0.5, 0.5)
-emitting = false
-amount = 20
-process_material = SubResource("ParticleProcessMaterial_np5ey")
-texture = ExtResource("5_h0jgo")
-randomness = 0.66
-visibility_rect = Rect2(-100, -100, 50, 50)
-
-[node name="Timer" type="Timer" parent="GPUParticles2D"]
-wait_time = 0.471
-
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="timeout" from="GPUParticles2D/Timer" to="." method="_on_timer_timeout"]

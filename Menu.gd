@@ -15,8 +15,8 @@ func _process(_delta):
 
 
 func _on_button_button_up():
-	get_tree().change_scene_to_file("res://scenes/Level"+str(level)+".tscn")
 	tab_change_sound.play()
+	get_tree().change_scene_to_file("res://scenes/Level"+str(level)+".tscn")
 
 func _on_left_button_up():
 	if level > 1:
@@ -33,5 +33,5 @@ func updateLevelButton():
 	button.text = "          "+str(level)
 
 func _on_settings_button_up():
-	get_tree().change_scene_to_file("res://scenes/options.tscn")
 	tab_change_sound.play()
+	get_tree().change_scene_to_file("res://scenes/options.tscn")

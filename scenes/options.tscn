@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://4it5mpv3insv"]
+[gd_scene load_steps=5 format=3 uid="uid://4it5mpv3insv"]
 
 [ext_resource type="Script" path="res://scripts/options.gd" id="1_pe5yr"]
 [ext_resource type="Texture2D" uid="uid://cgmyatonbqks" path="res://assets/original/empty.png" id="2_7vncf"]
 [ext_resource type="Texture2D" uid="uid://cltykmxgxdblj" path="res://assets/original/settings.png" id="3_ov71l"]
+[ext_resource type="AudioStream" uid="uid://bv0ammc22was5" path="res://assets/sounds/tabChange.mp3" id="4_fubvc"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -65,6 +66,10 @@ horizontal_alignment = 1
 layout_mode = 2
 value = 100.0
 tick_count = 5
+
+[node name="tabChangeSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_fubvc")
+bus = &"SFX"
 
 [connection signal="button_up" from="VBoxContainer/Settings" to="." method="_on_settings_button_up"]
 [connection signal="value_changed" from="VBoxContainer2/Music-Slider" to="." method="_on_music_slider_value_changed"]

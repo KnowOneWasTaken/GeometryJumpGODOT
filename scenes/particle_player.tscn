@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpp741bbim2ma"]
+
+[ext_resource type="Script" path="res://ParticlePlayer.gd" id="2_ab068"]
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_qkadf"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xxqvs"]
+lifetime_randomness = 0.78
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -120, 0)
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 240.0
+emission_ring_radius = 240.0
+emission_ring_inner_radius = 200.0
+angle_min = -88.0
+angle_max = 81.5
+inherit_velocity_ratio = 1.837
+direction = Vector3(0, -1, 0)
+spread = 180.0
+flatness = 1.0
+initial_velocity_min = 350.29
+initial_velocity_max = 815.41
+angular_velocity_min = -16.2
+angular_velocity_max = 7.55
+directional_velocity_min = -300.4
+directional_velocity_max = 302.4
+directional_velocity_curve = SubResource("CurveXYZTexture_qkadf")
+gravity = Vector3(0, 981, 0)
+
+[node name="ParticlePlayer" type="GPUParticles2D"]
+position = Vector2(0, -60)
+scale = Vector2(0.1, 0.1)
+skew = -0.349066
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_xxqvs")
+preprocess = 0.2
+explosiveness = 1.0
+randomness = 0.47
+visibility_rect = Rect2(-100, -100, 20, 20)
+script = ExtResource("2_ab068")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.8
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,7 +1,6 @@
 extends Node2D
 @onready var checkpoint_sfx = $CheckpointSFX
-@onready var gpu_particles_2d = $GPUParticles2D
-@onready var timer = $GPUParticles2D/Timer
+var particlePlayer := load("res://scenes/particle_player.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,8 +17,6 @@ func _on_area_2d_body_entered(body):
 	if body.respawn_point != Vector2(position.x, position.y-120):
 		checkpoint_sfx.play()
 		body.respawn_point = Vector2(position.x, position.y-120)
-		gpu_particles_2d.emitting = true
-		timer.start()
-
-func _on_timer_timeout():
-	gpu_particles_2d.emitting = false
+		var newParticle = particlePlayer.instantiate()
+		add_child(newParticle)
+		newParticle.set_image(preload("res://assets/original/particleCheckpoint.png"))

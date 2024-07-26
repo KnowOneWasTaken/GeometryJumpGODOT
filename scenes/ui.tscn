@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bl68dtbhhyyyv"]
+[gd_scene load_steps=10 format=3 uid="uid://bl68dtbhhyyyv"]
 
 [ext_resource type="Texture2D" uid="uid://dhx0xak1ffv2o" path="res://assets/original/ButtonUP.png" id="1_5imky"]
 [ext_resource type="Script" path="res://scripts/MenuButtons.gd" id="1_lhhre"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cnpm0spahbgoi" path="res://assets/original/ButtonLEFT.png" id="2_h5s2f"]
 [ext_resource type="Texture2D" uid="uid://da3g8em58sloy" path="res://assets/original/ButtonUP_PRESSED.png" id="2_vj6g4"]
 [ext_resource type="Texture2D" uid="uid://c74opk83fbk5n" path="res://assets/original/ButtonRIGHT.png" id="3_28pfa"]
+[ext_resource type="AudioStream" uid="uid://bv0ammc22was5" path="res://assets/sounds/tabChange.mp3" id="3_as23c"]
 [ext_resource type="Texture2D" uid="uid://bg1708qjjubb" path="res://assets/original/ButtonLEFT_PRESSED.png" id="4_fpsv7"]
 [ext_resource type="Texture2D" uid="uid://b16mxfenedpd3" path="res://assets/original/ButtonRIGHT_PRESSED.png" id="6_j4188"]
 
@@ -34,6 +35,13 @@ icon = ExtResource("2_cw8dq")
 flat = true
 icon_alignment = 2
 expand_icon = true
+
+[node name="tabChangeSound" type="AudioStreamPlayer" parent="MarginContainer/MenuButtons"]
+stream = ExtResource("3_as23c")
+bus = &"SFX"
+
+[node name="Timer" type="Timer" parent="MarginContainer/MenuButtons"]
+wait_time = 0.15
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchors_preset = 7
@@ -70,3 +78,4 @@ visibility_mode = 1
 
 [connection signal="button_up" from="MarginContainer/MenuButtons/Exit" to="." method="_on_exit_button_up"]
 [connection signal="button_up" from="MarginContainer/MenuButtons/Exit" to="MarginContainer/MenuButtons" method="_on_exit_button_up"]
+[connection signal="timeout" from="MarginContainer/MenuButtons/Timer" to="MarginContainer/MenuButtons" method="_on_timer_timeout"]
