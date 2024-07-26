@@ -3,13 +3,16 @@ var timer = 0
 @onready var animation_player = $AnimationPlayer
 var time = 0
 var y = 0
+var particlePlayer := load("res://scenes/particle_player.tscn")
 
 func _ready():
 	y = position.y
 
 func _on_area_2d_body_entered(_body):
 	animation_player.play("CollectCoin")
-
+	var newParticle = particlePlayer.instantiate()
+	add_child(newParticle)
+	newParticle.set_image(preload("res://assets/original/particleStar.png"))
 #func _process(delta):
 
 func _process(delta):

@@ -7,17 +7,15 @@ var player
 
 #Gets called when player enters Kill Zone -> player killed
 func _on_body_entered(body):
-	#Slows down time and starts a timer that will trigger a reset
-	timer.start()
-	Engine.time_scale = slowMotionTime
-	audio_stream_player_2d.play()
-	body.visible = false
-	player = body
+	if not body.died:
+		#Slows down time and starts a timer that will trigger a reset
+		timer.start()
+		audio_stream_player_2d.play()
+		player = body
+		body.die()
 
 #gets called when timer runs out
 func _on_timer_timeout():
 	#resets the level
 	#get_tree().reload_current_scene()
 	player.reset()
-	player.visible = true
-	Engine.time_scale = 1
