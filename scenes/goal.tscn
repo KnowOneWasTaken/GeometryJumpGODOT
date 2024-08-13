@@ -55,9 +55,6 @@ bus = &"SFX"
 position = Vector2(0, -63)
 shape = SubResource("RectangleShape2D_livif")
 
-[node name="Timer" type="Timer" parent="Area2D"]
-wait_time = 1.5
-
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2(0, -60)
 scale = Vector2(0.5, 0.5)
@@ -69,4 +66,3 @@ randomness = 0.66
 visibility_rect = Rect2(-100, -100, 50, 50)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="timeout" from="Area2D/Timer" to="Area2D" method="_on_timer_timeout"]

@@ -14,6 +14,9 @@
 
 [node name="Map" type="Node" parent="."]
 
+[node name="Background-Black" parent="Map" instance=ExtResource("4_4ba0t")]
+position = Vector2(-2340, -300)
+
 [node name="KillZone" parent="Map" instance=ExtResource("2_brbnr")]
 position = Vector2(-60, 1740)
 
@@ -24,9 +27,6 @@ shape = SubResource("WorldBoundaryShape2D_g020f")
 
 [node name="Wall4" parent="Map/Blocks" instance=ExtResource("3_pyvrn")]
 position = Vector2(-300, 180)
-
-[node name="Background-Black" parent="Map" instance=ExtResource("4_4ba0t")]
-position = Vector2(-2340, -300)
 
 [node name="Player" parent="." instance=ExtResource("5_21myp")]
 position = Vector2(-300, 60)

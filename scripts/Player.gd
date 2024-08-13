@@ -10,7 +10,7 @@ const CUT_OFF_JUMP_VELOCITY = -1000
 const WALL_FRICTION = 0.93  # New constant for wall friction
 @onready var animated_sprite_2d = $AnimatedSprite2D
 var particlePlayer := load("res://scenes/particle_player.tscn")
-
+var won = false
 @onready var timer = $JumpFXTimer
 var play_jump_fx := true
 
@@ -57,8 +57,9 @@ func _physics_process(delta):
 		# Apply wall friction if the player is pressing against a wall
 		if is_on_wall() && direction != 0:
 			velocity.y *= WALL_FRICTION
-
-		move_and_slide()
+		
+		if not won:
+			move_and_slide()
 
 func reset():
 	position = respawn_point
@@ -78,3 +79,6 @@ func die():
 	add_child(newParticle)
 	newParticle.set_image(preload("res://assets/original/particlePlayer.png"))
 	
+func win():
+	velocity = Vector2(0, 0)
+	won = true

@@ -1,8 +1,8 @@
 extends Area2D
 @onready var goal_sfx = $GoalSFX
-@onready var timer = $Timer
 var goal_reached = false
 @onready var gpu_particles_2d = $"../GPUParticles2D"
+@onready var win_screen := load("res://scenes/win_screen.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,15 +14,13 @@ func _process(_delta):
 	pass
 
 
-func _on_body_entered(_body):
+func _on_body_entered(body):
 	gpu_particles_2d.emitting = true
 	if not goal_reached:
 		print("Goal reached!")
 		goal_sfx.play()
-		timer.start()
+		var screen = win_screen.instantiate()
+		add_child(screen)
+		body.won = true
 	goal_reached = true
-
-
-func _on_timer_timeout():
-	gpu_particles_2d.emitting = false
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	

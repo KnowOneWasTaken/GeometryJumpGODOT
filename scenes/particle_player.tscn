@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpp741bbim2ma"]
 
-[ext_resource type="Script" path="res://ParticlePlayer.gd" id="2_ab068"]
+[ext_resource type="Script" path="res://scripts/ParticlePlayer.gd" id="2_ab068"]
 
 [sub_resource type="CurveXYZTexture" id="CurveXYZTexture_qkadf"]
 
