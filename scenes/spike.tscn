@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://6owmrrvfixor"]
 
-[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://scenes/kill_zone.tscn" id="1_1atpp"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="1_1atpp"]
 [ext_resource type="Texture2D" uid="uid://c10c8qsoiecsb" path="res://assets/original/spikeGlow.png" id="2_86nu3"]
 [ext_resource type="Texture2D" uid="uid://fipc4rdw10xe" path="res://assets/original/spike.png" id="3_jc56q"]
 

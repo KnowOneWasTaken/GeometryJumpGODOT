@@ -35,8 +35,14 @@ stream = ExtResource("3_s20k3")
 bus = &"SFX"
 
 [node name="Camera2D" parent="." instance=ExtResource("4_7v1q2")]
+limit_bottom = 3000
 
 [node name="JumpFXTimer" type="Timer" parent="."]
 wait_time = 0.1
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="timeout" from="JumpFXTimer" to="." method="_on_jump_fx_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

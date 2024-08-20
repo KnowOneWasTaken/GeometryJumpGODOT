@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://blyktp75a2ymj"]
 
 [ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/ui.tscn" id="1_h6ek5"]
-[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://scenes/kill_zone.tscn" id="2_y2hq3"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="2_y2hq3"]
 [ext_resource type="Texture2D" uid="uid://d3rihro6cf7tn" path="res://assets/spriteSets/BlockGlowSet.png" id="3_212sr"]
 [ext_resource type="Texture2D" uid="uid://cholljylwu2f8" path="res://assets/spriteSets/BlockSet.png" id="4_odm4i"]
 [ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/spike.tscn" id="4_yxgq4"]

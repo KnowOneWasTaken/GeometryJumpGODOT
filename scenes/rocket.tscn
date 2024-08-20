@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://dy58aexs6174f"]
+
+[ext_resource type="Script" path="res://scripts/Rocket.gd" id="1_t4118"]
+[ext_resource type="Texture2D" uid="uid://dcmc2la0vyq3k" path="res://assets/original/Bullet1.png" id="2_74wpv"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_xkpf6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mp7j8"]
+size = Vector2(72, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s42e7"]
+size = Vector2(72, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hoiv5"]
+size = Vector2(72, 32)
+
+[node name="Rocket" type="Node2D"]
+script = ExtResource("1_t4118")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.113672, 0.113672)
+texture = ExtResource("2_74wpv")
+
+[node name="KillZone" parent="." instance=ExtResource("3_xkpf6")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+shape = SubResource("RectangleShape2D_mp7j8")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_s42e7")
+
+[node name="AreaWorld" type="Area2D" parent="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/AreaWorld"]
+shape = SubResource("RectangleShape2D_hoiv5")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 1.5
+
+[connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D/AreaWorld" to="." method="_on_area_world_body_entered"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

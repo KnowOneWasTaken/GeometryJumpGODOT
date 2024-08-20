@@ -13,13 +13,18 @@ var particlePlayer := load("res://scenes/particle_player.tscn")
 var won = false
 @onready var timer = $JumpFXTimer
 var play_jump_fx := true
+@onready var timer_die = $Timer
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 6
 @onready var jump_sfx = $JumpSFX
-@export var default_respawn_point := Vector2(-300, 60)
+var default_respawn_point := Vector2(-300, 60)
 var respawn_point := default_respawn_point
 var died := false
+
+func _ready():
+	default_respawn_point = position
+	respawn_point = default_respawn_point
 
 func _physics_process(delta):
 	if not died:
@@ -61,12 +66,6 @@ func _physics_process(delta):
 		if not won:
 			move_and_slide()
 
-func reset():
-	position = respawn_point
-	velocity = Vector2(0, 0)
-	died = false
-	animated_sprite_2d.visible = true
-
 func _on_jump_fx_timer_timeout():
 	play_jump_fx = true
 	
@@ -78,7 +77,15 @@ func die():
 	var newParticle = particlePlayer.instantiate()
 	add_child(newParticle)
 	newParticle.set_image(preload("res://assets/original/particlePlayer.png"))
+	timer_die.start()
 	
 func win():
 	velocity = Vector2(0, 0)
 	won = true
+
+
+func _on_timer_timeout():
+	position = respawn_point
+	velocity = Vector2(0, 0)
+	died = false
+	animated_sprite_2d.visible = true

@@ -1,14 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://deaby8g41bg3c"]
+[gd_scene load_steps=12 format=3 uid="uid://deaby8g41bg3c"]
 
 [ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/ui.tscn" id="1_ltm7d"]
 [ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/background_black.tscn" id="2_wvu1g"]
-[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://scenes/kill_zone.tscn" id="3_1xxd2"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_1xxd2"]
 [ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/wall.tscn" id="4_lqien"]
 [ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/spike.tscn" id="5_l46t3"]
 [ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/Player.tscn" id="6_3bx46"]
 [ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/goal.tscn" id="7_38d4i"]
 [ext_resource type="PackedScene" uid="uid://bbp2wdd8niytd" path="res://scenes/bubble_block.tscn" id="7_iyk2i"]
 [ext_resource type="PackedScene" uid="uid://0guh00w84dni" path="res://scenes/coin.tscn" id="8_pq5gn"]
+[ext_resource type="PackedScene" uid="uid://bfexpxjwr8xfx" path="res://scenes/rocket_launcher.tscn" id="11_yv8x2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rou2m"]
 
@@ -400,6 +401,9 @@ position = Vector2(180, -300)
 
 [node name="coin" parent="Map/Blocks" instance=ExtResource("8_pq5gn")]
 position = Vector2(2940, -1260)
+
+[node name="Rocket-Launcher" parent="Map/Blocks" instance=ExtResource("11_yv8x2")]
+position = Vector2(2580, -780)
 
 [node name="Player" parent="." instance=ExtResource("6_3bx46")]
 position = Vector2(-300, 60)
