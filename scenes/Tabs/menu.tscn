@@ -1,15 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://ls4gn2jp3ogx"]
+[gd_scene load_steps=10 format=3 uid="uid://ls4gn2jp3ogx"]
 
-[ext_resource type="Script" path="res://scripts/Menu.gd" id="1_spb6w"]
-[ext_resource type="Texture2D" uid="uid://dlt7nutnsbthm" path="res://assets/original/left.png" id="2_gldfu"]
-[ext_resource type="Texture2D" uid="uid://cgmyatonbqks" path="res://assets/original/empty.png" id="2_vxot0"]
-[ext_resource type="Texture2D" uid="uid://bu21iu46pf57f" path="res://assets/original/BLevel1Glow.png" id="3_7j466"]
-[ext_resource type="Texture2D" uid="uid://c1fhixy3ppr13" path="res://assets/original/right.png" id="3_cscdo"]
-[ext_resource type="Texture2D" uid="uid://o5txwqh1olvk" path="res://assets/original/BLevelXEmpty.png" id="5_ipgel"]
-[ext_resource type="Texture2D" uid="uid://cltykmxgxdblj" path="res://assets/original/settings.png" id="7_0dlo1"]
-[ext_resource type="Texture2D" uid="uid://bbhggnuww5mxe" path="res://assets/original/Logo.png" id="8_4c1y5"]
-[ext_resource type="AudioStream" uid="uid://13g1x2kqvbqf" path="res://assets/sounds/click interface.mp3" id="9_2jfxu"]
-[ext_resource type="AudioStream" uid="uid://bv0ammc22was5" path="res://assets/sounds/tabChange.mp3" id="10_of3ch"]
+[ext_resource type="Script" path="res://scripts/Menu.gd" id="1_7qtnw"]
+[ext_resource type="Texture2D" uid="uid://cgmyatonbqks" path="res://assets/original/empty.png" id="2_ilbwe"]
+[ext_resource type="Texture2D" uid="uid://dlt7nutnsbthm" path="res://assets/original/left.png" id="3_lsfw5"]
+[ext_resource type="Texture2D" uid="uid://c1fhixy3ppr13" path="res://assets/original/right.png" id="4_8a5hb"]
+[ext_resource type="Texture2D" uid="uid://o5txwqh1olvk" path="res://assets/original/BLevelXEmpty.png" id="5_2jhlf"]
+[ext_resource type="Texture2D" uid="uid://bu21iu46pf57f" path="res://assets/original/BLevel1Glow.png" id="6_eetwa"]
+[ext_resource type="Texture2D" uid="uid://cltykmxgxdblj" path="res://assets/original/settings.png" id="7_rbs06"]
+[ext_resource type="Texture2D" uid="uid://bbhggnuww5mxe" path="res://assets/original/Logo.png" id="8_1pny3"]
+[ext_resource type="AudioStream" uid="uid://13g1x2kqvbqf" path="res://assets/sounds/click interface.mp3" id="9_ru2iw"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -18,14 +17,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_spb6w")
+script = ExtResource("1_7qtnw")
 metadata/Level = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -2
 position = Vector2(17452, 3340)
 scale = Vector2(1706, 1177.33)
-texture = ExtResource("2_vxot0")
+texture = ExtResource("2_ilbwe")
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
 layout_mode = 1
@@ -41,13 +40,13 @@ offset_bottom = 220.0
 
 [node name="Left" type="Button" parent="HSplitContainer"]
 layout_mode = 2
-icon = ExtResource("2_gldfu")
+icon = ExtResource("3_lsfw5")
 flat = true
 
 [node name="Right" type="Button" parent="HSplitContainer"]
 layout_direction = 3
 layout_mode = 2
-icon = ExtResource("3_cscdo")
+icon = ExtResource("4_8a5hb")
 flat = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -72,14 +71,14 @@ tooltip_text = "Play this level"
 layout_mode = 2
 theme_override_font_sizes/font_size = 160
 text = "Level 1"
-icon = ExtResource("5_ipgel")
+icon = ExtResource("5_2jhlf")
 flat = true
 icon_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/Button"]
 z_index = -1
 position = Vector2(324, 236)
-texture = ExtResource("3_7j466")
+texture = ExtResource("6_eetwa")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_direction = 3
@@ -89,7 +88,7 @@ offset_bottom = 208.0
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("7_0dlo1")
+icon = ExtResource("7_rbs06")
 flat = true
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
@@ -106,14 +105,10 @@ offset_bottom = 208.0
 
 [node name="Sprite2D" type="Sprite2D" parent="CenterContainer"]
 position = Vector2(540, 700)
-texture = ExtResource("8_4c1y5")
+texture = ExtResource("8_1pny3")
 
 [node name="ClickButtonSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_2jfxu")
-bus = &"SFX"
-
-[node name="tabChangeSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_of3ch")
+stream = ExtResource("9_ru2iw")
 bus = &"SFX"
 
 [connection signal="button_up" from="HSplitContainer/Left" to="." method="_on_left_button_up"]

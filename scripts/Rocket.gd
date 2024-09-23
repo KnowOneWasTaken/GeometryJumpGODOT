@@ -7,6 +7,8 @@ var particlePlayer := load("res://scenes/particle_player.tscn")
 @onready var sprite_2d = $Sprite2D
 var exploded := false
 @onready var kill_zone = $KillZone
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+var player
 
 
 # Called when the node enters the scene tree for the first time.
@@ -27,6 +29,9 @@ func _on_timer_timeout():
 
 
 func _on_area_2d_body_entered(body):
+	if not body.died and not body.won:
+		player = body
+		player.die()
 	explode()
 
 
@@ -39,6 +44,7 @@ func _on_area_world_body_entered(body):
 
 func explode():
 	if not exploded:
+		audio_stream_player_2d.play()
 		var newParticle = particlePlayer.instantiate()
 		add_child(newParticle)
 		newParticle.set_image(preload("res://assets/original/particleBullet.png"))
@@ -46,3 +52,6 @@ func explode():
 		exploded = true
 		timer_2.start()
 		kill_zone.queue_free()
+
+func rotate_rocket(direc):
+		rotate(atan(direc.y/direc.x))

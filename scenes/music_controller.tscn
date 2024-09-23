@@ -1,20 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdrsrble5ffxj"]
+[gd_scene load_steps=2 format=3 uid="uid://bdrsrble5ffxj"]
 
 [ext_resource type="Script" path="res://scripts/MusicController.gd" id="1_0m46p"]
-
-[sub_resource type="GDScript" id="GDScript_e8d5u"]
-script/source = "extends AudioStreamPlayer
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
-"
 
 [node name="MusicController" type="Control"]
 layout_mode = 3
@@ -27,4 +13,3 @@ script = ExtResource("1_0m46p")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 bus = &"Music"
-script = SubResource("GDScript_e8d5u")

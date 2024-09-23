@@ -1,3 +1,4 @@
+# Goal -> Goal
 extends Area2D
 @onready var goal_sfx = $GoalSFX
 var goal_reached = false
@@ -19,8 +20,9 @@ func _on_body_entered(body):
 	if not goal_reached:
 		print("Goal reached!")
 		goal_sfx.play()
-		var screen = win_screen.instantiate()
-		add_child(screen)
+		body.get_parent().get_node("UI").win()
+		#var screen = win_screen.instantiate()
+		#add_child(screen)
 		body.won = true
 	goal_reached = true
 	

@@ -1,3 +1,4 @@
+# winscreen
 extends Node2D
 
 
@@ -7,11 +8,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
 func _on_button_button_up():
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	#get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().change_tab_to_menu_from_level()
+	get_parent().get_parent().close_level()
 	queue_free()
-

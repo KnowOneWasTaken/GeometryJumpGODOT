@@ -4,7 +4,7 @@ extends Node2D
 @export var offset := 0.01
 @export var reload := 2.0
 @onready var timer = $Timer
-var rocket := load("res://scenes/rocket.tscn")
+var rocket := load("res://scenes/LevelObjects/rocket.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,5 +21,6 @@ func _on_timer_timeout():
 	add_child(newRocket)
 	newRocket.direction = direction
 	newRocket.speed = speed
+	newRocket.rotate_rocket(direction)
 	timer.wait_time = reload
 	timer.start()

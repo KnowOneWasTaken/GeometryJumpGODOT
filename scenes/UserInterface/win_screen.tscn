@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://cgbiq2rucufgt"]
 
-[ext_resource type="Script" path="res://scripts/win_screen.gd" id="2_pptak"]
-[ext_resource type="Texture2D" uid="uid://cj45na5rb1ols" path="res://assets/original/goalAnimationBackground.png" id="2_rl3na"]
-[ext_resource type="Texture2D" uid="uid://b8o5tfu7tduux" path="res://assets/original/ok.png" id="3_vyg87"]
+[ext_resource type="Texture2D" uid="uid://cj45na5rb1ols" path="res://assets/original/goalAnimationBackground.png" id="1_34p2r"]
+[ext_resource type="Script" path="res://scripts/win_screen.gd" id="2_mot58"]
+[ext_resource type="Texture2D" uid="uid://b8o5tfu7tduux" path="res://assets/original/ok.png" id="3_nb7b4"]
 
-[node name="Sprite2D" type="Sprite2D"]
+[node name="Winscreen" type="Sprite2D"]
 z_index = 2
-texture = ExtResource("2_rl3na")
-script = ExtResource("2_pptak")
+texture = ExtResource("1_34p2r")
+script = ExtResource("2_mot58")
 
 [node name="Label" type="Label" parent="."]
 z_index = 4
@@ -24,7 +24,7 @@ offset_left = -200.0
 offset_top = 270.0
 offset_right = 208.0
 offset_bottom = 478.0
-icon = ExtResource("3_vyg87")
+icon = ExtResource("3_nb7b4")
 flat = true
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

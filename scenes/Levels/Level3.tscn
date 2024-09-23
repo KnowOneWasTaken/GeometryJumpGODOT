@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://b84kanjf8qi2r"]
 
-[ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/ui.tscn" id="1_5qlyv"]
+[ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_5qlyv"]
 [ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="2_xvt8n"]
-[ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/wall.tscn" id="3_mvrud"]
-[ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/background_black.tscn" id="4_jfpni"]
-[ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/goal.tscn" id="4_pd6ha"]
-[ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/Player.tscn" id="5_7yrih"]
-[ext_resource type="PackedScene" uid="uid://0guh00w84dni" path="res://scenes/coin.tscn" id="5_pb8vp"]
-[ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/spike.tscn" id="6_oeqi2"]
+[ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/Blocks/wall.tscn" id="3_mvrud"]
+[ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="4_jfpni"]
+[ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/Blocks/goal.tscn" id="4_pd6ha"]
+[ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/LevelObjects/Player.tscn" id="5_7yrih"]
+[ext_resource type="PackedScene" uid="uid://0guh00w84dni" path="res://scenes/Blocks/coin.tscn" id="5_pb8vp"]
+[ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/Blocks/spike.tscn" id="6_oeqi2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ymmyq"]
 

@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://bjwlkjod4gi3l"]
 
-[ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/ui.tscn" id="1_hq3tu"]
-[ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/background_black.tscn" id="2_67c71"]
+[ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_hq3tu"]
+[ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="2_67c71"]
 [ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_yewnx"]
-[ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/wall.tscn" id="4_t032n"]
-[ext_resource type="PackedScene" uid="uid://bbp2wdd8niytd" path="res://scenes/bubble_block.tscn" id="5_bcg3n"]
-[ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/Player.tscn" id="6_1ybk1"]
-[ext_resource type="PackedScene" uid="uid://nu0fu6g64845" path="res://scenes/up_block.tscn" id="7_b4my1"]
-[ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/spike.tscn" id="7_etf5y"]
-[ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/goal.tscn" id="8_w6t32"]
-[ext_resource type="PackedScene" uid="uid://0guh00w84dni" path="res://scenes/coin.tscn" id="9_grptv"]
+[ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/Blocks/wall.tscn" id="4_t032n"]
+[ext_resource type="PackedScene" uid="uid://bbp2wdd8niytd" path="res://scenes/Blocks/bubble_block.tscn" id="5_bcg3n"]
+[ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/LevelObjects/Player.tscn" id="6_1ybk1"]
+[ext_resource type="PackedScene" uid="uid://nu0fu6g64845" path="res://scenes/Blocks/up_block.tscn" id="7_b4my1"]
+[ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/Blocks/spike.tscn" id="7_etf5y"]
+[ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/Blocks/goal.tscn" id="8_w6t32"]
+[ext_resource type="PackedScene" uid="uid://0guh00w84dni" path="res://scenes/Blocks/coin.tscn" id="9_grptv"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_um2aq"]
 
@@ -21,7 +21,7 @@ position = Vector2(-120, 720)
 [node name="Map" type="Node" parent="."]
 
 [node name="Background-Black" parent="Map" instance=ExtResource("2_67c71")]
-position = Vector2(-2340, -300)
+position = Vector2(-2700, -300)
 
 [node name="KillZone" parent="Map" instance=ExtResource("3_yewnx")]
 position = Vector2(-60, 1740)
@@ -106,14 +106,11 @@ position = Vector2(660, -2340)
 [node name="Wall27" parent="Map/Blocks" instance=ExtResource("4_t032n")]
 position = Vector2(660, -2460)
 
-[node name="Wall28" parent="Map/Blocks" instance=ExtResource("4_t032n")]
+[node name="Wall29" parent="Map/Blocks" instance=ExtResource("4_t032n")]
 position = Vector2(660, -2580)
 
-[node name="Wall29" parent="Map/Blocks" instance=ExtResource("4_t032n")]
-position = Vector2(660, -2700)
-
 [node name="Wall17" parent="Map/Blocks" instance=ExtResource("4_t032n")]
-position = Vector2(540, -2700)
+position = Vector2(540, -2580)
 
 [node name="BubbleBlock" parent="Map/Blocks" instance=ExtResource("5_bcg3n")]
 position = Vector2(-420, 660)
@@ -146,10 +143,6 @@ position = Vector2(420, -1860)
 boost = 5880
 
 [node name="UpBlock10" parent="Map/Blocks" instance=ExtResource("7_b4my1")]
-position = Vector2(420, -2100)
-boost = 5880
-
-[node name="UpBlock11" parent="Map/Blocks" instance=ExtResource("7_b4my1")]
 position = Vector2(420, -2100)
 boost = 5880
 
@@ -200,12 +193,8 @@ rotation = -1.5708
 position = Vector2(540, -2340)
 rotation = -1.5708
 
-[node name="Spike12" parent="Map/Blocks" instance=ExtResource("7_etf5y")]
-position = Vector2(540, -2580)
-rotation = -1.5708
-
 [node name="Goal" parent="Map/Blocks" instance=ExtResource("8_w6t32")]
-position = Vector2(780, -2700)
+position = Vector2(780, -2580)
 
 [node name="coin" parent="Map/Blocks" instance=ExtResource("9_grptv")]
 position = Vector2(60, -2220)
