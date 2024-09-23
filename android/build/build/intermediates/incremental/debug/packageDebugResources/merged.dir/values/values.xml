@@ -2,8 +2,14 @@
 <resources>
     <string name="godot_project_name_string">GeometryJump</string>
     <style name="GodotAppMainTheme" parent="@android:style/Theme.Black.NoTitleBar"/>
-    <style name="GodotAppSplashTheme" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
-		<item name="android:windowBackground">@drawable/splash_drawable</item>
-		<item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    <style name="GodotAppSplashTheme" parent="Theme.SplashScreen">
+		
+		<item name="android:windowSplashScreenBackground">@mipmap/icon_background</item>
+
+		
+		<item name="windowSplashScreenAnimatedIcon">@mipmap/icon_foreground</item>
+
+		
+		<item name="postSplashScreenTheme">@style/GodotAppMainTheme</item>
 	</style>
 </resources>

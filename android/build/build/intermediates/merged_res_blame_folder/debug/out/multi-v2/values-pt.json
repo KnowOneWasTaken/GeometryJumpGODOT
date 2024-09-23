@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.godot.game-mergeDebugResources-16:/values-pt/values-pt.xml",
+            "outputFile": "com.godot.game-mergeDebugResources-17:/values-pt/values-pt.xml",
             "map": [
                 {
                     "source": "/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/res/values-pt/godot_project_name_string.xml",

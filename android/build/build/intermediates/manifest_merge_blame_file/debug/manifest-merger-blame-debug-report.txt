@@ -44,7 +44,7 @@
 28-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/src/debug/AndroidManifest.xml:12:111-137
 29
 30    <application
-30-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:18:5-52:19
+30-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:18:5-56:19
 31        android:allowBackup="false"
 31-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:20:9-36
 32        android:appCategory="game"
@@ -64,138 +64,144 @@
 40        android:requestLegacyExternalStorage="false" >
 40-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:25:9-53
 41        <activity
-41-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:33:9-50:20
+41-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:37:9-54:20
 42            android:name="com.godot.game.GodotApp"
-42-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:34:13-37
+42-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:38:13-37
 43            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
-43-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:41:13-141
+43-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:45:13-141
 44            android:excludeFromRecents="false"
-44-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:38:13-47
+44-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:42:13-47
 45            android:exported="true"
-45-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:39:13-36
+45-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:43:13-36
 46            android:label="@string/godot_project_name_string"
-46-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:35:13-62
+46-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:39:13-62
 47            android:launchMode="singleInstancePerTask"
-47-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:37:13-55
+47-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:41:13-55
 48            android:resizeableActivity="true"
-48-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:42:13-47
+48-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:46:13-47
 49            android:screenOrientation="portrait"
-49-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:40:13-50
+49-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:44:13-50
 50            android:theme="@style/GodotAppSplashTheme" >
-50-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:36:13-55
+50-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:40:13-55
 51            <intent-filter>
 51-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/src/debug/AndroidManifest.xml:24:13-29:29
 52                <action android:name="android.intent.action.MAIN" />
-52-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:46:17-69
-52-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:46:25-66
+52-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:50:17-69
+52-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:50:25-66
 53
 54                <category android:name="android.intent.category.DEFAULT" />
-54-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:47:17-76
-54-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:47:27-73
+54-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:51:17-76
+54-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:51:27-73
 55                <category android:name="android.intent.category.LAUNCHER" />
-55-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:48:17-77
-55-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:48:27-74
+55-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:52:17-77
+55-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:52:27-74
 56                <category android:name="android.intent.category.HOME" />
 56-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/src/debug/AndroidManifest.xml:28:17-73
 56-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/src/debug/AndroidManifest.xml:28:27-70
 57            </intent-filter>
 58        </activity>
-59        <!-- Records the version of the Godot editor used for building -->
-60        <meta-data
-61            android:name="org.godotengine.editor.version"
-62            android:value="4.2.2.stable" /> <!-- Records the version of the Godot library -->
+59
+60        <profileable
+60-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:27:9-30:36
+61            android:enabled="true"
+61-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:29:13-35
+62            android:shell="true" /> <!-- Records the version of the Godot editor used for building -->
+62-->/home/philipp/Dokumente/GitHub/GeometryJumpGODOT/android/build/AndroidManifest.xml:28:13-33
 63        <meta-data
-63-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:12:9-14:44
-64            android:name="org.godotengine.library.version"
-64-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:13:13-59
-65            android:value="4.2.2.stable" />
-65-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:14:13-41
-66
-67        <service android:name="org.godotengine.godot.GodotDownloaderService" />
-67-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:16:9-80
-67-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:16:18-77
-68
-69        <activity
-69-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:18:9-22:75
-70            android:name="org.godotengine.godot.utils.ProcessPhoenix"
-70-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:19:13-70
-71            android:exported="false"
-71-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:20:13-37
-72            android:process=":phoenix"
-72-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:21:13-39
-73            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-73-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:22:13-72
-74
-75        <provider
-75-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:24:9-32:20
-76            android:name="androidx.core.content.FileProvider"
-76-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:25:13-62
-77            android:authorities="com.geometryjump_gdot.geometryjump.fileprovider"
-77-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:26:13-64
-78            android:exported="false"
-78-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:27:13-37
-79            android:grantUriPermissions="true" >
-79-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:28:13-47
-80            <meta-data
-80-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:29:13-31:64
-81                android:name="android.support.FILE_PROVIDER_PATHS"
-81-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:30:17-67
-82                android:resource="@xml/godot_provider_paths" />
-82-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/1d2f4d75c034fbcf1699ed1528521307/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:31:17-61
-83        </provider>
-84        <provider
-84-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
-85            android:name="androidx.startup.InitializationProvider"
-85-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:25:13-67
-86            android:authorities="com.geometryjump_gdot.geometryjump.androidx-startup"
-86-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:26:13-68
-87            android:exported="false" >
-87-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:27:13-37
-88            <meta-data
-88-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-89                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-89-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-90                android:value="androidx.startup" />
-90-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-91        </provider>
-92
-93        <receiver
-93-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-94            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-94-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-95            android:directBootAware="false"
-95-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-96            android:enabled="true"
-96-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-97            android:exported="true"
-97-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-98            android:permission="android.permission.DUMP" >
-98-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-99            <intent-filter>
-99-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-100                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-100-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-100-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-101            </intent-filter>
+64            android:name="org.godotengine.editor.version"
+65            android:value="4.3.stable" /> <!-- Records the version of the Godot library -->
+66        <meta-data
+66-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:12:9-14:44
+67            android:name="org.godotengine.library.version"
+67-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:13:13-59
+68            android:value="4.3.0.stable" />
+68-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:14:13-41
+69
+70        <service android:name="org.godotengine.godot.GodotDownloaderService" />
+70-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:16:9-80
+70-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:16:18-77
+71
+72        <activity
+72-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:18:9-22:75
+73            android:name="org.godotengine.godot.utils.ProcessPhoenix"
+73-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:19:13-70
+74            android:exported="false"
+74-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:20:13-37
+75            android:process=":phoenix"
+75-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:21:13-39
+76            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+76-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:22:13-72
+77
+78        <provider
+78-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:24:9-32:20
+79            android:name="androidx.core.content.FileProvider"
+79-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:25:13-62
+80            android:authorities="com.geometryjump_gdot.geometryjump.fileprovider"
+80-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:26:13-64
+81            android:exported="false"
+81-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:27:13-37
+82            android:grantUriPermissions="true" >
+82-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:28:13-47
+83            <meta-data
+83-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:29:13-31:64
+84                android:name="android.support.FILE_PROVIDER_PATHS"
+84-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:30:17-67
+85                android:resource="@xml/godot_provider_paths" />
+85-->[godot-lib.template_debug.aar] /home/philipp/.gradle/caches/transforms-3/ec78cfc85816bd35fa163c180d5f4394/transformed/jetified-godot-lib.template_debug/AndroidManifest.xml:31:17-61
+86        </provider>
+87        <provider
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+88            android:name="androidx.startup.InitializationProvider"
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:25:13-67
+89            android:authorities="com.geometryjump_gdot.geometryjump.androidx-startup"
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:26:13-68
+90            android:exported="false" >
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:27:13-37
+91            <meta-data
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+92                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+93                android:value="androidx.startup" />
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+94        </provider>
+95
+96        <receiver
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+97            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+98            android:directBootAware="false"
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+99            android:enabled="true"
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+100            android:exported="true"
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+101            android:permission="android.permission.DUMP" >
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
 102            <intent-filter>
-102-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-103                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-103-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-103-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+103                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+103-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+103-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
 104            </intent-filter>
 105            <intent-filter>
-105-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-106                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+106                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+106-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+106-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
 107            </intent-filter>
 108            <intent-filter>
-108-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-109                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/philipp/.gradle/caches/transforms-3/b72b7b82f0312570e02e9e180c961d22/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+108-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+109                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+109-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+109-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
 110            </intent-filter>
-111        </receiver>
-112    </application>
-113
-114</manifest>
+111            <intent-filter>
+111-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+112                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+112-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+112-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/philipp/.gradle/caches/transforms-3/618293b988a94b2ad64fc8615e872ffd/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+113            </intent-filter>
+114        </receiver>
+115    </application>
+116
+117</manifest>

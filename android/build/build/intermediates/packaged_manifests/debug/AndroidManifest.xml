@@ -56,13 +56,16 @@
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </activity>
-        <!-- Records the version of the Godot editor used for building -->
+
+        <profileable
+            android:enabled="true"
+            android:shell="true" /> <!-- Records the version of the Godot editor used for building -->
         <meta-data
             android:name="org.godotengine.editor.version"
-            android:value="4.2.2.stable" /> <!-- Records the version of the Godot library -->
+            android:value="4.3.stable" /> <!-- Records the version of the Godot library -->
         <meta-data
             android:name="org.godotengine.library.version"
-            android:value="4.2.2.stable" />
+            android:value="4.3.0.stable" />
 
         <service android:name="org.godotengine.godot.GodotDownloaderService" />
 
