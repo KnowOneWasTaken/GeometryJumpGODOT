@@ -9,22 +9,77 @@ z_index = 2
 texture = ExtResource("1_34p2r")
 script = ExtResource("2_mot58")
 
-[node name="Label" type="Label" parent="."]
-z_index = 4
-offset_left = -200.0
-offset_top = -510.0
-offset_right = 267.0
-offset_bottom = 339.0
-theme_override_font_sizes/font_size = 50
-text = "You have collected "
-
 [node name="Button" type="Button" parent="."]
 z_index = 4
-offset_left = -200.0
-offset_top = 270.0
-offset_right = 208.0
-offset_bottom = 478.0
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.846
+anchor_right = 0.504
+anchor_bottom = 0.846
+offset_left = -744.32
+offset_top = -643.68
+offset_right = -336.32
+offset_bottom = -435.68
 icon = ExtResource("3_nb7b4")
 flat = true
+
+[node name="Container" type="VBoxContainer" parent="."]
+offset_left = -540.0
+offset_top = -526.0
+offset_right = 540.0
+offset_bottom = 254.0
+
+[node name="Label" type="Label" parent="Container"]
+z_index = 4
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Level 0"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Container"]
+z_index = 4
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "You win"
+horizontal_alignment = 1
+
+[node name="spacer" type="Label" parent="Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+
+[node name="Label5" type="Label" parent="Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Your time:"
+horizontal_alignment = 1
+
+[node name="time" type="Label" parent="Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="spacer2" type="Label" parent="Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+
+[node name="Label3" type="Label" parent="Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "You have collected:"
+horizontal_alignment = 1
+
+[node name="coins" type="Label" parent="Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "0/0"
+horizontal_alignment = 1
+
+[node name="coins_text" type="Label" parent="Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "coins!"
+horizontal_alignment = 1
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

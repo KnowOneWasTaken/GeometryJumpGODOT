@@ -3,7 +3,6 @@ extends Area2D
 @onready var goal_sfx = $GoalSFX
 var goal_reached = false
 @onready var gpu_particles_2d = $"../GPUParticles2D"
-@onready var win_screen := load("res://scenes/win_screen.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

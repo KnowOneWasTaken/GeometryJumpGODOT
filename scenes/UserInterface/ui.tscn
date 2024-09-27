@@ -80,5 +80,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="Label" type="Label" parent="."]
+offset_left = 32.0
+offset_right = 237.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 80
+text = "00:00"
+
 [connection signal="button_up" from="MarginContainer/MenuButtons/Exit" to="." method="_on_exit_button_up"]
 [connection signal="button_up" from="MarginContainer/MenuButtons/Exit" to="MarginContainer/MenuButtons" method="_on_exit_button_up"]

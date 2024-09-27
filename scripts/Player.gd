@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+# Player
 const SPEED = 80.0 * 45 * 1.4
 const JUMP_VELOCITY = -1900.0
 const MAX_SPEED = 900
@@ -14,20 +14,25 @@ var won = false
 @onready var timer = $JumpFXTimer
 var play_jump_fx := true
 @onready var timer_die = $Timer
+var time_since_death = 0.0
+var time_when_started = Time.get_ticks_msec()
+var collected_coins = 0
+var is_respawn_point_default = true
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 6
 @onready var jump_sfx = $JumpSFX
-var default_respawn_point := Vector2(-300, 60)
-var respawn_point := default_respawn_point
+var default_respawn_point
+var respawn_point
 var died := false
 
 func _ready():
 	default_respawn_point = position
 	respawn_point = default_respawn_point
-
 func _physics_process(delta):
 	if not died:
+		if not won:
+			time_since_death = Time.get_ticks_msec() - time_when_started
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta
@@ -89,3 +94,6 @@ func _on_timer_timeout():
 	velocity = Vector2(0, 0)
 	died = false
 	animated_sprite_2d.visible = true
+
+func coin_collected():
+	collected_coins += 1
