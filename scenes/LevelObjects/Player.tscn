@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dq5puheu774fb"]
+[gd_scene load_steps=8 format=3 uid="uid://dq5puheu774fb"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_f51j4"]
 [ext_resource type="Texture2D" uid="uid://6ivgj1st88ek" path="res://assets/original/player.png" id="2_51tad"]
 [ext_resource type="AudioStream" uid="uid://dftul3jla4c8m" path="res://assets/sounds/jump.mp3" id="3_s20k3"]
 [ext_resource type="PackedScene" uid="uid://b7kxdk0sfkbcf" path="res://scenes/LevelObjects/camera.tscn" id="4_7v1q2"]
+[ext_resource type="Texture2D" uid="uid://d3kr160kdbxfc" path="res://assets/original/player.jpg" id="5_7s2es"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmwyj"]
 size = Vector2(118, 117)
@@ -12,7 +13,16 @@ size = Vector2(118, 117)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("5_7s2es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7s2es")
+}, {
+"duration": 1.0,
 "texture": ExtResource("2_51tad")
+}, {
+"duration": 1.0,
+"texture": null
 }],
 "loop": true,
 "name": &"default",
@@ -28,6 +38,7 @@ position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_mmwyj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.242, 0.242)
 sprite_frames = SubResource("SpriteFrames_hccvp")
 
 [node name="JumpSFX" type="AudioStreamPlayer2D" parent="."]
@@ -43,6 +54,11 @@ wait_time = 0.1
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="Player" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("5_7s2es")
 
 [connection signal="timeout" from="JumpFXTimer" to="." method="_on_jump_fx_timer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,5 +1,6 @@
 # menu
 extends Control
+var levelAmount
 @export var level := 1
 @onready var button = $MarginContainer/VBoxContainer/Button
 @onready var audio_stream_player = $ClickButtonSound
@@ -7,6 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	levelAmount = get_parent().levelAmount
 	pass # Replace with function body.
 
 
@@ -26,16 +28,19 @@ func _on_left_button_up():
 		update_font_size()
 
 func _on_right_button_up():
-	level += 1
+	if level < levelAmount:
+		level += 1
 	updateLevelButton()
 	audio_stream_player.play()
-	update_font_size()
 
 func updateLevelButton():
 	button.text = "Level "+str(level)
+	update_font_size()
 
 func setLevel(lvl):
 	level = lvl
+	if lvl > levelAmount:
+		level = levelAmount
 	updateLevelButton()
 
 func _on_settings_button_up():

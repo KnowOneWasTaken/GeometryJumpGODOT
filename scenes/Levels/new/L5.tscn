@@ -1,0 +1,101 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0foh7e4x27go"]
+
+[ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_es1wp"]
+[ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="2_0o17a"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_1yxs8"]
+[ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/Blocks/wall.tscn" id="4_htwt3"]
+[ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/Blocks/spike.tscn" id="5_2bnx6"]
+[ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/Blocks/goal.tscn" id="6_3263d"]
+[ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/LevelObjects/Player.tscn" id="7_7aubg"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vgw3j"]
+
+[node name="L5" type="Node2D"]
+
+[node name="UI" parent="." instance=ExtResource("1_es1wp")]
+
+[node name="Map" type="Node" parent="."]
+
+[node name="Background-Black" parent="Map" instance=ExtResource("2_0o17a")]
+position = Vector2(-2340, -300)
+
+[node name="KillZone" parent="Map" instance=ExtResource("3_1yxs8")]
+position = Vector2(-60, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/KillZone"]
+visible = false
+shape = SubResource("WorldBoundaryShape2D_vgw3j")
+
+[node name="Blocks" type="Node" parent="Map"]
+
+[node name="Wall4" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(-300, 180)
+
+[node name="Wall5" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(-180, 180)
+
+[node name="Wall6" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(-60, 180)
+
+[node name="Wall7" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(60, 180)
+
+[node name="Wall8" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(180, 180)
+
+[node name="Wall9" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(300, 180)
+
+[node name="Wall11" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(420, 180)
+
+[node name="Wall10" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(420, -60)
+
+[node name="Wall12" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(540, -60)
+
+[node name="Wall13" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(660, -60)
+
+[node name="Wall14" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(780, -60)
+
+[node name="Wall15" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(900, -60)
+
+[node name="Wall16" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(1260, -60)
+
+[node name="Wall17" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(1380, -60)
+
+[node name="Wall18" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(1500, -60)
+
+[node name="Wall19" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(1620, -60)
+
+[node name="Wall20" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(1740, -60)
+
+[node name="Wall21" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(2100, -60)
+
+[node name="Wall22" parent="Map/Blocks" instance=ExtResource("4_htwt3")]
+position = Vector2(2340, -60)
+
+[node name="Spike" parent="Map/Blocks" instance=ExtResource("5_2bnx6")]
+position = Vector2(-60, 60)
+
+[node name="Spike2" parent="Map/Blocks" instance=ExtResource("5_2bnx6")]
+position = Vector2(660, -180)
+
+[node name="Spike3" parent="Map/Blocks" instance=ExtResource("5_2bnx6")]
+position = Vector2(1500, -180)
+
+[node name="Goal" parent="Map/Blocks" instance=ExtResource("6_3263d")]
+position = Vector2(2220, -60)
+
+[node name="Player" parent="." instance=ExtResource("7_7aubg")]
+position = Vector2(-300, 60)

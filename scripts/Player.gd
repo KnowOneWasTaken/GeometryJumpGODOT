@@ -81,15 +81,18 @@ func die():
 	animated_sprite_2d.visible = false
 	var newParticle = particlePlayer.instantiate()
 	add_child(newParticle)
-	newParticle.set_image(preload("res://assets/original/particlePlayer.png"))
+	newParticle.set_image(preload("res://assets/original/playerParticle2.jpg"))
+	newParticle.scale.x = 0.01
+	newParticle.scale.y = 0.01
 	timer_die.start()
 	
 func win():
 	velocity = Vector2(0, 0)
 	won = true
 
-
 func _on_timer_timeout():
+	if default_respawn_point == respawn_point:
+		time_when_started = Time.get_ticks_msec()
 	position = respawn_point
 	velocity = Vector2(0, 0)
 	died = false

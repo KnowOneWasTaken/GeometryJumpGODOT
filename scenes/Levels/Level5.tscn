@@ -17,6 +17,9 @@
 
 [node name="Map" type="Node" parent="."]
 
+[node name="Background-Black" parent="Map" instance=ExtResource("7_bmm50")]
+position = Vector2(-2340, -300)
+
 [node name="KillZone" parent="Map" instance=ExtResource("2_tkmre")]
 position = Vector2(-60, 1740)
 
@@ -167,9 +170,6 @@ position = Vector2(1020, -540)
 
 [node name="Goal" parent="Map/Blocks" instance=ExtResource("6_62uwp")]
 position = Vector2(1260, -900)
-
-[node name="Background-Black" parent="Map" instance=ExtResource("7_bmm50")]
-position = Vector2(-2340, -300)
 
 [node name="Player" parent="." instance=ExtResource("8_uygsc")]
 position = Vector2(-300, 60)

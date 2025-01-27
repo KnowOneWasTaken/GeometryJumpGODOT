@@ -1,0 +1,177 @@
+[gd_scene load_steps=10 format=3 uid="uid://4fok5qeu5rie"]
+
+[ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_wap0t"]
+[ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="2_1pwyy"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_s1xnc"]
+[ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/Blocks/wall.tscn" id="4_f27ts"]
+[ext_resource type="PackedScene" uid="uid://16mmuo5b3heq" path="res://scenes/Blocks/slime.tscn" id="5_qntuo"]
+[ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/Blocks/spike.tscn" id="6_cq8oo"]
+[ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/Blocks/goal.tscn" id="7_46o7c"]
+[ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/LevelObjects/Player.tscn" id="8_h2e0w"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2tbux"]
+
+[node name="L8" type="Node2D"]
+
+[node name="UI" parent="." instance=ExtResource("1_wap0t")]
+
+[node name="Map" type="Node" parent="."]
+
+[node name="Background-Black" parent="Map" instance=ExtResource("2_1pwyy")]
+position = Vector2(-2340, -300)
+
+[node name="KillZone" parent="Map" instance=ExtResource("3_s1xnc")]
+position = Vector2(-60, 1020)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/KillZone"]
+visible = false
+shape = SubResource("WorldBoundaryShape2D_2tbux")
+
+[node name="Blocks" type="Node" parent="Map"]
+
+[node name="Wall4" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(-300, 180)
+
+[node name="Wall5" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(-180, 180)
+
+[node name="Wall6" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(-60, 180)
+
+[node name="Wall7" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(-60, 300)
+
+[node name="Wall8" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(-60, 420)
+
+[node name="Wall9" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(180, 420)
+
+[node name="Wall10" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(180, 300)
+
+[node name="Wall11" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(180, 180)
+
+[node name="Wall12" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(300, 180)
+
+[node name="Wall13" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(420, 180)
+
+[node name="Wall14" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(300, -900)
+
+[node name="Wall15" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(420, -900)
+
+[node name="Wall17" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(420, -420)
+
+[node name="Wall18" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(540, -420)
+
+[node name="Wall19" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(660, -420)
+
+[node name="Wall20" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(780, -420)
+
+[node name="Wall21" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(900, -420)
+
+[node name="Wall22" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(1020, -420)
+
+[node name="Wall23" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(1140, -420)
+
+[node name="Wall24" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(1260, -420)
+
+[node name="Wall25" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(1380, -420)
+
+[node name="Wall16" parent="Map/Blocks" instance=ExtResource("4_f27ts")]
+position = Vector2(780, -900)
+
+[node name="Slime" parent="Map/Blocks" instance=ExtResource("5_qntuo")]
+position = Vector2(60, 420)
+SLIME_VELOCITY = -4000
+
+[node name="Spike" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(420, -540)
+
+[node name="Spike2" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(540, -540)
+
+[node name="Spike12" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(420, -300)
+rotation = 3.14159
+
+[node name="Spike13" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(540, -300)
+rotation = 3.14159
+
+[node name="Spike14" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(660, -300)
+rotation = 3.14159
+
+[node name="Spike15" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(780, -300)
+rotation = 3.14159
+
+[node name="Spike16" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(900, -300)
+rotation = 3.14159
+
+[node name="Spike17" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(1020, -300)
+rotation = 3.14159
+
+[node name="Spike18" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(1140, -300)
+rotation = 3.14159
+
+[node name="Spike19" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(1260, -300)
+rotation = 3.14159
+
+[node name="Spike20" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(1380, -300)
+rotation = 3.14159
+
+[node name="Spike3" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(660, -540)
+
+[node name="Spike4" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(780, -540)
+
+[node name="Spike5" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(900, -540)
+
+[node name="Spike6" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(1140, -540)
+
+[node name="Spike8" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(1260, -540)
+
+[node name="Spike9" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(1380, -540)
+
+[node name="Spike10" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(1500, -420)
+rotation = 1.5708
+
+[node name="Spike11" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(300, -420)
+rotation = -1.5708
+
+[node name="Spike7" parent="Map/Blocks" instance=ExtResource("6_cq8oo")]
+position = Vector2(1020, -540)
+
+[node name="Goal" parent="Map/Blocks" instance=ExtResource("7_46o7c")]
+position = Vector2(1260, -900)
+
+[node name="Player" parent="." instance=ExtResource("8_h2e0w")]
+position = Vector2(-300, 60)

@@ -18,6 +18,9 @@
 
 [node name="Map" type="Node" parent="."]
 
+[node name="Background-Black" parent="Map" instance=ExtResource("4_k3ms5")]
+position = Vector2(-2340, 180)
+
 [node name="KillZone" parent="Map" instance=ExtResource("2_m4578")]
 position = Vector2(-60, 1740)
 
@@ -63,13 +66,7 @@ position = Vector2(-300, 660)
 position = Vector2(180, 780)
 
 [node name="Wall17" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
-position = Vector2(180, 900)
-
-[node name="Wall18" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
 position = Vector2(300, 900)
-
-[node name="Wall19" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
-position = Vector2(420, 900)
 
 [node name="Wall20" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
 position = Vector2(540, 900)
@@ -80,11 +77,62 @@ position = Vector2(660, 900)
 [node name="Wall22" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
 position = Vector2(900, 900)
 
-[node name="Wall23" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
-position = Vector2(900, 660)
+[node name="Wall41" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(900, 1260)
+
+[node name="Wall43" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(780, 1620)
+
+[node name="Wall46" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(900, 1620)
+
+[node name="Wall50" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(900, 1500)
+
+[node name="Wall51" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(900, 1380)
+
+[node name="Wall44" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(660, 1380)
+
+[node name="Wall52" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(540, 1380)
+
+[node name="Wall53" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(540, 1620)
+
+[node name="Wall56" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(300, 1620)
+
+[node name="Wall57" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(300, 1500)
+
+[node name="Wall58" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(300, 1380)
+
+[node name="Wall45" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(540, 1260)
+
+[node name="Wall59" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(540, 1140)
+
+[node name="Wall60" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(540, 1020)
+
+[node name="Wall47" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(300, 1260)
+
+[node name="Wall48" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(300, 1140)
+
+[node name="Wall49" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(300, 1020)
 
 [node name="Wall24" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
 position = Vector2(900, 780)
+
+[node name="Wall42" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
+position = Vector2(900, 660)
 
 [node name="Wall25" parent="Map/Blocks" instance=ExtResource("3_2dahf")]
 position = Vector2(900, 540)
@@ -200,6 +248,9 @@ position = Vector2(180, 540)
 [node name="Spike19" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
 position = Vector2(180, 660)
 
+[node name="Spike23" parent="Map/Blocks" instance=ExtResource("4_uy2cv")]
+position = Vector2(660, 1260)
+
 [node name="coin" parent="Map/Blocks" instance=ExtResource("5_0msyl")]
 position = Vector2(540, 60)
 
@@ -218,11 +269,11 @@ position = Vector2(-1020, 660)
 [node name="Slime2" parent="Map/Blocks" instance=ExtResource("6_f0xgl")]
 position = Vector2(660, 540)
 
+[node name="Slime3" parent="Map/Blocks" instance=ExtResource("6_f0xgl")]
+position = Vector2(420, 1620)
+
 [node name="Goal" parent="Map/Blocks" instance=ExtResource("7_446rk")]
 position = Vector2(780, 900)
-
-[node name="Background-Black" parent="Map" instance=ExtResource("4_k3ms5")]
-position = Vector2(-2340, -180)
 
 [node name="Player" parent="." instance=ExtResource("5_16vtp")]
 position = Vector2(-300, 60)

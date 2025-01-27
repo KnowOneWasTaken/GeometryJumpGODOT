@@ -1,409 +1,74 @@
-[gd_scene load_steps=12 format=3 uid="uid://deaby8g41bg3c"]
+[gd_scene load_steps=11 format=3 uid="uid://cf6kh44h0cxt0"]
 
-[ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_ltm7d"]
-[ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="2_wvu1g"]
-[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_1xxd2"]
-[ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/Blocks/wall.tscn" id="4_lqien"]
-[ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/Blocks/spike.tscn" id="5_l46t3"]
-[ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/LevelObjects/Player.tscn" id="6_3bx46"]
-[ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/Blocks/goal.tscn" id="7_38d4i"]
-[ext_resource type="PackedScene" uid="uid://bbp2wdd8niytd" path="res://scenes/Blocks/bubble_block.tscn" id="7_iyk2i"]
-[ext_resource type="PackedScene" uid="uid://0guh00w84dni" path="res://scenes/Blocks/coin.tscn" id="8_pq5gn"]
-[ext_resource type="PackedScene" uid="uid://bfexpxjwr8xfx" path="res://scenes/Blocks/rocket_launcher.tscn" id="11_yv8x2"]
+[ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_l4dq1"]
+[ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="2_8onmy"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_pyif0"]
+[ext_resource type="PackedScene" uid="uid://bfexpxjwr8xfx" path="res://scenes/Blocks/rocket_launcher.tscn" id="4_vi8u6"]
+[ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/Blocks/goal.tscn" id="5_3y0bl"]
+[ext_resource type="PackedScene" uid="uid://0guh00w84dni" path="res://scenes/Blocks/coin.tscn" id="6_52c6m"]
+[ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/Blocks/wall.tscn" id="7_fxfoj"]
+[ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/Blocks/spike.tscn" id="8_lb1a3"]
+[ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/LevelObjects/Player.tscn" id="9_nq0y5"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rou2m"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uhhld"]
 
-[node name="Level11" type="Node2D"]
+[node name="Level13" type="Node2D"]
 
-[node name="UI" parent="." instance=ExtResource("1_ltm7d")]
+[node name="UI" parent="." instance=ExtResource("1_l4dq1")]
 
 [node name="Map" type="Node" parent="."]
 
-[node name="Background-Black" parent="Map" instance=ExtResource("2_wvu1g")]
-position = Vector2(-2940, 780)
+[node name="Background-Black" parent="Map" instance=ExtResource("2_8onmy")]
+position = Vector2(-2340, -300)
 
-[node name="KillZone" parent="Map" instance=ExtResource("3_1xxd2")]
+[node name="KillZone" parent="Map" instance=ExtResource("3_pyif0")]
 position = Vector2(-60, 1740)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/KillZone"]
-shape = SubResource("WorldBoundaryShape2D_rou2m")
+shape = SubResource("WorldBoundaryShape2D_uhhld")
 
 [node name="Blocks" type="Node" parent="Map"]
 
-[node name="Wall4" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-300, 180)
-
-[node name="Wall5" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(180, 60)
-
-[node name="Wall6" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(660, 540)
-
-[node name="Wall7" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1020, 540)
-
-[node name="Wall8" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1140, 540)
-
-[node name="Wall9" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1500, 300)
-
-[node name="Wall61" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(2580, -900)
-
-[node name="Wall62" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1380, -540)
-
-[node name="Wall63" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1020, -660)
-
-[node name="Wall64" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(780, -780)
-
-[node name="Wall65" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(420, -540)
-
-[node name="Wall55" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(2580, 420)
-
-[node name="Wall58" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(2700, 420)
-
-[node name="Wall59" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(2820, 420)
-
-[node name="Wall60" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(2940, 420)
-
-[node name="Wall10" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-540, 1140)
-
-[node name="Wall11" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-420, 1140)
-
-[node name="Wall12" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-300, 1140)
-
-[node name="Wall13" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-180, 1140)
-
-[node name="Wall14" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-60, 1140)
-
-[node name="Wall15" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(60, 1140)
-
-[node name="Wall16" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(180, 1140)
-
-[node name="Wall17" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(300, 1140)
-
-[node name="Wall18" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(420, 1140)
-
-[node name="Wall19" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(540, 1140)
-
-[node name="Wall20" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(660, 1140)
-
-[node name="Wall21" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(780, 1140)
-
-[node name="Wall22" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(900, 1140)
-
-[node name="Wall23" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1020, 1140)
-
-[node name="Wall24" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1140, 1140)
-
-[node name="Wall25" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1260, 1140)
-
-[node name="Wall26" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1380, 1140)
-
-[node name="Wall27" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1500, 1140)
-
-[node name="Wall28" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1620, 1140)
-
-[node name="Wall29" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1740, 1140)
-
-[node name="Wall30" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1860, 1140)
-
-[node name="Wall31" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(1980, 1140)
-
-[node name="Wall32" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(2100, 1140)
-
-[node name="Wall33" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(2220, 1140)
-
-[node name="Wall34" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-1500, 1140)
-
-[node name="Wall35" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-1380, 1140)
-
-[node name="Wall36" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-1260, 1140)
-
-[node name="Wall37" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-1140, 1140)
-
-[node name="Wall38" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-1020, 1140)
-
-[node name="Wall39" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-900, 1140)
-
-[node name="Wall40" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-780, 1140)
-
-[node name="Wall41" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(-660, 1140)
-
-[node name="Spike" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(-1500, 1020)
-
-[node name="Spike2" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(-1380, 1020)
-
-[node name="Spike3" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(-1260, 1020)
-
-[node name="Spike4" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(-1140, 1020)
-
-[node name="Spike5" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(-1020, 1020)
-
-[node name="Spike6" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(-900, 1020)
-
-[node name="Spike7" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(-780, 1020)
-
-[node name="Spike8" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(-660, 1020)
-
-[node name="Spike9" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(-540, 1020)
-
-[node name="Spike10" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(-420, 1020)
-
-[node name="Spike11" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(-300, 1020)
-
-[node name="Spike12" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(-180, 1020)
-
-[node name="Spike13" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(-60, 1020)
-
-[node name="Spike14" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(60, 1020)
-
-[node name="Spike15" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(180, 1020)
-
-[node name="Spike16" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(300, 1020)
-
-[node name="Spike46" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(180, -180)
-rotation = 3.14159
-
-[node name="Spike49" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(1740, -420)
-rotation = 3.14159
-
-[node name="Spike50" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(1860, -420)
-rotation = 3.14159
-
-[node name="Spike17" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(420, 1020)
-
-[node name="Spike18" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(540, 1020)
-
-[node name="Spike19" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(660, 1020)
-
-[node name="Spike20" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(780, 1020)
-
-[node name="Wall57" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(900, 540)
-
-[node name="Spike47" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(900, 420)
-
-[node name="Spike48" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(900, 420)
-
-[node name="Spike21" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(900, 1020)
-
-[node name="Spike22" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(1020, 1020)
-
-[node name="Spike23" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(1140, 1020)
-
-[node name="Spike24" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(1260, 1020)
-
-[node name="Spike25" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(1380, 1020)
-
-[node name="Spike26" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(1500, 1020)
-
-[node name="Spike27" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(1620, 1020)
-
-[node name="Spike28" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(1740, 1020)
-
-[node name="Spike29" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(1860, 1020)
-
-[node name="Spike30" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(1980, 1020)
-
-[node name="Spike31" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(2100, 1020)
-
-[node name="Spike32" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(2220, 1020)
-
-[node name="Wall42" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(2340, 1140)
-
-[node name="Wall43" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(2460, 1140)
-
-[node name="Wall44" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(2580, 1140)
-
-[node name="Wall45" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(2700, 1140)
-
-[node name="Wall46" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(2820, 1140)
-
-[node name="Wall47" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(2940, 1140)
-
-[node name="Wall48" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(3060, 1140)
-
-[node name="Wall49" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(3180, 1140)
-
-[node name="Wall50" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(3300, 1140)
-
-[node name="Wall51" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(3420, 1140)
-
-[node name="Wall52" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(3540, 1140)
-
-[node name="Wall53" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(3660, 1140)
-
-[node name="Wall54" parent="Map/Blocks" instance=ExtResource("4_lqien")]
-position = Vector2(3780, 1140)
-
-[node name="Spike33" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(2340, 1020)
-
-[node name="Spike34" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(2460, 1020)
-
-[node name="Spike35" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(2580, 1020)
-
-[node name="Spike36" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(2700, 1020)
-
-[node name="Spike37" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(2820, 1020)
-
-[node name="Spike38" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(2940, 1020)
-
-[node name="Spike39" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(3060, 1020)
-
-[node name="Spike40" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(3180, 1020)
-
-[node name="Spike41" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(3300, 1020)
-
-[node name="Spike42" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(3420, 1020)
-
-[node name="Spike43" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(3540, 1020)
-
-[node name="Spike44" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(3660, 1020)
-
-[node name="Spike45" parent="Map/Blocks" instance=ExtResource("5_l46t3")]
-position = Vector2(3780, 1020)
-
-[node name="BubbleBlock" parent="Map/Blocks" instance=ExtResource("7_iyk2i")]
+[node name="Rocket-Launcher" parent="Map/Blocks" instance=ExtResource("4_vi8u6")]
+position = Vector2(-660, -60)
+speed = 550.0
+reload = 1.0
+
+[node name="Rocket-Launcher2" parent="Map/Blocks" instance=ExtResource("4_vi8u6")]
+position = Vector2(1020, 300)
+direction = Vector2(0, -1)
+speed = 550.0
+reload = 1.0
+
+[node name="Goal" parent="Map/Blocks" instance=ExtResource("5_3y0bl")]
 position = Vector2(1860, -60)
 
-[node name="BubbleBlock5" parent="Map/Blocks" instance=ExtResource("7_iyk2i")]
-position = Vector2(1740, -540)
+[node name="coin" parent="Map/Blocks" instance=ExtResource("6_52c6m")]
+position = Vector2(-60, 60)
 
-[node name="BubbleBlock6" parent="Map/Blocks" instance=ExtResource("7_iyk2i")]
-position = Vector2(1740, -660)
+[node name="Wall4" parent="Map/Blocks" instance=ExtResource("7_fxfoj")]
+position = Vector2(-300, 180)
 
-[node name="BubbleBlock7" parent="Map/Blocks" instance=ExtResource("7_iyk2i")]
-position = Vector2(1860, -660)
+[node name="Wall5" parent="Map/Blocks" instance=ExtResource("7_fxfoj")]
+position = Vector2(180, 180)
 
-[node name="BubbleBlock8" parent="Map/Blocks" instance=ExtResource("7_iyk2i")]
-position = Vector2(1860, -540)
+[node name="Wall6" parent="Map/Blocks" instance=ExtResource("7_fxfoj")]
+position = Vector2(300, 180)
 
-[node name="BubbleBlock9" parent="Map/Blocks" instance=ExtResource("7_iyk2i")]
-position = Vector2(1860, -780)
+[node name="Wall7" parent="Map/Blocks" instance=ExtResource("7_fxfoj")]
+position = Vector2(420, 180)
 
-[node name="BubbleBlock10" parent="Map/Blocks" instance=ExtResource("7_iyk2i")]
-position = Vector2(1740, -780)
+[node name="Wall8" parent="Map/Blocks" instance=ExtResource("7_fxfoj")]
+position = Vector2(780, -60)
 
-[node name="BubbleBlock2" parent="Map/Blocks" instance=ExtResource("7_iyk2i")]
-position = Vector2(2940, 180)
+[node name="Wall9" parent="Map/Blocks" instance=ExtResource("7_fxfoj")]
+position = Vector2(1260, -60)
 
-[node name="BubbleBlock3" parent="Map/Blocks" instance=ExtResource("7_iyk2i")]
-position = Vector2(2940, -60)
+[node name="Wall10" parent="Map/Blocks" instance=ExtResource("7_fxfoj")]
+position = Vector2(1620, -60)
 
-[node name="BubbleBlock4" parent="Map/Blocks" instance=ExtResource("7_iyk2i")]
-position = Vector2(2940, -300)
+[node name="Spike" parent="Map/Blocks" instance=ExtResource("8_lb1a3")]
+position = Vector2(-660, -180)
 
-[node name="Goal" parent="Map/Blocks" instance=ExtResource("7_38d4i")]
-position = Vector2(180, -300)
-
-[node name="coin" parent="Map/Blocks" instance=ExtResource("8_pq5gn")]
-position = Vector2(2940, -1260)
-
-[node name="Rocket-Launcher" parent="Map/Blocks" instance=ExtResource("11_yv8x2")]
-position = Vector2(2580, -780)
-
-[node name="Player" parent="." instance=ExtResource("6_3bx46")]
+[node name="Player" parent="." instance=ExtResource("9_nq0y5")]
 position = Vector2(-300, 60)

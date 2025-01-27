@@ -45,11 +45,11 @@ func int_to_time(integer):
 
 func time_to_string(time):
 	days = floor(time/(1000*60*60*24))
-	hours = floor(time/(1000*60*60)) % 24
-	minutes = floor(time/(1000*60)) % 60
-	seconds = floor(time/(1000)) % 60
-	ms = floor((floor(time) % 1000) / 10)
-	#ms = floor(time) % 1000
+	hours = (int)(floor(time/(1000*60*60))) % 24
+	minutes = (int)(floor(time/(1000*60))) % 60
+	seconds = (int)(floor(time/(1000))) % 60
+	ms = floor(((int)(floor(time)) % 1000) / 10)
+	#ms = floor(time) % 1000d
 	
 	if days > 0:
 		return str(days)+":"+int_to_time(hours)+":"+int_to_time(minutes)+":"+int_to_time(seconds)+":"+int_to_time(ms)

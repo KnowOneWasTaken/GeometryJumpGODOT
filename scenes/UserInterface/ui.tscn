@@ -45,7 +45,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="JumpButton" type="TouchScreenButton" parent="HBoxContainer"]
-position = Vector2(-172, -320)
+position = Vector2(-172, -350)
 scale = Vector2(4.11428, 4.11428)
 texture_normal = ExtResource("1_5imky")
 texture_pressed = ExtResource("2_vj6g4")
@@ -53,7 +53,7 @@ action = "jump"
 visibility_mode = 1
 
 [node name="LeftButton" type="TouchScreenButton" parent="HBoxContainer"]
-position = Vector2(-476, -320)
+position = Vector2(-476, -350)
 scale = Vector2(4.11428, 4.11428)
 texture_normal = ExtResource("2_h5s2f")
 texture_pressed = ExtResource("4_fpsv7")
@@ -61,7 +61,7 @@ action = "move_left"
 visibility_mode = 1
 
 [node name="RightButton" type="TouchScreenButton" parent="HBoxContainer"]
-position = Vector2(132, -320)
+position = Vector2(132, -350)
 scale = Vector2(4.11428, 4.11428)
 texture_normal = ExtResource("3_28pfa")
 texture_pressed = ExtResource("6_j4188")
