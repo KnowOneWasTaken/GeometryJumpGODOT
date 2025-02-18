@@ -52,6 +52,7 @@ func explode():
 		exploded = true
 		timer_2.start()
 		kill_zone.queue_free()
+		speed = 120
 
 func rotate_rocket(direc):
 		rotate(atan(direc.y/direc.x))

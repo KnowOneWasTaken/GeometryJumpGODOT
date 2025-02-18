@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://1roqlcad7iq0"]
+
+[ext_resource type="Texture2D" uid="uid://dh5k8u0q2gqhs" path="res://assets/original/player-new.png" id="1_cuy0e"]
+
+[node name="Ghost" type="Node2D"]
+
+[node name="image" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.32549)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("1_cuy0e")

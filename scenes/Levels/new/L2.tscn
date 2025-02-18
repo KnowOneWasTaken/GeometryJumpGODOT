@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://baaxhaeel0y5x"]
+[gd_scene load_steps=9 format=3 uid="uid://baaxhaeel0y5x"]
 
 [ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_aph7q"]
 [ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="2_gle8j"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/Blocks/wall.tscn" id="4_s5v8p"]
 [ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/Blocks/goal.tscn" id="5_qurlq"]
 [ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/LevelObjects/Player.tscn" id="6_tcwqj"]
+[ext_resource type="PackedScene" uid="uid://1roqlcad7iq0" path="res://scenes/LevelObjects/ghost.tscn" id="7_7gkmh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yckbr"]
 
@@ -110,3 +111,5 @@ position = Vector2(1020, -300)
 
 [node name="Player" parent="." instance=ExtResource("6_tcwqj")]
 position = Vector2(-300, 60)
+
+[node name="Ghost" parent="." instance=ExtResource("7_7gkmh")]

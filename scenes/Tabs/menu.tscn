@@ -86,11 +86,10 @@ layout_mode = 0
 offset_right = 208.0
 offset_bottom = 208.0
 
-[node name="Settings" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-tooltip_text = "Settings"
-icon = ExtResource("7_rbs06")
-flat = true
+[node name="TouchScreenButton" type="TouchScreenButton" parent="VBoxContainer"]
+position = Vector2(5, 3)
+texture_normal = ExtResource("7_rbs06")
+texture_pressed = ExtResource("7_rbs06")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -115,4 +114,4 @@ bus = &"SFX"
 [connection signal="button_up" from="HSplitContainer/Left" to="." method="_on_left_button_up"]
 [connection signal="button_up" from="HSplitContainer/Right" to="." method="_on_right_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_button_up"]
-[connection signal="button_up" from="VBoxContainer/Settings" to="." method="_on_settings_button_up"]
+[connection signal="released" from="VBoxContainer/TouchScreenButton" to="." method="_on_touch_screen_button_released"]

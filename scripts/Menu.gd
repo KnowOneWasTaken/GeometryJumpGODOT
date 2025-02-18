@@ -44,7 +44,7 @@ func setLevel(lvl):
 	updateLevelButton()
 
 func _on_settings_button_up():
-	get_parent().change_tab_to_options()
+	pass
 
 func update_font_size():
 	if level < 10:
@@ -53,3 +53,7 @@ func update_font_size():
 		level_button.add_theme_font_size_override("font_size", 150)
 	else:
 		level_button.add_theme_font_size_override("font_size", 135)
+
+
+func _on_touch_screen_button_released() -> void:
+	get_parent().change_tab_to_options()

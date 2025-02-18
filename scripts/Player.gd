@@ -26,13 +26,61 @@ var default_respawn_point
 var respawn_point
 var died := false
 
+var player_movements = []  # Liste, um die Bewegungen des Spielers zu speichern
+var best_run = []
+var ghost_index = 0
+var ghost
+var level
+var started
+
 func _ready():
 	default_respawn_point = position
 	respawn_point = default_respawn_point
+	ghost =  $"../Ghost"
+	level = str(get_parent().get_parent().level)
+	load_best_run()
+	started = false
+	
+func parse_vector2(pos_string: String) -> Vector2:
+	pos_string = pos_string.lstrip("(").rstrip(")")  # Klammern entfernen
+	var parts = pos_string.split(", ")  # In X und Y aufteilen
+	if parts.size() == 2:
+		return Vector2(float(parts[0]), float(parts[1]))  # In Vector2 umwandeln
+	return Vector2.ZERO  # Falls Fehler, Rückgabe als (0, 0)
+	
 func _physics_process(delta):
+	if ghost_index < best_run.size():
+		var image = $"../Ghost/image"
+		var ghost_data = best_run[ghost_index]
+		while(ghost_data["time"] < time_since_death):
+			if ghost_index < best_run.size() - 1:
+				ghost_index += 1
+				ghost_data = best_run[ghost_index]
+			else:
+				break
+		print(time_since_death)
+		print(ghost_data["time"])
+		print("-")
+		print(ghost_index)
+		print(best_run.size())
+		print("##")
+		image.visible = true
+		var node_position = Vector2(ghost_data["position_x"], ghost_data["position_y"])
+		ghost.global_position = node_position  # Setzt die Position des Nodes
+		#ghost.rotation = ghost_data.get("rotation", 0) # Optional
+		if ghost_index >= best_run.size()-1:
+			image.visible = true
+	else:
+		var image = $"../Ghost/image"
+		image.visible = false
+
 	if not died:
 		if not won:
-			time_since_death = Time.get_ticks_msec() - time_when_started
+			if started:
+				time_since_death = Time.get_ticks_msec() - time_when_started
+			else:
+				time_when_started = Time.get_ticks_msec()
+				time_since_death = 0
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta
@@ -41,6 +89,7 @@ func _physics_process(delta):
 
 		# Handle jump.
 		if Input.is_action_pressed("jump") and is_on_floor():
+			started = true
 			if velocity.y > CUT_OFF_JUMP_VELOCITY:
 				velocity.y = JUMP_VELOCITY
 				if play_jump_fx:
@@ -51,6 +100,7 @@ func _physics_process(delta):
 		# Get the input direction and handle the movement/deceleration.
 		var direction = Input.get_axis("move_left", "move_right")
 		if direction:
+			started = true
 			if abs(velocity.x) < MAX_SPEED or not velocity.x / direction > 0:
 				# Readd the lost value due to friction when walking
 				if is_on_floor():
@@ -70,6 +120,44 @@ func _physics_process(delta):
 		
 		if not won:
 			move_and_slide()
+	record_player_move()
+	
+func load_best_run():
+	var file = FileAccess.open("user://best_run"+level+".json", FileAccess.READ)
+	if file:
+		var json_data = JSON.parse_string(file.get_as_text())
+		if json_data:
+			best_run = json_data
+			print("Loaded best run")
+		file.close()
+
+func record_player_move():
+	# Speichern der aktuellen Position des Spielers
+	player_movements.append({
+		"position_x": global_position.x,
+		"position_y": global_position.y,
+		"rotation": global_rotation, # if needed
+		"time": time_since_death, # Optional: store timestamps for better synchronization
+		"visible": $AnimatedSprite2D.visible
+	})
+
+func save_run(time):
+	var file = FileAccess.open("user://best_run"+level+".json", FileAccess.WRITE)
+	if file:
+		file.store_string(JSON.stringify(player_movements))
+		file.close()
+	else:
+		print("Failed to open file for writing")
+	save_time(time)
+
+func save_time(bestTime):
+	var time = FileAccess.open("user://best_time"+level+".json", FileAccess.WRITE)
+	if time:
+		time.store_string(JSON.stringify(JSON.stringify({"time": bestTime})))
+		time.close()
+	else:
+		print("Failed to open file for writing")
+
 
 func _on_jump_fx_timer_timeout():
 	play_jump_fx = true
@@ -87,12 +175,30 @@ func die():
 	timer_die.start()
 	
 func win():
+	var file = FileAccess.open("user://best_time"+level+".json", FileAccess.READ)
+	var best_time = 999999999999
+	if file:
+		var json = JSON.new()
+		var error = json.parse(file.get_as_text())
+		if error == OK:
+			var data_received = json.data
+			best_time = int(data_received)
+			file.close()
+	else:
+		print("Failed to open file for writing")
+	if best_time > time_since_death:
+		save_run(time_since_death)
+		print("Saved run")
 	velocity = Vector2(0, 0)
 	won = true
 
 func _on_timer_timeout():
 	if default_respawn_point == respawn_point:
 		time_when_started = Time.get_ticks_msec()
+		time_since_death = 0
+		player_movements.clear()
+		ghost_index = 0
+		started = false
 	position = respawn_point
 	velocity = Vector2(0, 0)
 	died = false

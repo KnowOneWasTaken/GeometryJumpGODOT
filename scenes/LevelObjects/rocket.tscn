@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://dy58aexs6174f"]
 
 [ext_resource type="Script" path="res://scripts/Rocket.gd" id="1_ft8r4"]
-[ext_resource type="Texture2D" uid="uid://dcmc2la0vyq3k" path="res://assets/original/Bullet1.png" id="2_qvtqb"]
 [ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_67sog"]
 [ext_resource type="AudioStream" uid="uid://d13iv4we617e6" path="res://assets/sounds/explosion.mp3" id="4_7wgf1"]
+[ext_resource type="Texture2D" uid="uid://c1y76ixltslso" path="res://assets/original/Bullet1-new.png" id="5_rbdi4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mp7j8"]
 size = Vector2(72, 32)
@@ -17,25 +17,21 @@ size = Vector2(72, 32)
 [node name="Rocket" type="Node2D"]
 script = ExtResource("1_ft8r4")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.113672, 0.113672)
-texture = ExtResource("2_qvtqb")
-
 [node name="KillZone" parent="." instance=ExtResource("3_67sog")]
 script = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
 shape = SubResource("RectangleShape2D_mp7j8")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="KillZone"]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone/Area2D"]
 shape = SubResource("RectangleShape2D_s42e7")
 
-[node name="AreaWorld" type="Area2D" parent="Area2D"]
+[node name="AreaWorld" type="Area2D" parent="KillZone/Area2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/AreaWorld"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone/Area2D/AreaWorld"]
 shape = SubResource("RectangleShape2D_hoiv5")
 
 [node name="Timer" type="Timer" parent="."]
@@ -47,7 +43,12 @@ wait_time = 1.5
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_7wgf1")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5.68434e-14, -2.38419e-07)
+scale = Vector2(0.133594, 0.133594)
+texture = ExtResource("5_rbdi4")
+
 [connection signal="body_entered" from="KillZone" to="." method="_on_kill_zone_body_entered"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D/AreaWorld" to="." method="_on_area_world_body_entered"]
+[connection signal="body_entered" from="KillZone/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="KillZone/Area2D/AreaWorld" to="." method="_on_area_world_body_entered"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

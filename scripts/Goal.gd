@@ -15,13 +15,13 @@ func _process(_delta):
 
 
 func _on_body_entered(body):
-	gpu_particles_2d.emitting = true
 	if not goal_reached:
+		body.win()
 		print("Goal reached!")
 		goal_sfx.play()
 		body.get_parent().get_node("UI").win()
 		#var screen = win_screen.instantiate()
 		#add_child(screen)
-		body.won = true
+	gpu_particles_2d.emitting = true
 	goal_reached = true
 	

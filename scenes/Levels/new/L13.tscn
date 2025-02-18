@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://6usik8blus3n"]
+[gd_scene load_steps=13 format=3 uid="uid://6usik8blus3n"]
 
 [ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_iw8ph"]
 [ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="2_rse4v"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://0guh00w84dni" path="res://scenes/Blocks/coin.tscn" id="8_wyvr4"]
 [ext_resource type="PackedScene" uid="uid://dn0k5cvsfacg3" path="res://scenes/Blocks/checkpoint.tscn" id="9_k7sq7"]
 [ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/LevelObjects/Player.tscn" id="10_f0fgn"]
+[ext_resource type="PackedScene" uid="uid://1roqlcad7iq0" path="res://scenes/LevelObjects/ghost.tscn" id="11_vyafm"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pqxdk"]
 distance = -840.0
@@ -27,7 +28,6 @@ position = Vector2(-2340, -300)
 position = Vector2(-180, 1020)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/KillZone"]
-visible = false
 position = Vector2(0, -840)
 shape = SubResource("WorldBoundaryShape2D_pqxdk")
 
@@ -125,3 +125,5 @@ position = Vector2(2220, 300)
 
 [node name="Player" parent="." instance=ExtResource("10_f0fgn")]
 position = Vector2(-300, 60)
+
+[node name="Ghost" parent="." instance=ExtResource("11_vyafm")]

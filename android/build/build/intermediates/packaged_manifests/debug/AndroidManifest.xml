@@ -3,10 +3,10 @@
     package="com.geometryjump_gdot.geometryjump"
     android:installLocation="auto"
     android:versionCode="2"
-    android:versionName="1.1-25y8w17a" >
+    android:versionName="1.1-25y8w18a" >
 
     <uses-sdk
-        android:minSdkVersion="30"
+        android:minSdkVersion="33"
         android:targetSdkVersion="34" />
 
     <supports-screens
