@@ -5,6 +5,7 @@ var levelAmount
 @onready var button = $MarginContainer/VBoxContainer/Button
 @onready var audio_stream_player = $ClickButtonSound
 @onready var level_button = $MarginContainer/VBoxContainer/Button
+@onready var coins_label: Label = $coins_label
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,6 +17,8 @@ func _ready():
 func _process(_delta):
 	pass
 
+func set_coins(amount):
+	coins_label.text = str(amount)
 
 func _on_button_button_up():
 	get_parent().change_tab_to_level(level)
@@ -42,9 +45,6 @@ func setLevel(lvl):
 	if lvl > levelAmount:
 		level = levelAmount
 	updateLevelButton()
-
-func _on_settings_button_up():
-	pass
 
 func update_font_size():
 	if level < 10:

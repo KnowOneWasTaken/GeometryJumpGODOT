@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4gfc63oauvfj"]
+[gd_scene load_steps=13 format=3 uid="uid://b4gfc63oauvfj"]
 
 [ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_022ef"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_34lsf"]
 [ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="2_3mmkg"]
 [ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/Blocks/wall.tscn" id="3_ng82d"]
 [ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/Blocks/spike.tscn" id="4_ujjwn"]
@@ -9,10 +10,12 @@
 [ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="7_20d67"]
 [ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/LevelObjects/Player.tscn" id="8_n268v"]
 [ext_resource type="PackedScene" uid="uid://1roqlcad7iq0" path="res://scenes/LevelObjects/ghost.tscn" id="9_gbunj"]
+[ext_resource type="PackedScene" uid="uid://c8pwl7xe5busb" path="res://scenes/LevelObjects/ghost_gold.tscn" id="10_r4b0x"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uccp1"]
 
 [node name="L11" type="Node2D"]
+script = ExtResource("1_34lsf")
 
 [node name="UI" parent="." instance=ExtResource("1_022ef")]
 
@@ -145,3 +148,5 @@ position = Vector2(900, -660)
 position = Vector2(-300, 60)
 
 [node name="Ghost" parent="." instance=ExtResource("9_gbunj")]
+
+[node name="ghost-gold" parent="." instance=ExtResource("10_r4b0x")]

@@ -1,33 +1,55 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgbiq2rucufgt"]
+[gd_scene load_steps=5 format=3 uid="uid://cgbiq2rucufgt"]
 
 [ext_resource type="Texture2D" uid="uid://cj45na5rb1ols" path="res://assets/original/goalAnimationBackground.png" id="1_34p2r"]
 [ext_resource type="Script" path="res://scripts/win_screen.gd" id="2_mot58"]
 [ext_resource type="Texture2D" uid="uid://b8o5tfu7tduux" path="res://assets/original/ok.png" id="3_nb7b4"]
+[ext_resource type="Texture2D" uid="uid://cbwp27y5oelom" path="res://assets/original/rotateLeft.png" id="4_a2jjb"]
 
 [node name="Winscreen" type="Sprite2D"]
 z_index = 2
 texture = ExtResource("1_34p2r")
 script = ExtResource("2_mot58")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, 120)
+scale = Vector2(1, 1.3)
+texture = ExtResource("1_34p2r")
+
 [node name="Button" type="Button" parent="."]
 z_index = 4
 anchors_preset = -1
 anchor_left = 0.504
-anchor_top = 0.846
+anchor_top = 0.875
 anchor_right = 0.504
-anchor_bottom = 0.846
-offset_left = -744.32
-offset_top = -643.68
-offset_right = -336.32
-offset_bottom = -435.68
+anchor_bottom = 0.875
+offset_left = -748.32
+offset_top = -635.0
+offset_right = -340.32
+offset_bottom = -427.0
 icon = ExtResource("3_nb7b4")
 flat = true
 
+[node name="Button2" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -647.0
+offset_top = -532.0
+offset_right = 65.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("4_a2jjb")
+icon_alignment = 1
+
 [node name="Container" type="VBoxContainer" parent="."]
-offset_left = -540.0
+offset_left = -536.0
 offset_top = -526.0
-offset_right = 540.0
-offset_bottom = 254.0
+offset_right = 544.0
+offset_bottom = 309.0
 
 [node name="Label" type="Label" parent="Container"]
 z_index = 4
@@ -40,7 +62,7 @@ horizontal_alignment = 1
 z_index = 4
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
-text = "You win"
+text = "You win!"
 horizontal_alignment = 1
 
 [node name="spacer" type="Label" parent="Container"]
@@ -55,14 +77,19 @@ horizontal_alignment = 1
 
 [node name="time" type="Label" parent="Container"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 80
 text = "00:00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="spacer2" type="Label" parent="Container"]
+[node name="time2" type="Label" parent="Container"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 80
+text = "00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="Container"]
 layout_mode = 2
@@ -83,3 +110,4 @@ text = "coins!"
 horizontal_alignment = 1
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="button_up" from="Button2" to="." method="_on_button_2_button_up"]

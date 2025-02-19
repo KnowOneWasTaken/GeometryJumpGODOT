@@ -16,10 +16,10 @@ func _process(_delta):
 
 func _on_body_entered(body):
 	if not goal_reached:
-		body.win()
+		var best_time = body.win()
 		print("Goal reached!")
 		goal_sfx.play()
-		body.get_parent().get_node("UI").win()
+		body.get_parent().get_node("UI").win(best_time)
 		#var screen = win_screen.instantiate()
 		#add_child(screen)
 	gpu_particles_2d.emitting = true

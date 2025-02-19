@@ -10,17 +10,48 @@ var levelScene
 var level := 1
 var levelAmount = 20
 var newLevel
+var coins_collected = 0
 @onready var tab_change_sound: AudioStreamPlayer = $tabChangeSound
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	load_data()
 	newMenu = menu.instantiate()
 	add_child(newMenu)
+	newMenu.set_coins(coins_collected)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float):
 	pass
+
+func save_data():
+	var data = []
+	data.append({"coins_collected": coins_collected})
+	var file = FileAccess.open("user://data.json", FileAccess.WRITE)
+	if file:
+		file.store_string(JSON.stringify(data))
+		file.close()
+	else:
+		print("Failed to open file for writing")
+
+func load_data():
+	var file = FileAccess.open("user://data.json", FileAccess.READ)
+	if file:
+		var json = JSON.new()
+		var error = json.parse(file.get_as_text())
+		if error == OK:
+			var data_received = json.data
+			coins_collected = int(data_received[0].get("coins_collected"))
+			file.close()
+		else:
+			print("Error  while parsing data.json")
+	else:
+		print("No data found")
+
+func add_coins(amount):
+	coins_collected += amount
+	save_data()
 
 func change_tab_to_options():
 	level = newMenu.level
@@ -49,6 +80,7 @@ func change_tab_to_menu_from_level():
 func open_tab_menu():
 	newMenu = menu.instantiate()
 	add_child(newMenu)
+	newMenu.set_coins(coins_collected)
 
 func close_tab_menu():
 	newMenu.queue_free()
@@ -68,6 +100,11 @@ func open_tab_level(lvl):
 	levelScene = load("res://scenes/Levels/new/L"+str(lvl)+".tscn")
 	newLevel = levelScene.instantiate()
 	add_child(newLevel)
-
+	newLevel.set_level(level)
+	
 func close_tab_level():
 	newLevel.queue_free()
+	
+func reset_level():
+	change_tab_to_menu_from_level()
+	change_tab_to_level(level)
