@@ -47,3 +47,4 @@ assets/original/coin.png
 assets/original/coinGlow.png
 assets/original/spikeGlow.png
 *.apk
+/android/build
