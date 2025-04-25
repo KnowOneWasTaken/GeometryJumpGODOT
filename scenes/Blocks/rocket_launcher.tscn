@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfexpxjwr8xfx"]
+[gd_scene load_steps=5 format=3 uid="uid://bfexpxjwr8xfx"]
 
-[ext_resource type="Script" path="res://scripts/rocket_launcher.gd" id="1_nhyli"]
+[ext_resource type="Script" uid="uid://cfi31celiesj0" path="res://scripts/rocket_launcher.gd" id="1_nhyli"]
 [ext_resource type="Texture2D" uid="uid://hqqym1e0pvqg" path="res://assets/original/missileLauncher.png" id="2_24c5x"]
 [ext_resource type="Texture2D" uid="uid://l17dhmfdkkme" path="res://assets/original/missileLauncherGlow.png" id="3_s7eww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3eid"]
+size = Vector2(120, 120)
 
 [node name="Rocket-Launcher" type="Node2D"]
 script = ExtResource("1_nhyli")
@@ -19,5 +22,11 @@ position = Vector2(0, -0.419975)
 texture = ExtResource("3_s7eww")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_o3eid")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

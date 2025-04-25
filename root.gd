@@ -8,7 +8,7 @@ var music_volume = 70
 var sfx_volume = 100
 var levelScene
 var level := 1
-var levelAmount = 20
+var levelAmount = 21
 var newLevel
 var coins_collected = 0
 @onready var tab_change_sound: AudioStreamPlayer = $tabChangeSound
@@ -97,10 +97,14 @@ func close_tab_options():
 	newOptions.queue_free()
 
 func open_tab_level(lvl):
-	levelScene = load("res://scenes/Levels/new/L"+str(lvl)+".tscn")
-	newLevel = levelScene.instantiate()
-	add_child(newLevel)
-	newLevel.set_level(level)
+	if lvl <= levelAmount:
+		levelScene = load("res://scenes/Levels/new/L"+str(lvl)+".tscn")
+		newLevel = levelScene.instantiate()
+		add_child(newLevel)
+		newLevel.set_level(level)
+	else:
+		print("Cannot open level because this level is greater than the levelAmount set in root")
+		open_tab_menu()
 	
 func close_tab_level():
 	newLevel.queue_free()

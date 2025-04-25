@@ -22,6 +22,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	update_timer()
+	pass
 
 func load_preferences():
 	settings_overlay  = settings.instantiate()
@@ -68,6 +69,7 @@ func exit_level(next):
 
 func update_timer():
 	player_time = player.time_since_death
+	player_time = 0
 	label.text = time_to_string(player_time)
 
 func int_to_time(integer):
@@ -103,9 +105,8 @@ func _on_settings_button_up() -> void:
 		settings_overlay  = settings.instantiate()
 		center_container.add_child(settings_overlay)
 	else:
-		remove_settings_overlay()
-
+		remove_settings_overlay
+		
 func remove_settings_overlay():
-	is_settings_open = false
-	settings_overlay.queue_free()
-	
+		is_settings_open = false
+		settings_overlay.queue_free()

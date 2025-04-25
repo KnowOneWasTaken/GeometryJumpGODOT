@@ -1,8 +1,13 @@
+#level.gd
+
 extends Node2D
 @onready var ghost: Node2D = $Ghost
 @onready var ghost_gold: Node2D = $"ghost-gold"
 @onready var ui: CanvasLayer = $UI
+const PLAYER = preload("res://scenes/LevelObjects/Player.tscn")
+var peer = ENetMultiplayerPeer.new()
 var level
+@onready var original_player: CharacterBody2D = $Player
 
 
 # Called when the node enters the scene tree for the first time.
@@ -30,3 +35,9 @@ func get_gold_ghost_visibility() -> bool:
 
 func get_ghost_visibility() -> bool:
 	return ghost.visible
+	
+func add_player(pid):
+	var player = PLAYER.instantiate()
+	player.name = str(pid)
+	player.position = Vector2(-300, 60)
+	add_child(player)

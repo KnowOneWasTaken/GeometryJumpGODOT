@@ -39,7 +39,7 @@ func _on_timer_2_timeout():
 	queue_free()
 
 
-func _on_area_world_body_entered(body):
+func _on_area_world_body_entered(_body):
 	explode()
 
 func explode():

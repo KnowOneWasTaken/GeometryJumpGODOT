@@ -8,6 +8,9 @@ const SWITCH_OFF = preload("res://assets/original/switch_off.png")
 @onready var level = get_parent().get_parent().get_parent()
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var timer: Timer = $AudioStreamPlayer/Timer
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	load_preferences()
@@ -88,3 +91,11 @@ func save_preferences():
 
 func _on_timer_timeout() -> void:
 	get_parent().get_parent().remove_settings_overlay()
+
+
+func _on_host_button_button_up() -> void:
+	get_parent().get_parent().get_parent().host()
+
+
+func _on_join_button_button_up() -> void:
+	get_parent().get_parent().get_parent().join()

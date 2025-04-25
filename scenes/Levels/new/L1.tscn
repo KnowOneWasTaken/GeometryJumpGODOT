@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://crsdlirmksskm"]
 
-[ext_resource type="Script" path="res://scripts/level.gd" id="1_2ixtg"]
+[ext_resource type="Script" uid="uid://cp5jtbmccmr4b" path="res://scripts/level.gd" id="1_2ixtg"]
 [ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_gqi5d"]
 [ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="2_b2h3v"]
 [ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_r85g0"]
@@ -69,3 +69,5 @@ position = Vector2(-300, 60)
 [node name="Ghost" parent="." instance=ExtResource("7_edvnd")]
 
 [node name="ghost-gold" parent="." instance=ExtResource("8_5rxa7")]
+
+[node name="Players" type="Node" parent="."]

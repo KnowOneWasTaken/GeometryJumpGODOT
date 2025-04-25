@@ -48,3 +48,9 @@ assets/original/coinGlow.png
 assets/original/spikeGlow.png
 *.apk
 /android/build
+android/build/libs/debug/godot-lib.template_debug.aar
+/android/build
+/android/build/libs
+/android/build/libs/debug
+/android/build/res/mipmap
+key.keystore

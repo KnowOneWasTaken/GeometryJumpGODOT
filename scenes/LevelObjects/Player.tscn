@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dq5puheu774fb"]
+[gd_scene load_steps=10 format=3 uid="uid://dq5puheu774fb"]
 
-[ext_resource type="Script" path="res://scripts/Player.gd" id="1_f51j4"]
+[ext_resource type="Script" uid="uid://di424wmf8cgm2" path="res://scripts/Player.gd" id="1_f51j4"]
 [ext_resource type="Texture2D" uid="uid://dh5k8u0q2gqhs" path="res://assets/original/player-new.png" id="2_14axx"]
 [ext_resource type="Texture2D" uid="uid://6ivgj1st88ek" path="res://assets/original/player.png" id="2_51tad"]
 [ext_resource type="AudioStream" uid="uid://dftul3jla4c8m" path="res://assets/sounds/jump.mp3" id="3_s20k3"]
@@ -36,8 +36,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_fj45a"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("Player:visible")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_f51j4")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
@@ -66,6 +75,9 @@ one_shot = true
 visible = false
 scale = Vector2(0.242, 0.242)
 texture = ExtResource("5_7s2es")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_fj45a")
 
 [connection signal="timeout" from="JumpFXTimer" to="." method="_on_jump_fx_timer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

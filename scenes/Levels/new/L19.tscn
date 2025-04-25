@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://i0x0wnly4osd"]
 
-[ext_resource type="Script" path="res://scripts/level.gd" id="1_p3blh"]
+[ext_resource type="Script" uid="uid://cp5jtbmccmr4b" path="res://scripts/level.gd" id="1_p3blh"]
 [ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_pm1ub"]
 [ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="2_228od"]
 [ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_a24u8"]

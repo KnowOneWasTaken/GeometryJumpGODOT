@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bx4yey6h1x6rm"]
 
-[ext_resource type="Script" path="res://scripts/level_settings.gd" id="1_daewo"]
+[ext_resource type="Script" uid="uid://dfuhfu5hx1sq2" path="res://scripts/level_settings.gd" id="1_daewo"]
 [ext_resource type="Texture2D" uid="uid://cj45na5rb1ols" path="res://assets/original/goalAnimationBackground.png" id="1_m8nqt"]
 [ext_resource type="AudioStream" uid="uid://13g1x2kqvbqf" path="res://assets/sounds/click interface.mp3" id="2_me11v"]
 [ext_resource type="Texture2D" uid="uid://b8o5tfu7tduux" path="res://assets/original/ok.png" id="2_pmasl"]

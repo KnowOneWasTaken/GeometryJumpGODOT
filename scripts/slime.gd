@@ -29,10 +29,8 @@ func _on_jump_area_body_entered(body: Node2D) -> void:
 	newParticle.set_image(preload("res://assets/original/particleSlime.png"))
 
 
-func _on_jump_area_body_exited(body: Node2D) -> void:
+func _on_jump_area_body_exited(_body: Node2D) -> void:
 	isInArea = false
-	
-
 
 
 func _on_timer_timeout() -> void:

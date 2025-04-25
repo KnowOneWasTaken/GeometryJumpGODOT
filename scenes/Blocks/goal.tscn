@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bx23ss1ukw3u4" path="res://assets/original/goalGlow.png" id="1_doltf"]
 [ext_resource type="Texture2D" uid="uid://brva4dh1ombkq" path="res://assets/original/checkpoint.png" id="2_vbstd"]
-[ext_resource type="Script" path="res://scripts/Goal.gd" id="3_71t8v"]
+[ext_resource type="Script" uid="uid://baglntvxv82r6" path="res://scripts/Goal.gd" id="3_71t8v"]
 [ext_resource type="AudioStream" uid="uid://ccyxemm3o6wpl" path="res://assets/sounds/goal_sound.mp3" id="4_o5rc1"]
 [ext_resource type="Texture2D" uid="uid://bs3j00502f8ro" path="res://assets/original/particleCheckpoint.png" id="5_b7k3b"]
 
@@ -21,6 +21,7 @@ emission_ring_axis = Vector3(0, 0, 1)
 emission_ring_height = 120.0
 emission_ring_radius = 60.0
 emission_ring_inner_radius = 50.0
+emission_ring_cone_angle = 90.0
 inherit_velocity_ratio = 1.837
 direction = Vector3(0, -1, 0)
 spread = 89.651
@@ -60,9 +61,9 @@ position = Vector2(0, -60)
 scale = Vector2(0.5, 0.5)
 emitting = false
 amount = 20
-process_material = SubResource("ParticleProcessMaterial_n5kxm")
 texture = ExtResource("5_b7k3b")
 randomness = 0.66
 visibility_rect = Rect2(-100, -100, 50, 50)
+process_material = SubResource("ParticleProcessMaterial_n5kxm")
 
 [connection signal="body_entered" from="GoalArea" to="GoalArea" method="_on_body_entered"]

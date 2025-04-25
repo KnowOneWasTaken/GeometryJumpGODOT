@@ -36,6 +36,9 @@ var started
 var ghost_gold
 var gold_index = 0
 
+func _enter_tree() -> void:
+	set_multiplayer_authority(int(str(name)))
+
 func _ready():
 	default_respawn_point = position
 	respawn_point = default_respawn_point
@@ -95,13 +98,14 @@ func _physics_process(delta):
 		var image = $"../ghost-gold/image"
 		image.visible = false
 
+	if not won:
+		if started:
+			time_since_death = Time.get_ticks_msec() - time_when_started
+		else:
+			time_when_started = Time.get_ticks_msec()
+			time_since_death = 0
+
 	if not died:
-		if not won:
-			if started:
-				time_since_death = Time.get_ticks_msec() - time_when_started
-			else:
-				time_when_started = Time.get_ticks_msec()
-				time_since_death = 0
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y += gravity * delta
