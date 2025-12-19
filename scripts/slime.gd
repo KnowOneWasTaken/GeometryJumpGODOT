@@ -21,12 +21,7 @@ func _on_jump_area_body_entered(body: Node2D) -> void:
 	isInArea = true
 	player = body
 	if player.velocity.y > CUT_OFF_VELOCITY:
-		player.velocity.y += SLIME_VELOCITY
-		slime_sfx.play()
-	timer.start()
-	var newParticle = particlePlayer.instantiate()
-	add_child(newParticle)
-	newParticle.set_image(preload("res://assets/original/particleSlime.png"))
+		jump()
 
 
 func _on_jump_area_body_exited(_body: Node2D) -> void:
@@ -35,6 +30,12 @@ func _on_jump_area_body_exited(_body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	if isInArea:
-		if player.velocity.y > CUT_OFF_VELOCITY:
-			player.velocity.y += SLIME_VELOCITY
-		timer.start()
+		jump()
+
+func jump() -> void:
+	player.velocity.y += SLIME_VELOCITY
+	slime_sfx.play()
+	timer.start()
+	var newParticle = particlePlayer.instantiate()
+	add_child(newParticle)
+	newParticle.set_image(preload("res://assets/original/particleSlime.png"))

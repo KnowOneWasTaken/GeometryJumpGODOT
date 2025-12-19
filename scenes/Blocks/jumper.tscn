@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3 uid="uid://s6benlwy41i6"]
+
+[ext_resource type="Script" path="res://scripts/jumper.gd" id="1_18cru"]
+[ext_resource type="Texture2D" uid="uid://b1k2wim8g5ctt" path="res://assets/original/slimeGlow.png" id="2_cq3j7"]
+[ext_resource type="Texture2D" uid="uid://bi86rsydcj4pb" path="res://assets/original/slime.png" id="3_5a700"]
+[ext_resource type="AudioStream" uid="uid://7plye86gm272" path="res://assets/sounds/jumpSlime.mp3" id="4_gxekn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xpbt"]
+size = Vector2(120, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1csp"]
+size = Vector2(120, 9.5)
+
+[node name="Jumper" type="Node2D"]
+script = ExtResource("1_18cru")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.14902, 0.313726, 1, 1)
+z_index = -1
+texture = ExtResource("2_cq3j7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("3_5a700")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_7xpbt")
+
+[node name="JumpArea" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="JumpShape" type="CollisionShape2D" parent="JumpArea"]
+position = Vector2(0, -64.25)
+shape = SubResource("RectangleShape2D_f1csp")
+
+[node name="Timer" type="Timer" parent="JumpArea"]
+wait_time = 0.1
+
+[node name="JumpAreaLEFT" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="JumpShapeLEFT" type="CollisionShape2D" parent="JumpAreaLEFT"]
+position = Vector2(-64, 0)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_f1csp")
+
+[node name="TimerLEFT" type="Timer" parent="JumpAreaLEFT"]
+wait_time = 0.1
+
+[node name="JumpAreaBOTTOM" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="JumpShapeBOTTOM" type="CollisionShape2D" parent="JumpAreaBOTTOM"]
+position = Vector2(0, 64)
+shape = SubResource("RectangleShape2D_f1csp")
+
+[node name="TimerBOTTOM" type="Timer" parent="JumpAreaBOTTOM"]
+wait_time = 0.1
+
+[node name="JumpAreaRIGHT" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="JumpShapeRIGHT" type="CollisionShape2D" parent="JumpAreaRIGHT"]
+position = Vector2(64, 0)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_f1csp")
+
+[node name="TimerRIGHT" type="Timer" parent="JumpAreaRIGHT"]
+wait_time = 0.1
+
+[node name="SlimeSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_gxekn")
+bus = &"SFX"
+
+[connection signal="body_entered" from="JumpArea" to="." method="_on_jump_area_body_entered"]
+[connection signal="body_entered" from="JumpArea" to="JumpArea" method="_on_body_entered"]
+[connection signal="body_exited" from="JumpArea" to="." method="_on_jump_area_body_exited"]
+[connection signal="body_exited" from="JumpArea" to="JumpArea" method="_on_body_exited"]
+[connection signal="timeout" from="JumpArea/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="JumpArea/Timer" to="JumpArea" method="_on_timer_timeout"]
+[connection signal="body_entered" from="JumpAreaLEFT" to="." method="_on_jump_area_left_body_entered"]
+[connection signal="body_exited" from="JumpAreaLEFT" to="." method="_on_jump_area_left_body_exited"]
+[connection signal="timeout" from="JumpAreaLEFT/TimerLEFT" to="." method="_on_timer_left_timeout"]
+[connection signal="body_entered" from="JumpAreaBOTTOM" to="." method="_on_jump_area_bottom_body_entered"]
+[connection signal="body_exited" from="JumpAreaBOTTOM" to="." method="_on_jump_area_bottom_body_exited"]
+[connection signal="timeout" from="JumpAreaBOTTOM/TimerBOTTOM" to="." method="_on_timer_bottom_timeout"]
+[connection signal="body_entered" from="JumpAreaRIGHT" to="." method="_on_jump_area_right_body_entered"]
+[connection signal="body_exited" from="JumpAreaRIGHT" to="." method="_on_jump_area_right_body_exited"]
+[connection signal="timeout" from="JumpAreaRIGHT/TimerRIGHT" to="." method="_on_timer_right_timeout"]

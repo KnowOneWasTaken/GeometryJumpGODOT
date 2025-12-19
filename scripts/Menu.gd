@@ -26,13 +26,17 @@ func _on_button_button_up():
 func _on_left_button_up():
 	if level > 1:
 		level -= 1
-		updateLevelButton()
-		audio_stream_player.play()
-		update_font_size()
+	else:
+		level = levelAmount
+	updateLevelButton()
+	audio_stream_player.play()
+	update_font_size()
 
 func _on_right_button_up():
 	if level < levelAmount:
 		level += 1
+	else:
+		level = 1
 	updateLevelButton()
 	audio_stream_player.play()
 
@@ -54,6 +58,5 @@ func update_font_size():
 	else:
 		level_button.add_theme_font_size_override("font_size", 135)
 
-
-func _on_touch_screen_button_released() -> void:
+func _on_settings_button_button_up() -> void:
 	get_parent().change_tab_to_options()

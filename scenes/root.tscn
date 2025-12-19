@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c54pumg3js77f"]
 
-[ext_resource type="Script" uid="uid://d2am1pcojtj0b" path="res://root.gd" id="1_8opmk"]
+[ext_resource type="Script" path="res://root.gd" id="1_8opmk"]
 [ext_resource type="AudioStream" uid="uid://bv0ammc22was5" path="res://assets/sounds/tabChange.mp3" id="2_my8ew"]
 
 [node name="root" type="Control"]

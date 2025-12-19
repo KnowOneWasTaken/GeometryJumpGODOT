@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://4it5mpv3insv"]
 
-[ext_resource type="Script" uid="uid://tmmebt3etivq" path="res://scripts/options.gd" id="1_17n85"]
+[ext_resource type="Script" path="res://scripts/options.gd" id="1_17n85"]
 [ext_resource type="Texture2D" uid="uid://cgmyatonbqks" path="res://assets/original/empty.png" id="2_8m825"]
 [ext_resource type="Texture2D" uid="uid://cltykmxgxdblj" path="res://assets/original/settings.png" id="3_fjbf4"]
 [ext_resource type="AudioStream" uid="uid://bv0ammc22was5" path="res://assets/sounds/tabChange.mp3" id="4_jq6je"]
@@ -20,27 +20,18 @@ position = Vector2(17601.9, 3357.37)
 scale = Vector2(1706, 1177.33)
 texture = ExtResource("2_8m825")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_direction = 3
-layout_mode = 0
-offset_right = 208.0
-offset_bottom = 208.0
-
-[node name="Settings" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-icon = ExtResource("3_fjbf4")
-flat = true
-
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
-layout_mode = 2
-anchor_left = 0.503
-anchor_top = 0.447
-anchor_right = 0.503
-anchor_bottom = 0.447
-offset_left = -503.029
-offset_top = -520.375
-offset_right = -168.029
-offset_bottom = -173.375
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -332.0
+offset_top = 231.0
+offset_right = -81.0
+offset_bottom = -1841.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(3, 3)
 
 [node name="Label" type="Label" parent="VBoxContainer2"]
@@ -59,6 +50,12 @@ tick_count = 5
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_font_sizes/font_size = 38
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 38
 text = "Sound-Effects"
 horizontal_alignment = 1
 
@@ -67,10 +64,55 @@ layout_mode = 2
 value = 100.0
 tick_count = 5
 
+[node name="Label3" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 38
+horizontal_alignment = 1
+
+[node name="LinkButton" type="LinkButton" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Link to the music of this game"
+theme_override_colors/font_color = Color(0.318421, 0.523791, 0.991375, 1)
+theme_override_font_sizes/font_size = 20
+keep_pressed_outside = true
+text = "Music Playlist"
+uri = "https://youtube.com/playlist?list=PLwJjxqYuirCLkq42mGw4XKGQlpZSfxsYd"
+structured_text_bidi_override = 1
+
+[node name="LinkButton2" type="LinkButton" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Link to the music of this game"
+theme_override_colors/font_color = Color(0.318421, 0.523791, 0.991375, 1)
+theme_override_font_sizes/font_size = 20
+keep_pressed_outside = true
+text = "Privacy Policy"
+uri = "https://www.notion.so/Privacy-Policy-EN-11fe08485f6a4d6e85765afba71b4006?pvs=4"
+structured_text_bidi_override = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_direction = 2
+layout_mode = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -208.0
+offset_right = 335.0
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+icon = ExtResource("3_fjbf4")
+flat = true
+
 [node name="tabChangeSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_jq6je")
 bus = &"SFX"
 
-[connection signal="button_up" from="VBoxContainer/Settings" to="." method="_on_settings_button_up"]
 [connection signal="value_changed" from="VBoxContainer2/Music" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="VBoxContainer2/SFX" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="button_up" from="VBoxContainer/Settings" to="." method="_on_settings_button_up"]

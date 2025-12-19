@@ -8,7 +8,7 @@ var music_volume = 70
 var sfx_volume = 100
 var levelScene
 var level := 1
-var levelAmount = 21
+var levelAmount = 23
 var newLevel
 var coins_collected = 0
 @onready var tab_change_sound: AudioStreamPlayer = $tabChangeSound

@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://c44s22se4hcrb"]
 
-[ext_resource type="Script" uid="uid://cp5jtbmccmr4b" path="res://scripts/level.gd" id="1_28owh"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_28owh"]
 [ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_fvlta"]
 [ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="2_28owh"]
 [ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_2v6or"]
@@ -308,10 +308,21 @@ position = Vector2(-1140, -180)
 [node name="Checkpoint" parent="Map/Blocks" instance=ExtResource("7_l0vbd")]
 position = Vector2(-1260, -180)
 
-[node name="Slime" parent="Map" instance=ExtResource("8_vy1an")]
+[node name="coin" parent="Map/Blocks" instance=ExtResource("14_28owh")]
+position = Vector2(-780, -300)
+
+[node name="Rocket-Launcher" parent="Map/Blocks" instance=ExtResource("9_deghp")]
+position = Vector2(-1380, 60)
+direction = Vector2(0, -1)
+reload = 0.7
+
+[node name="Goal" parent="Map/Blocks" instance=ExtResource("15_2v6or")]
+position = Vector2(-660, -900)
+
+[node name="Slime" parent="Map/Blocks" instance=ExtResource("8_vy1an")]
 position = Vector2(-1140, 2100)
 
-[node name="Rocket-Launcher" parent="Map" instance=ExtResource("9_deghp")]
+[node name="Rocket-Launcher2" parent="Map/Blocks" instance=ExtResource("9_deghp")]
 position = Vector2(1020, 780)
 direction = Vector2(-1, 0)
 speed = 650.0
@@ -323,14 +334,3 @@ position = Vector2(-300, 60)
 [node name="ghost-gold" parent="." instance=ExtResource("12_hoje4")]
 
 [node name="Ghost" parent="." instance=ExtResource("13_bjhar")]
-
-[node name="coin" parent="." instance=ExtResource("14_28owh")]
-position = Vector2(-780, -300)
-
-[node name="Rocket-Launcher" parent="." instance=ExtResource("9_deghp")]
-position = Vector2(-1380, 60)
-direction = Vector2(0, -1)
-reload = 0.7
-
-[node name="Goal" parent="." instance=ExtResource("15_2v6or")]
-position = Vector2(-660, -900)

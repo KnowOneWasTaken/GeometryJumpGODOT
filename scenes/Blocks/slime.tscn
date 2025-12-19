@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://16mmuo5b3heq"]
 
 [ext_resource type="Texture2D" uid="uid://b1k2wim8g5ctt" path="res://assets/original/slimeGlow.png" id="1_oq4ea"]
-[ext_resource type="Script" uid="uid://brwf3a4tbkut3" path="res://scripts/slime.gd" id="1_wumr5"]
+[ext_resource type="Script" path="res://scripts/slime.gd" id="1_wumr5"]
 [ext_resource type="Texture2D" uid="uid://bi86rsydcj4pb" path="res://assets/original/slime.png" id="2_5wb4x"]
 [ext_resource type="AudioStream" uid="uid://7plye86gm272" path="res://assets/sounds/jumpSlime.mp3" id="4_eqhc4"]
 

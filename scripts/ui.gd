@@ -15,6 +15,7 @@ var ms
 var player_time
 var settings_overlay
 var is_settings_open
+var isEditMode = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -69,7 +70,6 @@ func exit_level(next):
 
 func update_timer():
 	player_time = player.time_since_death
-	player_time = 0
 	label.text = time_to_string(player_time)
 
 func int_to_time(integer):
