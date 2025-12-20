@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dy58aexs6174f"]
 
 [ext_resource type="Script" path="res://scripts/Rocket.gd" id="1_ft8r4"]
-[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_67sog"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://scenes/LevelObjects/kill_zone.tscn" id="3_67sog"]
 [ext_resource type="AudioStream" uid="uid://d13iv4we617e6" path="res://assets/sounds/explosion.mp3" id="4_7wgf1"]
 [ext_resource type="Texture2D" uid="uid://c1y76ixltslso" path="res://assets/original/Bullet1-new.png" id="5_rbdi4"]
 

@@ -13,7 +13,7 @@ func _on_area_2d_body_entered(body):
 	animation_player.play("CollectCoin")
 	var newParticle = particlePlayer.instantiate()
 	add_child(newParticle)
-	newParticle.set_image(preload("res://assets/original/particleStar-new.png"))
+	newParticle.set_image(preload("res://assets/original/Particles/particleStar-new.png"))
 	body.coin_collected()
 
 func _process(delta):

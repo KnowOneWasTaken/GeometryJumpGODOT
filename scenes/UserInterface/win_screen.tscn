@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cj45na5rb1ols" path="res://assets/original/goalAnimationBackground.png" id="1_34p2r"]
 [ext_resource type="Script" path="res://scripts/win_screen.gd" id="2_mot58"]
-[ext_resource type="Texture2D" uid="uid://b8o5tfu7tduux" path="res://assets/original/ok.png" id="3_nb7b4"]
-[ext_resource type="Texture2D" uid="uid://cbwp27y5oelom" path="res://assets/original/rotateLeft.png" id="4_a2jjb"]
+[ext_resource type="Texture2D" uid="uid://b8o5tfu7tduux" path="res://assets/original/Buttons/ok.png" id="3_nb7b4"]
+[ext_resource type="Texture2D" uid="uid://cbwp27y5oelom" path="res://assets/original/Buttons/rotateLeft.png" id="4_a2jjb"]
 
 [node name="Winscreen" type="Sprite2D"]
 z_index = 2

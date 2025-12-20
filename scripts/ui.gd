@@ -7,6 +7,12 @@ extends CanvasLayer
 @onready var settings := load("res://scenes/UserInterface/level_settings.tscn")
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var settings_button: Button = $MarginContainer/MenuButtons/Settings
+@onready var item_list: Control = $Control
+@onready var down_button: TouchScreenButton = $HBoxContainer/DownButton
+@onready var up_button: TouchScreenButton = $HBoxContainer/UpButton
+@onready var jump_button: TouchScreenButton = $HBoxContainer/JumpButton
+
+
 var days
 var hours
 var minutes
@@ -16,12 +22,18 @@ var player_time
 var settings_overlay
 var is_settings_open
 var isEditMode = false
+var selectedBlock = load("res://scenes/Blocks/wall.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	is_settings_open = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	item_list.visible = isEditMode && !is_settings_open
+	down_button.visible = isEditMode
+	up_button.visible = isEditMode
+	jump_button.visible = !isEditMode
+	player.isEditMode = isEditMode
 	update_timer()
 	pass
 
@@ -34,7 +46,9 @@ func load_preferences():
 func _on_exit_button_up():
 	exit_level(false)
 	
-func win(best_time):
+func win(best_time, valid):
+	if isEditMode:
+		return
 	settings_button.visible = false
 	if settings_overlay != null:
 		settings_overlay.queue_free()
@@ -43,23 +57,28 @@ func win(best_time):
 	update_timer()
 	screen.time.text = label.text + str(player_time % 10)
 	var sign = ""
-	if best_time > 0:
-		sign = "+"
-	elif best_time < 0:
-		sign = "-"
-	else:
-		sign = ""
-	screen.time2.text = sign + time_to_string(abs(best_time)) + str(abs(best_time) % 10)
-	if best_time < 0:
-		screen.get_node("Container/time").modulate = Color(0, 1, 0)
-		screen.get_node("Container/time2").modulate = Color(0, 1, 0)
-	else:
-		if best_time == 0:
-			screen.get_node("Container/time").modulate = Color(1, 1, 1)
-			screen.get_node("Container/time2").modulate = Color(0, 0, 1)
+	if valid:
+		if best_time > 0:
+			sign = "+"
+		elif best_time < 0:
+			sign = "-"
 		else:
-			screen.get_node("Container/time").modulate = Color(1, 0, 0)
-			screen.get_node("Container/time2").modulate = Color(1, 0, 0)
+			sign = ""
+		screen.time2.text = sign + time_to_string(abs(best_time)) + str(abs(best_time) % 10)
+		if best_time < 0:
+			screen.get_node("Container/time").modulate = Color(0, 1, 0)
+			screen.get_node("Container/time2").modulate = Color(0, 1, 0)
+		else:
+			if best_time == 0:
+				screen.get_node("Container/time").modulate = Color(1, 1, 1)
+				screen.get_node("Container/time2").modulate = Color(0, 0, 1)
+			else:
+				screen.get_node("Container/time").modulate = Color(1, 0, 0)
+				screen.get_node("Container/time2").modulate = Color(1, 0, 0)
+	else:
+		screen.time.text = "Invalid Run"
+		screen.get_node("Container/time").modulate = Color(1, 0, 0)
+		screen.get_node("Container/time2").modulate = Color(1, 0, 0)
 	screen.coins.text = str(player.collected_coins)
 	get_parent().add_coins_to_total(player.collected_coins)
 
@@ -105,8 +124,34 @@ func _on_settings_button_up() -> void:
 		settings_overlay  = settings.instantiate()
 		center_container.add_child(settings_overlay)
 	else:
-		remove_settings_overlay
+		remove_settings_overlay()
 		
 func remove_settings_overlay():
 		is_settings_open = false
 		settings_overlay.queue_free()
+
+
+func _on_item_list_item_selected(index: int) -> void:
+	match index:
+		1:
+			selectedBlock = preload("res://scenes/Blocks/slime.tscn")
+		2:
+			selectedBlock = preload("res://scenes/Blocks/rocket_launcher.tscn")
+		3:
+			selectedBlock = preload("res://scenes/Blocks/checkpoint.tscn")
+		4:
+			selectedBlock = preload("res://scenes/Blocks/bubble_block.tscn")
+		5:
+			selectedBlock = null
+		6:
+			selectedBlock = preload("res://scenes/Blocks/spike.tscn")
+		7:
+			selectedBlock = preload("res://scenes/Blocks/jumper.tscn")
+		8:
+			selectedBlock = preload("res://scenes/Blocks/coin.tscn")
+		9:
+			selectedBlock = preload("res://scenes/Blocks/goal.tscn")
+		10:
+			selectedBlock = preload("res://scenes/Blocks/up_block.tscn")
+		_: 
+			selectedBlock = preload("res://scenes/Blocks/wall.tscn")

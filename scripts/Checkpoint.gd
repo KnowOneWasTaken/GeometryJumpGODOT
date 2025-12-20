@@ -14,10 +14,12 @@ func _process(_delta):
 
 
 func _on_area_2d_body_entered(body):
+	if body.isEditMode:
+		return
 	if body.respawn_point != Vector2(position.x, position.y-120):
 		checkpoint_sfx.play()
 		body.respawn_point = Vector2(position.x, position.y-120)
 		body.is_respawn_point_default = false
 		var newParticle = particlePlayer.instantiate()
 		add_child(newParticle)
-		newParticle.set_image(preload("res://assets/original/particleCheckpoint.png"))
+		newParticle.set_image(preload("res://assets/original/Particles/particleCheckpoint.png"))

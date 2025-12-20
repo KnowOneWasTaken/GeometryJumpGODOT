@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8pwl7xe5busb"]
 
-[ext_resource type="Script" uid="uid://dco15ssh7eg0w" path="res://scenes/LevelObjects/ghost_gold.gd" id="1_0my6x"]
+[ext_resource type="Script" path="res://scripts/ghost_gold.gd" id="1_0my6x"]
 [ext_resource type="Texture2D" uid="uid://dh5k8u0q2gqhs" path="res://assets/original/player-new.png" id="1_41sw6"]
 
 [node name="ghost-gold" type="Node2D"]

@@ -1,10 +1,10 @@
-extends Node2D
+extends Control
 var ghost_button_on = true
 var gold_button_on = true
 @onready var ghost_button: TouchScreenButton = $ghost_button
 @onready var gold_button: TouchScreenButton = $gold_button
-const SWITCH_ON = preload("res://assets/original/switch_on.png")
-const SWITCH_OFF = preload("res://assets/original/switch_off.png")
+const SWITCH_ON = preload("res://assets/original/Buttons/switch_on.png")
+const SWITCH_OFF = preload("res://assets/original/Buttons/switch_off.png")
 @onready var level = get_parent().get_parent().get_parent()
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var timer: Timer = $AudioStreamPlayer/Timer
@@ -16,13 +16,13 @@ const SWITCH_OFF = preload("res://assets/original/switch_off.png")
 func _ready() -> void:
 	load_preferences()
 	if get_parent().get_parent().isEditMode:
-		creative_button.icon = load("res://assets/original/BEditModeOn.png")
+		creative_button.icon = load("res://assets/original/Buttons/BEditModeOn.png")
 	else:
-		creative_button.icon = load("res://assets/original/BEditModeOff.png")
+		creative_button.icon = load("res://assets/original/Buttons/BEditModeOff.png")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -100,6 +100,6 @@ func _on_timer_timeout() -> void:
 func _on_creative_button_button_up() -> void:
 	get_parent().get_parent().isEditMode = !get_parent().get_parent().isEditMode;
 	if get_parent().get_parent().isEditMode:
-		creative_button.icon = load("res://assets/original/BEditModeOn.png")
+		creative_button.icon = load("res://assets/original/Buttons/BEditModeOn.png")
 	else:
-		creative_button.icon = load("res://assets/original/BEditModeOff.png")
+		creative_button.icon = load("res://assets/original/Buttons/BEditModeOff.png")

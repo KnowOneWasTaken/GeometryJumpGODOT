@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxbpsaridwy1e"]
+[gd_scene load_steps=6 format=3 uid="uid://bpo2muf2y25q8"]
 
-[ext_resource type="Script" uid="uid://cj1eg7rova6hj" path="res://scripts/kill_zone.gd" id="1_jf0yg"]
+[ext_resource type="Script" path="res://scripts/kill_zone.gd" id="1_jf0yg"]
 [ext_resource type="AudioStream" uid="uid://dk44rarsr53s8" path="res://assets/sounds/reset.mp3" id="2_ht6mp"]
-[ext_resource type="Texture2D" uid="uid://dsmu7i62x1nd5" path="res://assets/original/particlePlayer.png" id="3_jb0sp"]
+[ext_resource type="Texture2D" uid="uid://dsmu7i62x1nd5" path="res://assets/original/Particles/particlePlayer.png" id="3_jb0sp"]
 
 [sub_resource type="CurveXYZTexture" id="CurveXYZTexture_uj77k"]
 
@@ -15,7 +15,6 @@ emission_ring_axis = Vector3(0, 0, 1)
 emission_ring_height = 240.0
 emission_ring_radius = 240.0
 emission_ring_inner_radius = 200.0
-emission_ring_cone_angle = 90.0
 angle_min = -88.0
 angle_max = 81.5
 inherit_velocity_ratio = 1.837

@@ -38,4 +38,4 @@ func jump() -> void:
 	timer.start()
 	var newParticle = particlePlayer.instantiate()
 	add_child(newParticle)
-	newParticle.set_image(preload("res://assets/original/particleSlime.png"))
+	newParticle.set_image(preload("res://assets/original/Particles/particleSlime.png"))

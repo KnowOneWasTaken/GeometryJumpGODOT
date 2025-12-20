@@ -47,7 +47,7 @@ func explode():
 		audio_stream_player_2d.play()
 		var newParticle = particlePlayer.instantiate()
 		add_child(newParticle)
-		newParticle.set_image(preload("res://assets/original/particleBullet.png"))
+		newParticle.set_image(preload("res://assets/original/Particles/particleBullet.png"))
 		sprite_2d.visible = false
 		exploded = true
 		timer_2.start()

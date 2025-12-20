@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_2ixtg"]
 [ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_gqi5d"]
 [ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="2_b2h3v"]
-[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_r85g0"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://scenes/LevelObjects/kill_zone.tscn" id="3_r85g0"]
 [ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/Blocks/wall.tscn" id="4_1ys2y"]
 [ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/Blocks/goal.tscn" id="5_orphh"]
 [ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/LevelObjects/Player.tscn" id="6_87vyg"]
@@ -20,7 +20,7 @@ script = ExtResource("1_2ixtg")
 [node name="Map" type="Node" parent="."]
 
 [node name="Background-Black" parent="Map" instance=ExtResource("2_b2h3v")]
-position = Vector2(-2340, -300)
+position = Vector2(-2374, -310)
 
 [node name="KillZone" parent="Map" instance=ExtResource("3_r85g0")]
 position = Vector2(-180, 780)
@@ -69,3 +69,5 @@ position = Vector2(-300, 60)
 [node name="Ghost" parent="." instance=ExtResource("7_edvnd")]
 
 [node name="ghost-gold" parent="." instance=ExtResource("8_5rxa7")]
+position = Vector2(-143, -101)
+script = null

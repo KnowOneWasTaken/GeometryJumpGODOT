@@ -15,11 +15,13 @@ func _process(_delta):
 
 
 func _on_body_entered(body):
+	if body.isEditMode:
+		return
 	if not goal_reached:
 		var best_time = body.win()
 		print("Goal reached!")
 		goal_sfx.play()
-		body.get_parent().get_node("UI").win(best_time)
+		body.get_parent().get_node("UI").win(best_time, body.isRunValid)
 		#var screen = win_screen.instantiate()
 		#add_child(screen)
 	gpu_particles_2d.emitting = true

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://6owmrrvfixor"]
 
-[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="1_o64ex"]
-[ext_resource type="Texture2D" uid="uid://c10c8qsoiecsb" path="res://assets/original/spikeGlow.png" id="2_ineyf"]
-[ext_resource type="Texture2D" uid="uid://fipc4rdw10xe" path="res://assets/original/spike.png" id="3_ify12"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://scenes/LevelObjects/kill_zone.tscn" id="1_o64ex"]
+[ext_resource type="Texture2D" uid="uid://c10c8qsoiecsb" path="res://assets/original/Blocks/Glow/spikeGlow.png" id="2_ineyf"]
+[ext_resource type="Texture2D" uid="uid://fipc4rdw10xe" path="res://assets/original/Blocks/Base/spike.png" id="3_ify12"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxmoe"]
 size = Vector2(78, 85.2244)

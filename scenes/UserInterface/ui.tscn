@@ -1,15 +1,26 @@
-[gd_scene load_steps=11 format=3 uid="uid://bl68dtbhhyyyv"]
+[gd_scene load_steps=22 format=3 uid="uid://bl68dtbhhyyyv"]
 
-[ext_resource type="Texture2D" uid="uid://dhx0xak1ffv2o" path="res://assets/original/ButtonUP.png" id="1_5imky"]
+[ext_resource type="Texture2D" uid="uid://dhx0xak1ffv2o" path="res://assets/original/Buttons/ButtonUP.png" id="1_5imky"]
 [ext_resource type="Script" path="res://scripts/ui.gd" id="1_qv7ar"]
-[ext_resource type="Texture2D" uid="uid://bt0owr845nvp7" path="res://assets/original/ButtonEXIT.png" id="2_cw8dq"]
-[ext_resource type="Texture2D" uid="uid://cnpm0spahbgoi" path="res://assets/original/ButtonLEFT.png" id="2_h5s2f"]
-[ext_resource type="Texture2D" uid="uid://da3g8em58sloy" path="res://assets/original/ButtonUP_PRESSED.png" id="2_vj6g4"]
-[ext_resource type="Texture2D" uid="uid://c74opk83fbk5n" path="res://assets/original/ButtonRIGHT.png" id="3_28pfa"]
-[ext_resource type="Texture2D" uid="uid://d0k4fth3amlnm" path="res://assets/original/BEditModeOff.png" id="3_oklbi"]
-[ext_resource type="Texture2D" uid="uid://bg1708qjjubb" path="res://assets/original/ButtonLEFT_PRESSED.png" id="4_fpsv7"]
-[ext_resource type="Texture2D" uid="uid://b16mxfenedpd3" path="res://assets/original/ButtonRIGHT_PRESSED.png" id="6_j4188"]
+[ext_resource type="Texture2D" uid="uid://bt0owr845nvp7" path="res://assets/original/Buttons/ButtonEXIT.png" id="2_cw8dq"]
+[ext_resource type="Texture2D" uid="uid://cnpm0spahbgoi" path="res://assets/original/Buttons/ButtonLEFT.png" id="2_h5s2f"]
+[ext_resource type="Texture2D" uid="uid://da3g8em58sloy" path="res://assets/original/Buttons/ButtonUP_PRESSED.png" id="2_vj6g4"]
+[ext_resource type="Texture2D" uid="uid://c74opk83fbk5n" path="res://assets/original/Buttons/ButtonRIGHT.png" id="3_28pfa"]
+[ext_resource type="Texture2D" uid="uid://cltykmxgxdblj" path="res://assets/original/Buttons/settings.png" id="3_getoq"]
+[ext_resource type="Texture2D" uid="uid://bg1708qjjubb" path="res://assets/original/Buttons/ButtonLEFT_PRESSED.png" id="4_fpsv7"]
+[ext_resource type="Texture2D" uid="uid://b16mxfenedpd3" path="res://assets/original/Buttons/ButtonRIGHT_PRESSED.png" id="6_j4188"]
+[ext_resource type="Texture2D" uid="uid://h4r52cbtnb2b" path="res://assets/BlocksWithGlow/wallR.png" id="11_cpjrd"]
 [ext_resource type="AudioStream" uid="uid://13g1x2kqvbqf" path="res://assets/sounds/click interface.mp3" id="11_qomvq"]
+[ext_resource type="Texture2D" uid="uid://b3qh0wdyqchf3" path="res://assets/BlocksWithGlow/slimeR.png" id="12_e2j37"]
+[ext_resource type="Texture2D" uid="uid://wdta24ll5wph" path="res://assets/BlocksWithGlow/missileLauncherR.png" id="13_gntqu"]
+[ext_resource type="Texture2D" uid="uid://ctqnc47rg1wow" path="res://assets/BlocksWithGlow/checkpointR.png" id="13_jrf4t"]
+[ext_resource type="Texture2D" uid="uid://n0lfsvet7nu6" path="res://assets/BlocksWithGlow/bubbleR.png" id="14_rvytk"]
+[ext_resource type="Texture2D" uid="uid://ca3vny6r1rupg" path="res://assets/BlocksWithGlow/spikeR.png" id="15_35a3v"]
+[ext_resource type="Texture2D" uid="uid://djnt2p11qbco2" path="res://assets/BlocksWithGlow/remove.png" id="15_ws7dg"]
+[ext_resource type="Texture2D" uid="uid://udk18ltjtl5c" path="res://assets/BlocksWithGlow/jumperR.png" id="16_evpys"]
+[ext_resource type="Texture2D" uid="uid://bxg7olg5bypd4" path="res://assets/BlocksWithGlow/coinR.png" id="17_cophi"]
+[ext_resource type="Texture2D" uid="uid://cdmkcckudonlt" path="res://assets/BlocksWithGlow/goalR.png" id="18_g0s4c"]
+[ext_resource type="Texture2D" uid="uid://ceb2v2kkrc1j0" path="res://assets/BlocksWithGlow/upR.png" id="19_tvauc"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_qv7ar")
@@ -23,19 +34,6 @@ grow_horizontal = 0
 [node name="MenuButtons" type="Control" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Exit" type="Button" parent="MarginContainer/MenuButtons"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -180.0
-offset_bottom = 180.0
-grow_horizontal = 0
-icon = ExtResource("2_cw8dq")
-flat = true
-icon_alignment = 2
-expand_icon = true
-
 [node name="Settings" type="Button" parent="MarginContainer/MenuButtons"]
 layout_mode = 1
 anchors_preset = 1
@@ -45,7 +43,7 @@ offset_left = -180.0
 offset_top = 180.0
 offset_bottom = 360.0
 grow_horizontal = 0
-icon = ExtResource("3_oklbi")
+icon = ExtResource("3_getoq")
 flat = true
 icon_alignment = 2
 expand_icon = true
@@ -65,6 +63,32 @@ scale = Vector2(4.11428, 4.11428)
 texture_normal = ExtResource("1_5imky")
 texture_pressed = ExtResource("2_vj6g4")
 action = "jump"
+visibility_mode = 1
+
+[node name="Exit" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_cw8dq")
+flat = true
+icon_alignment = 2
+expand_icon = true
+
+[node name="DownButton" type="TouchScreenButton" parent="HBoxContainer"]
+visible = false
+position = Vector2(116, 29)
+rotation = 3.14159
+scale = Vector2(4.114, 2.057)
+texture_normal = ExtResource("1_5imky")
+texture_pressed = ExtResource("2_vj6g4")
+action = "down"
+visibility_mode = 1
+
+[node name="UpButton" type="TouchScreenButton" parent="HBoxContainer"]
+visible = false
+position = Vector2(-172, -321)
+scale = Vector2(4.114, 2.057)
+texture_normal = ExtResource("1_5imky")
+texture_pressed = ExtResource("2_vj6g4")
+action = "up"
 visibility_mode = 1
 
 [node name="LeftButton" type="TouchScreenButton" parent="HBoxContainer"]
@@ -102,6 +126,46 @@ offset_bottom = 110.0
 theme_override_font_sizes/font_size = 80
 text = "00:00"
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.5
+anchor_top = 0.865
+anchor_right = 0.5
+anchor_bottom = 0.865
+offset_left = -520.0
+offset_top = -496.0
+offset_right = 520.0
+offset_bottom = -56.0002
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ItemList" type="ItemList" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0576923
+anchor_top = 0.159091
+anchor_right = -0.0673077
+anchor_bottom = -0.0227273
+offset_top = 80.0
+offset_right = 1040.0
+offset_bottom = 480.0
+allow_search = false
+item_count = 11
+max_columns = 6
+icon_scale = 0.6
+item_0/icon = ExtResource("11_cpjrd")
+item_1/icon = ExtResource("12_e2j37")
+item_2/icon = ExtResource("13_gntqu")
+item_3/icon = ExtResource("13_jrf4t")
+item_4/icon = ExtResource("14_rvytk")
+item_5/icon = ExtResource("15_ws7dg")
+item_6/icon = ExtResource("15_35a3v")
+item_7/icon = ExtResource("16_evpys")
+item_8/icon = ExtResource("17_cophi")
+item_9/icon = ExtResource("18_g0s4c")
+item_10/icon = ExtResource("19_tvauc")
+metadata/_edit_use_anchors_ = true
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_qomvq")
 bus = &"SFX"
@@ -109,6 +173,7 @@ bus = &"SFX"
 [node name="Timer" type="Timer" parent="AudioStreamPlayer"]
 wait_time = 0.5
 
-[connection signal="button_up" from="MarginContainer/MenuButtons/Exit" to="." method="_on_exit_button_up"]
-[connection signal="button_up" from="MarginContainer/MenuButtons/Exit" to="MarginContainer/MenuButtons" method="_on_exit_button_up"]
 [connection signal="button_up" from="MarginContainer/MenuButtons/Settings" to="." method="_on_settings_button_up"]
+[connection signal="button_up" from="HBoxContainer/Exit" to="." method="_on_exit_button_up"]
+[connection signal="button_up" from="HBoxContainer/Exit" to="MarginContainer/MenuButtons" method="_on_exit_button_up"]
+[connection signal="item_selected" from="Control/ItemList" to="." method="_on_item_list_item_selected"]

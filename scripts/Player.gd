@@ -1,6 +1,7 @@
 extends CharacterBody2D
 # Player
 const SPEED = 80.0 * 45 * 1.4
+const CREATIVE_SPEED = 80 * 12
 const JUMP_VELOCITY = -1900.0
 const MAX_SPEED = 900
 const FRICTION = 0.6
@@ -18,6 +19,7 @@ var time_since_death = 0.0
 var time_when_started = Time.get_ticks_msec()
 var collected_coins = 0
 var is_respawn_point_default = true
+var isEditMode
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 6
@@ -35,6 +37,7 @@ var level
 var started
 var ghost_gold
 var gold_index = 0
+var isRunValid = true
 
 func _enter_tree() -> void:
 	set_multiplayer_authority(int(str(name)))
@@ -57,6 +60,16 @@ func parse_vector2(pos_string: String) -> Vector2:
 	return Vector2.ZERO  # Falls Fehler, Rückgabe als (0, 0)
 	
 func _physics_process(delta):
+	if isEditMode:
+		isRunValid = false
+		var direction = Input.get_axis("move_left", "move_right")
+		if direction:
+			position.x += direction * CREATIVE_SPEED * delta
+		if Input.is_action_pressed("up"):
+			position.y -= CREATIVE_SPEED * delta
+		if Input.is_action_pressed("down"):
+			position.y += CREATIVE_SPEED * delta
+		return
 	if ghost_index < best_run.size():
 		var image = $"../Ghost/image"
 		var ghost_data = best_run[ghost_index]
@@ -197,13 +210,15 @@ func _on_jump_fx_timer_timeout():
 	play_jump_fx = true
 	
 func die():
+	if isEditMode:
+		return
 	died = true
 	velocity.x = 0
 	velocity.y = 0
 	animated_sprite_2d.visible = false
 	var newParticle = particlePlayer.instantiate()
 	add_child(newParticle)
-	newParticle.set_image(preload("res://assets/original/playerParticle2.jpg"))
+	newParticle.set_image(preload("res://assets/original/Particles/playerParticle2.jpg"))
 	newParticle.scale.x = 0.01
 	newParticle.scale.y = 0.01
 	timer_die.start()
@@ -220,7 +235,7 @@ func win() -> int:
 			file.close()
 	else:
 		print("Failed to open file for writing")
-	if best_time > time_since_death:
+	if best_time > time_since_death && isRunValid:
 		save_run(time_since_death)
 		print("Saved run")
 	velocity = Vector2(0, 0)
@@ -232,6 +247,7 @@ func win() -> int:
 
 func _on_timer_timeout():
 	if default_respawn_point == respawn_point:
+		isRunValid = true
 		time_when_started = Time.get_ticks_msec()
 		time_since_death = 0
 		player_movements.clear()

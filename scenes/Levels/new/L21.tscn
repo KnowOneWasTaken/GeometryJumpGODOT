@@ -1,9 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://c44s22se4hcrb"]
+[gd_scene load_steps=17 format=3 uid="uid://rvmhfrekenvi"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_28owh"]
 [ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_fvlta"]
 [ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="2_28owh"]
-[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_2v6or"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://scenes/LevelObjects/kill_zone.tscn" id="3_2v6or"]
 [ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/Blocks/wall.tscn" id="4_v1o6n"]
 [ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/Blocks/spike.tscn" id="5_oms57"]
 [ext_resource type="PackedScene" uid="uid://bbp2wdd8niytd" path="res://scenes/Blocks/bubble_block.tscn" id="6_e32sh"]
@@ -37,9 +37,6 @@ shape = SubResource("WorldBoundaryShape2D_2hu1u")
 [node name="Blocks" type="Node" parent="Map"]
 
 [node name="Wall4" parent="Map/Blocks" instance=ExtResource("4_v1o6n")]
-position = Vector2(-300, 180)
-
-[node name="Wall34" parent="Map/Blocks" instance=ExtResource("4_v1o6n")]
 position = Vector2(-300, 180)
 
 [node name="Wall28" parent="Map/Blocks" instance=ExtResource("4_v1o6n")]

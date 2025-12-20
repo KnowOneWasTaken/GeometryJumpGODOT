@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://bgtbogt2nb3rp"]
 
 [ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="1_cwbnb"]
-[ext_resource type="Script" uid="uid://cp5jtbmccmr4b" path="res://scripts/level.gd" id="1_quyfr"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_quyfr"]
 [ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="2_gfg4j"]
-[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="3_6yp6a"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://scenes/LevelObjects/kill_zone.tscn" id="3_6yp6a"]
 [ext_resource type="PackedScene" uid="uid://bfexpxjwr8xfx" path="res://scenes/Blocks/rocket_launcher.tscn" id="4_85e5w"]
 [ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/Blocks/goal.tscn" id="5_7lijt"]
 [ext_resource type="PackedScene" uid="uid://0guh00w84dni" path="res://scenes/Blocks/coin.tscn" id="6_yru5c"]

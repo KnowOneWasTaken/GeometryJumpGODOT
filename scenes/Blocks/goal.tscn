@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://dmfp6di4l4ue4"]
 
-[ext_resource type="Texture2D" uid="uid://bx23ss1ukw3u4" path="res://assets/original/goalGlow.png" id="1_doltf"]
-[ext_resource type="Texture2D" uid="uid://brva4dh1ombkq" path="res://assets/original/checkpoint.png" id="2_vbstd"]
-[ext_resource type="Script" uid="uid://baglntvxv82r6" path="res://scripts/Goal.gd" id="3_71t8v"]
+[ext_resource type="Texture2D" uid="uid://bx23ss1ukw3u4" path="res://assets/original/Blocks/Glow/goalGlow.png" id="1_doltf"]
+[ext_resource type="Texture2D" uid="uid://brva4dh1ombkq" path="res://assets/original/Blocks/Base/checkpoint.png" id="2_vbstd"]
+[ext_resource type="Script" path="res://scripts/Goal.gd" id="3_71t8v"]
 [ext_resource type="AudioStream" uid="uid://ccyxemm3o6wpl" path="res://assets/sounds/goal_sound.mp3" id="4_o5rc1"]
-[ext_resource type="Texture2D" uid="uid://bs3j00502f8ro" path="res://assets/original/particleCheckpoint.png" id="5_b7k3b"]
+[ext_resource type="Texture2D" uid="uid://bs3j00502f8ro" path="res://assets/original/Particles/particleCheckpoint.png" id="5_b7k3b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l710o"]
 size = Vector2(120, 120)

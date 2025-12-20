@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://s6benlwy41i6"]
+[gd_scene load_steps=7 format=3 uid="uid://pebikk3my60n"]
 
 [ext_resource type="Script" path="res://scripts/jumper.gd" id="1_18cru"]
-[ext_resource type="Texture2D" uid="uid://b1k2wim8g5ctt" path="res://assets/original/slimeGlow.png" id="2_cq3j7"]
-[ext_resource type="Texture2D" uid="uid://bi86rsydcj4pb" path="res://assets/original/slime.png" id="3_5a700"]
+[ext_resource type="Texture2D" uid="uid://baatgdbr8yv5p" path="res://assets/original/Blocks/Glow/jumperGlow.png" id="2_a1chq"]
+[ext_resource type="Texture2D" uid="uid://el7bdqs8qcp7" path="res://assets/original/Blocks/Base/wall.png" id="3_v25wh"]
 [ext_resource type="AudioStream" uid="uid://7plye86gm272" path="res://assets/sounds/jumpSlime.mp3" id="4_gxekn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xpbt"]
@@ -17,11 +17,11 @@ script = ExtResource("1_18cru")
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 modulate = Color(0.14902, 0.313726, 1, 1)
 z_index = -1
-texture = ExtResource("2_cq3j7")
+texture = ExtResource("2_a1chq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-texture = ExtResource("3_5a700")
+texture = ExtResource("3_v25wh")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

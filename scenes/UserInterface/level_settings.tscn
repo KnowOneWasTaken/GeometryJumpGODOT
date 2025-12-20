@@ -3,13 +3,15 @@
 [ext_resource type="Script" path="res://scripts/level_settings.gd" id="1_daewo"]
 [ext_resource type="Texture2D" uid="uid://cj45na5rb1ols" path="res://assets/original/goalAnimationBackground.png" id="1_m8nqt"]
 [ext_resource type="AudioStream" uid="uid://13g1x2kqvbqf" path="res://assets/sounds/click interface.mp3" id="2_me11v"]
-[ext_resource type="Texture2D" uid="uid://b8o5tfu7tduux" path="res://assets/original/ok.png" id="2_pmasl"]
-[ext_resource type="Texture2D" uid="uid://cbwp27y5oelom" path="res://assets/original/rotateLeft.png" id="3_2wkyj"]
-[ext_resource type="Texture2D" uid="uid://bw7dr58tgxhal" path="res://assets/original/switch_on.png" id="3_uxrau"]
-[ext_resource type="Texture2D" uid="uid://coyv13va1o2rr" path="res://assets/original/bg.png" id="4_5qifx"]
-[ext_resource type="Texture2D" uid="uid://d0k4fth3amlnm" path="res://assets/original/BEditModeOff.png" id="6_lk5hw"]
+[ext_resource type="Texture2D" uid="uid://b8o5tfu7tduux" path="res://assets/original/Buttons/ok.png" id="2_pmasl"]
+[ext_resource type="Texture2D" uid="uid://cbwp27y5oelom" path="res://assets/original/Buttons/rotateLeft.png" id="3_2wkyj"]
+[ext_resource type="Texture2D" uid="uid://bw7dr58tgxhal" path="res://assets/original/Buttons/switch_on.png" id="3_uxrau"]
+[ext_resource type="Texture2D" uid="uid://coyv13va1o2rr" path="res://assets/original/Buttons/bg.png" id="4_5qifx"]
+[ext_resource type="Texture2D" uid="uid://d0k4fth3amlnm" path="res://assets/original/Buttons/BEditModeOff.png" id="6_lk5hw"]
 
-[node name="Level-Settings" type="Node2D"]
+[node name="Level-Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_daewo")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -36,7 +38,74 @@ scale = Vector2(0.612635, 0.579957)
 texture_normal = ExtResource("3_uxrau")
 texture_pressed = ExtResource("4_5qifx")
 
+[node name="Container" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -540.0
+offset_top = -407.0
+offset_right = 540.0
+offset_bottom = 507.0
+
+[node name="Settings Topic Text" type="Label" parent="Container"]
+z_index = 4
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="Ghost Text" type="Label" parent="Container"]
+z_index = 4
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Ghost of your best run:"
+horizontal_alignment = 1
+
+[node name="Separator" type="Label" parent="Container"]
+custom_minimum_size = Vector2(800, 111)
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Gold Metal Text" type="Label" parent="Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Ghost of Gold Medal:"
+horizontal_alignment = 1
+
+[node name="Separator2" type="Label" parent="Container"]
+custom_minimum_size = Vector2(800, 131)
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Audio Info" type="Label" parent="Container"]
+custom_minimum_size = Vector2(800, 131)
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "You can find audio settings in the menu (Settings icon)"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Separator3" type="Label" parent="Container"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="Container"]
+z_index = 4
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Continue"
+icon = ExtResource("2_pmasl")
+flat = true
+icon_alignment = 1
+
 [node name="Button2" type="Button" parent="."]
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -49,10 +118,12 @@ offset_bottom = 1223.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.3, 0.3)
+tooltip_text = "Reset"
 icon = ExtResource("3_2wkyj")
 icon_alignment = 1
 
 [node name="CreativeButton" type="Button" parent="."]
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -65,73 +136,15 @@ offset_bottom = 1286.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.275, 0.275)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Edit Mode"
 icon = ExtResource("6_lk5hw")
-icon_alignment = 1
-
-[node name="Container" type="VBoxContainer" parent="."]
-offset_left = -540.0
-offset_top = -407.0
-offset_right = 540.0
-offset_bottom = 507.0
-
-[node name="Label" type="Label" parent="Container"]
-z_index = 4
-layout_mode = 2
-theme_override_font_sizes/font_size = 80
-text = "Settings"
-horizontal_alignment = 1
-
-[node name="Label2" type="Label" parent="Container"]
-z_index = 4
-layout_mode = 2
-theme_override_font_sizes/font_size = 56
-text = "Ghost of your best run:"
-horizontal_alignment = 1
-
-[node name="spacer2" type="Label" parent="Container"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-
-[node name="spacer" type="Label" parent="Container"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-
-[node name="Label5" type="Label" parent="Container"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 56
-text = "Ghost of Gold Medal:"
-horizontal_alignment = 1
-
-[node name="spacer3" type="Label" parent="Container"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-
-[node name="spacer4" type="Label" parent="Container"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-
-[node name="Label3" type="Label" parent="Container"]
-custom_minimum_size = Vector2(800, 131)
-layout_mode = 2
-theme_override_font_sizes/font_size = 46
-text = "You can find audio settings in the menu (Settings icon)"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="spacer5" type="Label" parent="Container"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-
-[node name="Button" type="Button" parent="Container"]
-z_index = 4
-layout_mode = 2
-icon = ExtResource("2_pmasl")
-flat = true
 icon_alignment = 1
 
 [connection signal="timeout" from="AudioStreamPlayer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="released" from="ghost_button" to="." method="_on_ghost_button_released"]
 [connection signal="released" from="gold_button" to="." method="_on_gold_button_released"]
+[connection signal="button_up" from="Container/Button" to="." method="_on_button_button_up"]
 [connection signal="button_up" from="Button2" to="." method="_on_button_2_button_up"]
 [connection signal="button_up" from="CreativeButton" to="." method="_on_creative_button_button_up"]
-[connection signal="button_up" from="Container/Button" to="." method="_on_button_button_up"]

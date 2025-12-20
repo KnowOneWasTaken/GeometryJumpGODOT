@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpp741bbim2ma"]
 
-[ext_resource type="Script" uid="uid://bxr71farcy1us" path="res://scripts/ParticlePlayer.gd" id="2_ab068"]
+[ext_resource type="Script" path="res://scripts/ParticlePlayer.gd" id="2_ab068"]
 
 [sub_resource type="CurveXYZTexture" id="CurveXYZTexture_qkadf"]
 
@@ -13,7 +13,6 @@ emission_ring_axis = Vector3(0, 0, 1)
 emission_ring_height = 240.0
 emission_ring_radius = 240.0
 emission_ring_inner_radius = 200.0
-emission_ring_cone_angle = 90.0
 angle_min = -88.0
 angle_max = 81.5
 inherit_velocity_ratio = 1.837
@@ -35,11 +34,11 @@ scale = Vector2(0.1, 0.1)
 skew = -0.349066
 emitting = false
 amount = 20
+process_material = SubResource("ParticleProcessMaterial_xxqvs")
 preprocess = 0.2
 explosiveness = 1.0
 randomness = 0.47
 visibility_rect = Rect2(-100, -100, 20, 20)
-process_material = SubResource("ParticleProcessMaterial_xxqvs")
 script = ExtResource("2_ab068")
 
 [node name="Timer" type="Timer" parent="."]

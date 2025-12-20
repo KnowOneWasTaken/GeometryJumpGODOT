@@ -32,7 +32,7 @@ func _on_jump_area_body_entered(body: Node2D) -> void:
 	timer.start()
 	var newParticle = particlePlayer.instantiate()
 	add_child(newParticle)
-	newParticle.set_image(preload("res://assets/original/particleSlime.png"))
+	newParticle.set_image(preload("res://assets/original/Particles/particleSlime.png"))
 
 
 func _on_jump_area_body_exited(_body: Node2D) -> void:
@@ -53,7 +53,7 @@ func _on_jump_area_bottom_body_entered(body: Node2D) -> void:
 	timerB.start()
 	var newParticle = particlePlayer.instantiate()
 	add_child(newParticle)
-	newParticle.set_image(preload("res://assets/original/particleSlime.png"))
+	newParticle.set_image(preload("res://assets/original/Particles/particleSlime.png"))
 
 
 func _on_jump_area_bottom_body_exited(body: Node2D) -> void:
@@ -68,7 +68,7 @@ func _on_jump_area_right_body_entered(body: Node2D) -> void:
 	timerR.start()
 	var newParticle = particlePlayer.instantiate()
 	add_child(newParticle)
-	newParticle.set_image(preload("res://assets/original/particleSlime.png"))
+	newParticle.set_image(preload("res://assets/original/Particles/particleSlime.png"))
 
 
 func _on_jump_area_right_body_exited(body: Node2D) -> void:
@@ -95,7 +95,7 @@ func _on_jump_area_left_body_entered(body: Node2D) -> void:
 	timerL.start()
 	var newParticle = particlePlayer.instantiate()
 	add_child(newParticle)
-	newParticle.set_image(preload("res://assets/original/particleSlime.png"))
+	newParticle.set_image(preload("res://assets/original/Particles/particleSlime.png"))
 
 
 func _on_timer_left_timeout() -> void:

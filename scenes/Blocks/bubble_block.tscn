@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bbp2wdd8niytd"]
 
-[ext_resource type="Script" uid="uid://4h83fdlcwl85" path="res://scripts/BubbleBlock.gd" id="1_dtyei"]
-[ext_resource type="Texture2D" uid="uid://d0ww8motefen8" path="res://assets/original/bubble.png" id="2_3ije1"]
-[ext_resource type="Texture2D" uid="uid://ci84avc82fywl" path="res://assets/original/bubbleGlow.png" id="3_8eca4"]
+[ext_resource type="Script" path="res://scripts/BubbleBlock.gd" id="1_dtyei"]
+[ext_resource type="Texture2D" uid="uid://d0ww8motefen8" path="res://assets/original/Blocks/Base/bubble.png" id="2_3ije1"]
+[ext_resource type="Texture2D" uid="uid://ci84avc82fywl" path="res://assets/original/Blocks/Glow/bubbleGlow.png" id="3_8eca4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ooaju"]
 size = Vector2(112, 112)
