@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_jw37d"]
 [ext_resource type="PackedScene" uid="uid://bl68dtbhhyyyv" path="res://scenes/UserInterface/ui.tscn" id="2_u3dch"]
 [ext_resource type="PackedScene" uid="uid://d3ksffg63g3yp" path="res://scenes/LevelObjects/background_black.tscn" id="3_4updf"]
-[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://assets/original/kill_zone.tscn" id="4_i086d"]
+[ext_resource type="PackedScene" uid="uid://dgjjpnfo45oxw" path="res://scenes/LevelObjects/kill_zone.tscn" id="4_i086d"]
 [ext_resource type="PackedScene" uid="uid://dgjx6h0617km6" path="res://scenes/Blocks/wall.tscn" id="5_5ceuo"]
 [ext_resource type="PackedScene" uid="uid://dq5puheu774fb" path="res://scenes/LevelObjects/Player.tscn" id="6_csjkk"]
 [ext_resource type="PackedScene" uid="uid://bbp2wdd8niytd" path="res://scenes/Blocks/bubble_block.tscn" id="7_0vvsa"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://6owmrrvfixor" path="res://scenes/Blocks/spike.tscn" id="8_nsda1"]
 [ext_resource type="PackedScene" uid="uid://dn0k5cvsfacg3" path="res://scenes/Blocks/checkpoint.tscn" id="9_iw8hf"]
 [ext_resource type="PackedScene" uid="uid://bfexpxjwr8xfx" path="res://scenes/Blocks/rocket_launcher.tscn" id="9_kdjfg"]
-[ext_resource type="PackedScene" uid="uid://s6benlwy41i6" path="res://scenes/Blocks/jumper.tscn" id="10_remsh"]
+[ext_resource type="PackedScene" uid="uid://pebikk3my60n" path="res://scenes/Blocks/jumper.tscn" id="10_remsh"]
 [ext_resource type="PackedScene" uid="uid://0guh00w84dni" path="res://scenes/Blocks/coin.tscn" id="11_1rrsa"]
 [ext_resource type="PackedScene" uid="uid://dmfp6di4l4ue4" path="res://scenes/Blocks/goal.tscn" id="12_x0suc"]
 

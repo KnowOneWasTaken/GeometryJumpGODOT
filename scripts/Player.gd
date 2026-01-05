@@ -9,7 +9,7 @@ const CHANGE_DIRECTION_SPEED = 2.0
 const MAX_WALK_SPEED = 700
 const CUT_OFF_JUMP_VELOCITY = -1000
 const WALL_FRICTION = 0.93  # New constant for wall friction
-@onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var animated_sprite_2d = $Sprite2D
 var particlePlayer := load("res://scenes/particle_player.tscn")
 var won = false
 @onready var timer = $JumpFXTimer
@@ -185,7 +185,7 @@ func record_player_move():
 		"position_y": global_position.y,
 		"rotation": global_rotation, # if needed
 		"time": time_since_death, # Optional: store timestamps for better synchronization
-		"visible": $AnimatedSprite2D.visible
+		"visible": animated_sprite_2d.visible
 	})
 
 func save_run(time):

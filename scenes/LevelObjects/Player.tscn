@@ -1,40 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://dq5puheu774fb"]
+[gd_scene load_steps=7 format=3 uid="uid://dq5puheu774fb"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_f51j4"]
 [ext_resource type="Texture2D" uid="uid://dh5k8u0q2gqhs" path="res://assets/original/player-new.png" id="2_14axx"]
-[ext_resource type="Texture2D" uid="uid://6ivgj1st88ek" path="res://assets/original/player.png" id="2_51tad"]
 [ext_resource type="AudioStream" uid="uid://dftul3jla4c8m" path="res://assets/sounds/jump.mp3" id="3_s20k3"]
 [ext_resource type="PackedScene" uid="uid://b7kxdk0sfkbcf" path="res://scenes/LevelObjects/camera.tscn" id="4_7v1q2"]
-[ext_resource type="Texture2D" uid="uid://d3kr160kdbxfc" path="res://assets/original/player.jpg" id="5_7s2es"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmwyj"]
 size = Vector2(118, 117)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hccvp"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_14axx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_7s2es")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_7s2es")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_51tad")
-}, {
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": null
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_fj45a"]
 properties/0/path = NodePath(".:position")
@@ -49,13 +21,13 @@ collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_f51j4")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_14axx")
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_mmwyj")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.242, 0.242)
-sprite_frames = SubResource("SpriteFrames_hccvp")
 
 [node name="JumpSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_s20k3")
@@ -74,7 +46,6 @@ one_shot = true
 [node name="Player" type="Sprite2D" parent="."]
 visible = false
 scale = Vector2(0.242, 0.242)
-texture = ExtResource("5_7s2es")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_fj45a")

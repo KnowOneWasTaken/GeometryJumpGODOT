@@ -34,14 +34,23 @@ grow_horizontal = 0
 [node name="MenuButtons" type="Control" parent="MarginContainer"]
 layout_mode = 2
 
+[node name="Exit" type="Button" parent="MarginContainer/MenuButtons"]
+layout_mode = 2
+offset_left = -190.0
+offset_bottom = 182.0
+icon = ExtResource("2_cw8dq")
+flat = true
+icon_alignment = 2
+expand_icon = true
+
 [node name="Settings" type="Button" parent="MarginContainer/MenuButtons"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -180.0
-offset_top = 180.0
-offset_bottom = 360.0
+offset_top = 170.0
+offset_bottom = 350.0
 grow_horizontal = 0
 icon = ExtResource("3_getoq")
 flat = true
@@ -54,6 +63,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -64,13 +76,6 @@ texture_normal = ExtResource("1_5imky")
 texture_pressed = ExtResource("2_vj6g4")
 action = "jump"
 visibility_mode = 1
-
-[node name="Exit" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-icon = ExtResource("2_cw8dq")
-flat = true
-icon_alignment = 2
-expand_icon = true
 
 [node name="DownButton" type="TouchScreenButton" parent="HBoxContainer"]
 visible = false
@@ -142,17 +147,18 @@ grow_vertical = 0
 [node name="ItemList" type="ItemList" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0576923
-anchor_top = 0.159091
-anchor_right = -0.0673077
-anchor_bottom = -0.0227273
+anchor_left = 0.0115385
+anchor_top = 0.0227273
+anchor_right = -0.00576923
+anchor_bottom = 0.0227273
 offset_top = 80.0
 offset_right = 1040.0
 offset_bottom = 480.0
 allow_search = false
 item_count = 11
 max_columns = 6
-icon_scale = 0.6
+icon_scale = 0.68
+fixed_icon_size = Vector2i(1, 0)
 item_0/icon = ExtResource("11_cpjrd")
 item_1/icon = ExtResource("12_e2j37")
 item_2/icon = ExtResource("13_gntqu")
@@ -173,7 +179,7 @@ bus = &"SFX"
 [node name="Timer" type="Timer" parent="AudioStreamPlayer"]
 wait_time = 0.5
 
+[connection signal="button_up" from="MarginContainer/MenuButtons/Exit" to="." method="_on_exit_button_up"]
+[connection signal="button_up" from="MarginContainer/MenuButtons/Exit" to="MarginContainer/MenuButtons" method="_on_exit_button_up"]
 [connection signal="button_up" from="MarginContainer/MenuButtons/Settings" to="." method="_on_settings_button_up"]
-[connection signal="button_up" from="HBoxContainer/Exit" to="." method="_on_exit_button_up"]
-[connection signal="button_up" from="HBoxContainer/Exit" to="MarginContainer/MenuButtons" method="_on_exit_button_up"]
 [connection signal="item_selected" from="Control/ItemList" to="." method="_on_item_list_item_selected"]

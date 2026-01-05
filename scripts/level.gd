@@ -41,6 +41,7 @@ func add_player(pid):
 	player.name = str(pid)
 	player.position = Vector2(-300, 60)
 	add_child(player)
+	
 
 func _unhandled_input(event):
 	print("Event detected")
@@ -50,7 +51,7 @@ func _unhandled_input(event):
 		print("-------------")
 		print("new event")
 		print("event is screentouch or mouse event")
-		if ui.isEditMode:
+		if ui.isEditMode and event.is_pressed():
 			var world_pos = get_global_mouse_position()
 			print(world_pos.x)
 			print(world_pos.y)
